@@ -27727,3 +27727,14 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+[master 0d5c515] Fri Jun 23 08:02:04 EST 2023
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+fatal: Couldn't find remote ref refs/heads/master
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:        
+remote:      https://github.com/FLARE-forecast/BVRE-data/pull/new/master        
+remote: 
+remote: Heads up! The branch 'master' that you pushed to was renamed to 'main'.        
+remote: 
+To github.com:FLARE-forecast/BVRE-data.git
+ * [new branch]      master -> master

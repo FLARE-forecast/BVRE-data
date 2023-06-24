@@ -1,0 +1,22 @@
+
+############################ bjorn - 06/23/23 12:54:23 EST -0500 ############################
+
+2023/06/23 12:54:23 autossh[1427]: checking for grace period, tries = 0
+2023/06/23 12:54:23 autossh[1427]: starting ssh (count 1)
+2023/06/23 12:54:23 autossh[1427]: ssh child pid is 1428
+2023/06/23 12:54:23 autossh[1427]: check on child 1428
+2023/06/23 12:54:23 autossh[1427]: clear alarm timer (0 secs left)
+2023/06/23 12:54:23 autossh[1427]: set alarm for 600 secs
+2023/06/23 12:54:23 autossh[1428]: child of 1427 execing /usr/bin/ssh
+2023/06/23 13:03:30 autossh[1427]: received signal to exit (15)
+2023/06/23 13:03:30 autossh[1427]: clear alarm timer (53 secs left)
+
+############################ bjorn - 06/23/23 15:42:38 EST -0500 ############################
+
+2023/06/23 15:42:38 autossh[1459]: checking for grace period, tries = 0
+2023/06/23 15:42:38 autossh[1459]: starting ssh (count 1)
+2023/06/23 15:42:38 autossh[1459]: ssh child pid is 1461
+2023/06/23 15:42:38 autossh[1459]: check on child 1461
+2023/06/23 15:42:38 autossh[1459]: clear alarm timer (0 secs left)
+2023/06/23 15:42:38 autossh[1459]: set alarm for 600 secs
+2023/06/23 15:42:38 autossh[1461]: child of 1459 execing /usr/bin/ssh

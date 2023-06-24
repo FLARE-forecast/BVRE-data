@@ -1,0 +1,10 @@
+
+############################ bjorn - 06/23/23 12:55:55 EST -0500 ############################
+
+Disk Usage Before Git Garbage Collector:
+/dev/sda1                           59G  564M   55G   1% /data
+Working on: /data/bvre-platform-data
+fatal: Unable to create '/data/bvre-platform-data/.git/gc.pid.lock': Permission denied
+Working on: /data/bjorn-logs
+Disk Usage After Git Garbage Collector:
+/dev/sda1                           59G  564M   55G   1% /data

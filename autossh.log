@@ -2110,3 +2110,135 @@
 2023/06/24 08:03:54 autossh[2332]: check on child 2594
 2023/06/24 08:03:54 autossh[2332]: set alarm for 490 secs
 2023/06/24 08:03:54 autossh[2594]: execing /usr/bin/ssh
+2023/06/24 08:12:19 autossh[2332]: timeout polling to accept read connection
+2023/06/24 08:12:19 autossh[2332]: port down, restarting ssh
+2023/06/24 08:12:19 autossh[2332]: checking for grace period, tries = 0
+2023/06/24 08:12:19 autossh[2332]: starting ssh (count 12)
+2023/06/24 08:12:19 autossh[2332]: ssh child pid is 2968
+2023/06/24 08:12:19 autossh[2332]: check on child 2968
+2023/06/24 08:12:19 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:12:19 autossh[2968]: execing /usr/bin/ssh
+2023/06/24 08:22:34 autossh[2332]: timeout polling to accept read connection
+2023/06/24 08:22:34 autossh[2332]: port down, restarting ssh
+2023/06/24 08:22:34 autossh[2332]: checking for grace period, tries = 0
+2023/06/24 08:22:34 autossh[2332]: starting ssh (count 13)
+2023/06/24 08:22:34 autossh[2332]: ssh child pid is 3291
+2023/06/24 08:22:34 autossh[2332]: check on child 3291
+2023/06/24 08:22:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:22:34 autossh[3291]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: not what I sent: "bjorn autossh 2332 376256741 
+" : ""
+2023/06/24 08:32:34 autossh[2332]: not what I sent: "bjorn autossh 2332 376256741 
+" : ""
+2023/06/24 08:32:34 autossh[2332]: tried connection 3 times and failed
+2023/06/24 08:32:34 autossh[2332]: port down, restarting ssh
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 0
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 14)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3867
+2023/06/24 08:32:34 autossh[2332]: check on child 3867
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3867]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3867
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 1
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 15)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3868
+2023/06/24 08:32:34 autossh[2332]: check on child 3868
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3868]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3868
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 2
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 16)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3869
+2023/06/24 08:32:34 autossh[2332]: check on child 3869
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3869]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3869
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 3
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 17)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3870
+2023/06/24 08:32:34 autossh[2332]: check on child 3870
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3870]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3870
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 4
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 18)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3871
+2023/06/24 08:32:34 autossh[2332]: check on child 3871
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3871]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3871
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 5
+2023/06/24 08:32:34 autossh[2332]: starting ssh (count 19)
+2023/06/24 08:32:34 autossh[2332]: ssh child pid is 3872
+2023/06/24 08:32:34 autossh[2332]: check on child 3872
+2023/06/24 08:32:34 autossh[2332]: set alarm for 600 secs
+2023/06/24 08:32:34 autossh[3872]: execing /usr/bin/ssh
+2023/06/24 08:32:34 autossh[2332]: check on child 3872
+2023/06/24 08:32:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:34 autossh[2332]: checking for grace period, tries = 6
+2023/06/24 08:32:34 autossh[2332]: sleeping for grace time 2 secs
+2023/06/24 08:32:36 autossh[2332]: starting ssh (count 20)
+2023/06/24 08:32:36 autossh[2332]: ssh child pid is 3874
+2023/06/24 08:32:36 autossh[2332]: check on child 3874
+2023/06/24 08:32:36 autossh[2332]: set alarm for 598 secs
+2023/06/24 08:32:36 autossh[3874]: execing /usr/bin/ssh
+2023/06/24 08:32:36 autossh[2332]: check on child 3874
+2023/06/24 08:32:36 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:36 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:36 autossh[2332]: checking for grace period, tries = 7
+2023/06/24 08:32:36 autossh[2332]: sleeping for grace time 8 secs
+2023/06/24 08:32:44 autossh[2332]: starting ssh (count 21)
+2023/06/24 08:32:44 autossh[2332]: ssh child pid is 3876
+2023/06/24 08:32:44 autossh[2332]: check on child 3876
+2023/06/24 08:32:44 autossh[2332]: set alarm for 590 secs
+2023/06/24 08:32:44 autossh[3876]: execing /usr/bin/ssh
+2023/06/24 08:32:44 autossh[2332]: check on child 3876
+2023/06/24 08:32:44 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:32:44 autossh[2332]: expired child, returning 1
+2023/06/24 08:32:44 autossh[2332]: checking for grace period, tries = 8
+2023/06/24 08:32:44 autossh[2332]: sleeping for grace time 18 secs
+2023/06/24 08:33:02 autossh[2332]: starting ssh (count 22)
+2023/06/24 08:33:02 autossh[2332]: ssh child pid is 3905
+2023/06/24 08:33:02 autossh[2332]: check on child 3905
+2023/06/24 08:33:02 autossh[2332]: set alarm for 572 secs
+2023/06/24 08:33:02 autossh[3905]: execing /usr/bin/ssh
+2023/06/24 08:33:02 autossh[2332]: check on child 3905
+2023/06/24 08:33:02 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:33:02 autossh[2332]: expired child, returning 1
+2023/06/24 08:33:02 autossh[2332]: checking for grace period, tries = 9
+2023/06/24 08:33:02 autossh[2332]: sleeping for grace time 32 secs
+2023/06/24 08:33:34 autossh[2332]: starting ssh (count 23)
+2023/06/24 08:33:34 autossh[2332]: ssh child pid is 3921
+2023/06/24 08:33:34 autossh[2332]: check on child 3921
+2023/06/24 08:33:34 autossh[2332]: set alarm for 540 secs
+2023/06/24 08:33:34 autossh[3921]: execing /usr/bin/ssh
+2023/06/24 08:33:34 autossh[2332]: check on child 3921
+2023/06/24 08:33:34 autossh[2332]: ssh exited with error status 255; restarting ssh
+2023/06/24 08:33:34 autossh[2332]: expired child, returning 1
+2023/06/24 08:33:34 autossh[2332]: checking for grace period, tries = 10
+2023/06/24 08:33:34 autossh[2332]: sleeping for grace time 50 secs
+2023/06/24 08:34:24 autossh[2332]: starting ssh (count 24)
+2023/06/24 08:34:24 autossh[2332]: ssh child pid is 3982
+2023/06/24 08:34:24 autossh[2332]: check on child 3982
+2023/06/24 08:34:24 autossh[2332]: set alarm for 490 secs
+2023/06/24 08:34:24 autossh[3982]: execing /usr/bin/ssh
+
+############################ bjorn - 06/24/23 14:02:05 EST ############################
+
+2023/06/24 14:02:05 autossh[2214]: checking for grace period, tries = 0
+2023/06/24 14:02:05 autossh[2214]: starting ssh (count 1)
+2023/06/24 14:02:05 autossh[2214]: ssh child pid is 2215
+2023/06/24 14:02:05 autossh[2214]: check on child 2215
+2023/06/24 14:02:05 autossh[2214]: set alarm for 600 secs
+2023/06/24 14:02:05 autossh[2215]: execing /usr/bin/ssh

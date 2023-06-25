@@ -2242,3 +2242,45 @@
 2023/06/24 14:02:05 autossh[2214]: check on child 2215
 2023/06/24 14:02:05 autossh[2214]: set alarm for 600 secs
 2023/06/24 14:02:05 autossh[2215]: execing /usr/bin/ssh
+2023/06/24 14:12:20 autossh[2214]: timeout polling to accept read connection
+2023/06/24 14:12:20 autossh[2214]: port down, restarting ssh
+2023/06/24 14:12:20 autossh[2214]: checking for grace period, tries = 0
+2023/06/24 14:12:20 autossh[2214]: starting ssh (count 2)
+2023/06/24 14:12:20 autossh[2214]: ssh child pid is 2847
+2023/06/24 14:12:20 autossh[2214]: check on child 2847
+2023/06/24 14:12:20 autossh[2214]: set alarm for 600 secs
+2023/06/24 14:12:20 autossh[2847]: execing /usr/bin/ssh
+2023/06/24 14:18:53 autossh[2214]: check on child 2847
+2023/06/24 14:18:53 autossh[2214]: ssh exited with error status 255; restarting ssh
+2023/06/24 14:18:53 autossh[2214]: expired child, returning 1
+2023/06/24 14:18:53 autossh[2214]: checking for grace period, tries = 0
+2023/06/24 14:18:53 autossh[2214]: starting ssh (count 3)
+2023/06/24 14:18:53 autossh[2214]: ssh child pid is 3317
+2023/06/24 14:18:53 autossh[2214]: check on child 3317
+2023/06/24 14:18:53 autossh[2214]: set alarm for 208 secs
+2023/06/24 14:18:53 autossh[3317]: execing /usr/bin/ssh
+2023/06/24 14:22:36 autossh[2214]: timeout polling to accept read connection
+2023/06/24 14:22:36 autossh[2214]: port down, restarting ssh
+2023/06/24 14:22:36 autossh[2214]: checking for grace period, tries = 0
+2023/06/24 14:22:36 autossh[2214]: starting ssh (count 4)
+2023/06/24 14:22:36 autossh[2214]: ssh child pid is 3446
+2023/06/24 14:22:36 autossh[2214]: check on child 3446
+2023/06/24 14:22:36 autossh[2214]: set alarm for 600 secs
+2023/06/24 14:22:36 autossh[3446]: execing /usr/bin/ssh
+2023/06/24 14:32:51 autossh[2214]: timeout polling to accept read connection
+2023/06/24 14:32:51 autossh[2214]: port down, restarting ssh
+2023/06/24 14:32:51 autossh[2214]: checking for grace period, tries = 0
+2023/06/24 14:32:51 autossh[2214]: starting ssh (count 5)
+2023/06/24 14:32:51 autossh[2214]: ssh child pid is 3772
+2023/06/24 14:32:51 autossh[2214]: check on child 3772
+2023/06/24 14:32:51 autossh[2214]: set alarm for 600 secs
+2023/06/24 14:32:51 autossh[3772]: execing /usr/bin/ssh
+
+############################ bjorn - 06/25/23 00:02:06 EST ############################
+
+2023/06/25 00:02:06 autossh[2276]: checking for grace period, tries = 0
+2023/06/25 00:02:06 autossh[2276]: starting ssh (count 1)
+2023/06/25 00:02:06 autossh[2276]: ssh child pid is 2280
+2023/06/25 00:02:06 autossh[2276]: check on child 2280
+2023/06/25 00:02:06 autossh[2276]: set alarm for 600 secs
+2023/06/25 00:02:06 autossh[2280]: execing /usr/bin/ssh

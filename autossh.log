@@ -2284,3 +2284,107 @@
 2023/06/25 00:02:06 autossh[2276]: check on child 2280
 2023/06/25 00:02:06 autossh[2276]: set alarm for 600 secs
 2023/06/25 00:02:06 autossh[2280]: execing /usr/bin/ssh
+2023/06/25 00:10:32 autossh[2276]: check on child 2280
+2023/06/25 00:10:32 autossh[2276]: set alarm for 93 secs
+2023/06/25 00:10:32 autossh[2276]: check on child 2280
+2023/06/25 00:10:32 autossh[2276]: ssh exited with status 0; autossh exiting
+2023/06/25 00:10:32 autossh[2276]: expired child, returning 2
+
+############################ bjorn - 06/25/23 08:02:05 EST ############################
+
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 0
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 1)
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2242
+2023/06/25 08:02:05 autossh[2239]: check on child 2242
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2242]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: check on child 2242
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 1
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 2)
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2249
+2023/06/25 08:02:05 autossh[2239]: check on child 2249
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2249]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: check on child 2249
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 2
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 3)
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2250
+2023/06/25 08:02:05 autossh[2239]: check on child 2250
+2023/06/25 08:02:05 autossh[2250]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2239]: check on child 2250
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 3
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 4)
+2023/06/25 08:02:05 autossh[2252]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2252
+2023/06/25 08:02:05 autossh[2239]: check on child 2252
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2239]: check on child 2252
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 4
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 5)
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2254
+2023/06/25 08:02:05 autossh[2239]: check on child 2254
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2254]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: check on child 2254
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 5
+2023/06/25 08:02:05 autossh[2239]: starting ssh (count 6)
+2023/06/25 08:02:05 autossh[2239]: ssh child pid is 2255
+2023/06/25 08:02:05 autossh[2239]: check on child 2255
+2023/06/25 08:02:05 autossh[2239]: set alarm for 600 secs
+2023/06/25 08:02:05 autossh[2255]: execing /usr/bin/ssh
+2023/06/25 08:02:05 autossh[2239]: check on child 2255
+2023/06/25 08:02:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:05 autossh[2239]: checking for grace period, tries = 6
+2023/06/25 08:02:05 autossh[2239]: sleeping for grace time 2 secs
+2023/06/25 08:02:07 autossh[2239]: starting ssh (count 7)
+2023/06/25 08:02:07 autossh[2239]: ssh child pid is 2265
+2023/06/25 08:02:07 autossh[2239]: check on child 2265
+2023/06/25 08:02:07 autossh[2239]: set alarm for 598 secs
+2023/06/25 08:02:07 autossh[2265]: execing /usr/bin/ssh
+2023/06/25 08:02:07 autossh[2239]: check on child 2265
+2023/06/25 08:02:07 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:07 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:07 autossh[2239]: checking for grace period, tries = 7
+2023/06/25 08:02:07 autossh[2239]: sleeping for grace time 8 secs
+2023/06/25 08:02:15 autossh[2239]: starting ssh (count 8)
+2023/06/25 08:02:15 autossh[2239]: ssh child pid is 2275
+2023/06/25 08:02:15 autossh[2239]: check on child 2275
+2023/06/25 08:02:15 autossh[2239]: set alarm for 590 secs
+2023/06/25 08:02:15 autossh[2275]: execing /usr/bin/ssh
+2023/06/25 08:02:15 autossh[2239]: check on child 2275
+2023/06/25 08:02:15 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:15 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:15 autossh[2239]: checking for grace period, tries = 8
+2023/06/25 08:02:15 autossh[2239]: sleeping for grace time 18 secs
+2023/06/25 08:02:33 autossh[2239]: starting ssh (count 9)
+2023/06/25 08:02:33 autossh[2239]: ssh child pid is 2365
+2023/06/25 08:02:33 autossh[2239]: check on child 2365
+2023/06/25 08:02:33 autossh[2239]: set alarm for 572 secs
+2023/06/25 08:02:33 autossh[2365]: execing /usr/bin/ssh
+2023/06/25 08:02:33 autossh[2239]: check on child 2365
+2023/06/25 08:02:33 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:02:33 autossh[2239]: expired child, returning 1
+2023/06/25 08:02:33 autossh[2239]: checking for grace period, tries = 9
+2023/06/25 08:02:33 autossh[2239]: sleeping for grace time 32 secs
+2023/06/25 08:03:05 autossh[2239]: starting ssh (count 10)
+2023/06/25 08:03:05 autossh[2239]: ssh child pid is 2416
+2023/06/25 08:03:05 autossh[2239]: check on child 2416
+2023/06/25 08:03:05 autossh[2239]: set alarm for 540 secs
+2023/06/25 08:03:05 autossh[2416]: execing /usr/bin/ssh
+2023/06/25 08:03:05 autossh[2239]: check on child 2416
+2023/06/25 08:03:05 autossh[2239]: ssh exited with error status 255; restarting ssh
+2023/06/25 08:03:05 autossh[2239]: expired child, returning 1
+2023/06/25 08:03:05 autossh[2239]: checking for grace period, tries = 10
+2023/06/25 08:03:05 autossh[2239]: sleeping for grace time 50 secs

@@ -4222,3 +4222,134 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 60.927/67.758/75.837/6.157 ms
+
+############################ bjorn - 06/26/23 00:02:07 EST ############################
+
+ 00:02:07 up 1 min,  0 users,  load average: 0.76, 0.34, 0.12
+
+
+reboot   system boot  5.3.0-53-generic Mon Jun 26 00:01   still running
+reboot   system boot  5.3.0-53-generic Sun Jun 25 14:00   still running
+reboot   system boot  5.3.0-53-generic Sun Jun 25 08:00   still running
+reboot   system boot  5.3.0-53-generic Sun Jun 25 00:00 - 00:10  (00:09)
+reboot   system boot  5.3.0-53-generic Sat Jun 24 14:00 - 00:10  (10:09)
+
+
+
+
+Bus 001 Device 003: ID 1410:9031 Novatel Wireless 
+
+
+[    9.933810] cdc_ether 1-5:1.0 enx0015ff170646: renamed from eth0
+
+
+[   12.129389] Bluetooth: BNEP filters: protocol multicast
+[   12.129395] Bluetooth: BNEP socket layer initialized
+[   13.247142] openvswitch: Open vSwitch switching datapath
+[   13.455805] device ovs-system entered promiscuous mode
+[   13.738892] device eviCIBR4 entered promiscuous mode
+[   13.747691] device appCIBR4 entered promiscuous mode
+[   14.852566] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   14.852831] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[   17.135402] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Down
+[   18.771823] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2   29G   17G   11G  62% /
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+/dev/sda1        59G  374M   56G   1% /data
+
+
+IN-USE  SSID       MODE   CHAN  RATE       SIGNAL  BARS  SECURITY 
+        CR6_13030  Infra  1     54 Mbit/s  29      ▂___  --       
+
+
+enx0015ff170646:
+100.69.36.101/30
+
+
+
+
+enp2s0:
+10.10.1.2/24
+
+
+PING 10.10.100.1 (10.10.100.1) 56(84) bytes of data.
+From 10.10.100.5 icmp_seq=1 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=2 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=3 Destination Host Unreachable
+
+--- 10.10.100.1 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2043ms
+pipe 3
+
+
+PING 10.10.100.2 (10.10.100.2) 56(84) bytes of data.
+From 10.10.100.5 icmp_seq=1 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=2 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=3 Destination Host Unreachable
+
+--- 10.10.100.2 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2038ms
+pipe 3
+
+
+PING 10.10.100.3 (10.10.100.3) 56(84) bytes of data.
+From 10.10.100.5 icmp_seq=1 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=2 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=3 Destination Host Unreachable
+
+--- 10.10.100.3 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2039ms
+pipe 3
+
+
+PING 10.10.100.4 (10.10.100.4) 56(84) bytes of data.
+From 10.10.100.5 icmp_seq=1 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=2 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=3 Destination Host Unreachable
+
+--- 10.10.100.4 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2039ms
+pipe 3
+
+
+PING 10.10.100.5 (10.10.100.5) 56(84) bytes of data.
+64 bytes from 10.10.100.5: icmp_seq=1 ttl=64 time=0.069 ms
+64 bytes from 10.10.100.5: icmp_seq=2 ttl=64 time=0.102 ms
+64 bytes from 10.10.100.5: icmp_seq=3 ttl=64 time=0.102 ms
+
+--- 10.10.100.5 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2039ms
+rtt min/avg/max/mdev = 0.069/0.091/0.102/0.015 ms
+
+
+PING 10.10.100.6 (10.10.100.6) 56(84) bytes of data.
+From 10.10.100.5 icmp_seq=1 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=2 Destination Host Unreachable
+From 10.10.100.5 icmp_seq=3 Destination Host Unreachable
+
+--- 10.10.100.6 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2039ms
+pipe 3
+
+
+PING github.com (140.82.113.4) 56(84) bytes of data.
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=1 ttl=50 time=45.3 ms
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=2 ttl=50 time=55.5 ms
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=3 ttl=50 time=52.7 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 45.306/51.190/55.554/4.319 ms
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=113 time=55.7 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=113 time=60.9 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=113 time=50.3 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 50.303/55.668/60.981/4.367 ms

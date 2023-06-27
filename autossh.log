@@ -2938,3 +2938,36 @@
 2023/06/27 08:02:09 autossh[2250]: check on child 2252
 2023/06/27 08:02:09 autossh[2250]: set alarm for 600 secs
 2023/06/27 08:02:09 autossh[2252]: execing /usr/bin/ssh
+2023/06/27 08:12:24 autossh[2250]: timeout polling to accept read connection
+2023/06/27 08:12:24 autossh[2250]: port down, restarting ssh
+2023/06/27 08:12:24 autossh[2250]: checking for grace period, tries = 0
+2023/06/27 08:12:24 autossh[2250]: starting ssh (count 2)
+2023/06/27 08:12:24 autossh[2250]: ssh child pid is 2897
+2023/06/27 08:12:24 autossh[2250]: check on child 2897
+2023/06/27 08:12:24 autossh[2250]: set alarm for 600 secs
+2023/06/27 08:12:24 autossh[2897]: execing /usr/bin/ssh
+2023/06/27 08:22:39 autossh[2250]: timeout polling to accept read connection
+2023/06/27 08:22:39 autossh[2250]: port down, restarting ssh
+2023/06/27 08:22:39 autossh[2250]: checking for grace period, tries = 0
+2023/06/27 08:22:39 autossh[2250]: starting ssh (count 3)
+2023/06/27 08:22:39 autossh[2250]: ssh child pid is 3248
+2023/06/27 08:22:39 autossh[2250]: check on child 3248
+2023/06/27 08:22:39 autossh[2250]: set alarm for 600 secs
+2023/06/27 08:22:39 autossh[3248]: execing /usr/bin/ssh
+2023/06/27 08:29:16 autossh[2250]: check on child 3248
+2023/06/27 08:29:16 autossh[2250]: ssh exited with error status 255; restarting ssh
+2023/06/27 08:29:16 autossh[2250]: expired child, returning 1
+2023/06/27 08:29:16 autossh[2250]: checking for grace period, tries = 0
+2023/06/27 08:29:16 autossh[2250]: starting ssh (count 4)
+2023/06/27 08:29:16 autossh[2250]: ssh child pid is 3734
+2023/06/27 08:29:16 autossh[2250]: check on child 3734
+2023/06/27 08:29:16 autossh[2250]: set alarm for 204 secs
+2023/06/27 08:29:16 autossh[3734]: execing /usr/bin/ssh
+2023/06/27 08:32:55 autossh[2250]: timeout polling to accept read connection
+2023/06/27 08:32:55 autossh[2250]: port down, restarting ssh
+2023/06/27 08:32:55 autossh[2250]: checking for grace period, tries = 0
+2023/06/27 08:32:55 autossh[2250]: starting ssh (count 5)
+2023/06/27 08:32:55 autossh[2250]: ssh child pid is 3850
+2023/06/27 08:32:55 autossh[2250]: check on child 3850
+2023/06/27 08:32:55 autossh[2250]: set alarm for 600 secs
+2023/06/27 08:32:55 autossh[3850]: execing /usr/bin/ssh

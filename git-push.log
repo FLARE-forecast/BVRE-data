@@ -53,3 +53,15 @@ Everything up-to-date
 
 Logs:
 
+
+############################ bjorn - 06/27/23 09:29:19 EST -0500 ############################
+
+Data:
+
+fatal: Unable to create '/data/bvre-platform-data/.git/index.lock': Permission denied
+fatal: Unable to create '/data/bvre-platform-data/.git/index.lock': Permission denied
+error: update_ref failed for ref 'refs/remotes/origin/bvre-platform-data': cannot lock ref 'refs/remotes/origin/bvre-platform-data': Unable to create '/data/bvre-platform-data/.git/refs/remotes/origin/bvre-platform-data.lock': Permission denied
+Everything up-to-date
+
+Logs:
+

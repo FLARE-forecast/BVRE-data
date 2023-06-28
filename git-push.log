@@ -293,3 +293,22 @@ Everything up-to-date
 
 Logs:
 
+[bjorn-logs cd9ca86c] 06/28/23 00:20:01 EST -0500: Logs
+ 2 files changed, 87 insertions(+)
+To github.com:FLARE-forecast/BVRE-data.git
+   3a28a9da..cd9ca86c  bjorn-logs -> bjorn-logs
+
+Completed at 06/28/23 00:20:07 EST
+
+
+############################ bjorn - 06/28/23 00:20:09 EST -0500 ############################
+
+Data:
+
+fatal: Unable to create '/data/bvre-platform-data/.git/index.lock': Permission denied
+fatal: Unable to create '/data/bvre-platform-data/.git/index.lock': Permission denied
+error: update_ref failed for ref 'refs/remotes/origin/bvre-platform-data': cannot lock ref 'refs/remotes/origin/bvre-platform-data': Unable to create '/data/bvre-platform-data/.git/refs/remotes/origin/bvre-platform-data.lock': Permission denied
+Everything up-to-date
+
+Logs:
+

@@ -88,3 +88,12 @@ fatal: Unable to create '/data/bvre-platform-data/.git/gc.pid.lock': Permission 
 Working on: /data/bjorn-logs
 Disk Usage After Git Garbage Collector:
 /dev/sda1                           59G  324M   56G   1% /data
+
+############################ bjorn - 06/28/23 14:13:47 EST -0500 ############################
+
+Disk Usage Before Git Garbage Collector:
+/dev/sda1                           59G  375M   56G   1% /data
+Working on: /data/bvre-platform-data
+Working on: /data/bjorn-logs
+Disk Usage After Git Garbage Collector:
+/dev/sda1                           59G  309M   56G   1% /data

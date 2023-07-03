@@ -954,3 +954,34 @@
 2023/07/02 14:24:47 autossh[1449]: clear alarm timer (0 secs left)
 2023/07/02 14:24:47 autossh[1449]: set alarm for 600 secs
 2023/07/02 14:24:47 autossh[1938]: child of 1449 execing /usr/bin/ssh
+2023/07/02 14:34:47 autossh[1449]: received SIGALRM (end-of-life 0)
+2023/07/02 14:35:02 autossh[1449]: timeout polling to accept read connection
+2023/07/02 14:35:02 autossh[1449]: port down, restarting ssh
+2023/07/02 14:35:02 autossh[1449]: clear alarm timer (0 secs left)
+2023/07/02 14:35:02 autossh[1449]: checking for grace period, tries = 0
+2023/07/02 14:35:02 autossh[1449]: starting ssh (count 4)
+2023/07/02 14:35:02 autossh[1449]: ssh child pid is 2307
+2023/07/02 14:35:02 autossh[1449]: check on child 2307
+2023/07/02 14:35:02 autossh[1449]: clear alarm timer (0 secs left)
+2023/07/02 14:35:02 autossh[1449]: set alarm for 600 secs
+2023/07/02 14:35:02 autossh[2307]: child of 1449 execing /usr/bin/ssh
+2023/07/02 14:41:35 autossh[1449]: check on child 2307
+2023/07/02 14:41:35 autossh[1449]: clear alarm timer (207 secs left)
+2023/07/02 14:41:35 autossh[1449]: set alarm for 207 secs
+2023/07/02 14:41:35 autossh[1449]: signalled to exit
+2023/07/02 14:41:35 autossh[1449]: check on child 2307
+2023/07/02 14:41:35 autossh[1449]: clear alarm timer (207 secs left)
+2023/07/02 14:41:35 autossh[1449]: set alarm for 207 secs
+2023/07/02 14:41:35 autossh[1449]: signalled to exit
+2023/07/02 14:41:35 autossh[1449]: waitpid() not successful: No child processes
+2023/07/02 14:41:35 autossh[1449]: clear alarm timer (207 secs left)
+
+############################ bjorn - 07/02/23 20:12:22 EST -0500 ############################
+
+2023/07/02 20:12:22 autossh[1486]: checking for grace period, tries = 0
+2023/07/02 20:12:22 autossh[1486]: starting ssh (count 1)
+2023/07/02 20:12:22 autossh[1486]: ssh child pid is 1487
+2023/07/02 20:12:22 autossh[1486]: check on child 1487
+2023/07/02 20:12:22 autossh[1486]: clear alarm timer (0 secs left)
+2023/07/02 20:12:22 autossh[1486]: set alarm for 600 secs
+2023/07/02 20:12:22 autossh[1487]: child of 1486 execing /usr/bin/ssh

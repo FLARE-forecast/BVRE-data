@@ -2736,3 +2736,34 @@
 2023/07/13 14:24:50 autossh[1451]: clear alarm timer (0 secs left)
 2023/07/13 14:24:50 autossh[1451]: set alarm for 600 secs
 2023/07/13 14:24:50 autossh[1986]: child of 1451 execing /usr/bin/ssh
+2023/07/13 14:34:50 autossh[1451]: received SIGALRM (end-of-life 0)
+2023/07/13 14:35:05 autossh[1451]: timeout polling to accept read connection
+2023/07/13 14:35:05 autossh[1451]: port down, restarting ssh
+2023/07/13 14:35:05 autossh[1451]: clear alarm timer (0 secs left)
+2023/07/13 14:35:05 autossh[1451]: checking for grace period, tries = 0
+2023/07/13 14:35:05 autossh[1451]: starting ssh (count 4)
+2023/07/13 14:35:05 autossh[1451]: ssh child pid is 2348
+2023/07/13 14:35:05 autossh[1451]: check on child 2348
+2023/07/13 14:35:05 autossh[1451]: clear alarm timer (0 secs left)
+2023/07/13 14:35:05 autossh[1451]: set alarm for 600 secs
+2023/07/13 14:35:05 autossh[2348]: child of 1451 execing /usr/bin/ssh
+2023/07/13 14:41:37 autossh[1451]: check on child 2348
+2023/07/13 14:41:37 autossh[1451]: clear alarm timer (208 secs left)
+2023/07/13 14:41:37 autossh[1451]: set alarm for 208 secs
+2023/07/13 14:41:37 autossh[1451]: signalled to exit
+2023/07/13 14:41:37 autossh[1451]: check on child 2348
+2023/07/13 14:41:37 autossh[1451]: clear alarm timer (208 secs left)
+2023/07/13 14:41:37 autossh[1451]: set alarm for 208 secs
+2023/07/13 14:41:37 autossh[1451]: signalled to exit
+2023/07/13 14:41:37 autossh[1451]: waitpid() not successful: No child processes
+2023/07/13 14:41:37 autossh[1451]: clear alarm timer (208 secs left)
+
+############################ bjorn - 07/13/23 20:12:26 EST -0500 ############################
+
+2023/07/13 20:12:26 autossh[1501]: checking for grace period, tries = 0
+2023/07/13 20:12:26 autossh[1501]: starting ssh (count 1)
+2023/07/13 20:12:26 autossh[1501]: ssh child pid is 1502
+2023/07/13 20:12:26 autossh[1501]: check on child 1502
+2023/07/13 20:12:26 autossh[1501]: clear alarm timer (0 secs left)
+2023/07/13 20:12:26 autossh[1501]: set alarm for 600 secs
+2023/07/13 20:12:26 autossh[1502]: child of 1501 execing /usr/bin/ssh

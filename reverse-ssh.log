@@ -4813,3 +4813,37 @@
 2023/07/26 20:12:28 autossh[1452]: check on child 1453
 2023/07/26 20:12:28 autossh[1452]: clear alarm timer (0 secs left)
 2023/07/26 20:12:28 autossh[1452]: set alarm for 600 secs
+2023/07/26 20:22:28 autossh[1452]: received SIGALRM (end-of-life 0)
+2023/07/26 20:22:43 autossh[1452]: timeout polling to accept read connection
+2023/07/26 20:22:43 autossh[1452]: port down, restarting ssh
+2023/07/26 20:22:43 autossh[1452]: clear alarm timer (0 secs left)
+2023/07/26 20:22:43 autossh[1452]: checking for grace period, tries = 0
+2023/07/26 20:22:43 autossh[1452]: starting ssh (count 2)
+2023/07/26 20:22:43 autossh[1452]: ssh child pid is 1941
+2023/07/26 20:22:43 autossh[1452]: check on child 1941
+2023/07/26 20:22:43 autossh[1452]: clear alarm timer (0 secs left)
+2023/07/26 20:22:43 autossh[1452]: set alarm for 600 secs
+2023/07/26 20:22:43 autossh[1941]: child of 1452 execing /usr/bin/ssh
+2023/07/26 20:32:43 autossh[1452]: received SIGALRM (end-of-life 0)
+2023/07/26 20:32:58 autossh[1452]: timeout polling to accept read connection
+2023/07/26 20:32:58 autossh[1452]: port down, restarting ssh
+2023/07/26 20:32:58 autossh[1452]: clear alarm timer (0 secs left)
+2023/07/26 20:32:58 autossh[1452]: checking for grace period, tries = 0
+2023/07/26 20:32:58 autossh[1452]: starting ssh (count 3)
+2023/07/26 20:32:58 autossh[1452]: ssh child pid is 2154
+2023/07/26 20:32:58 autossh[1452]: check on child 2154
+2023/07/26 20:32:58 autossh[1452]: clear alarm timer (0 secs left)
+2023/07/26 20:32:58 autossh[1452]: set alarm for 600 secs
+2023/07/26 20:32:58 autossh[2154]: child of 1452 execing /usr/bin/ssh
+2023/07/26 20:41:40 autossh[1452]: received signal to exit (15)
+2023/07/26 20:41:40 autossh[1452]: clear alarm timer (78 secs left)
+
+############################ bjorn - 07/27/23 00:12:29 EST -0500 ############################
+
+2023/07/27 00:12:29 autossh[1487]: checking for grace period, tries = 0
+2023/07/27 00:12:29 autossh[1487]: starting ssh (count 1)
+2023/07/27 00:12:29 autossh[1487]: ssh child pid is 1488
+2023/07/27 00:12:29 autossh[1487]: check on child 1488
+2023/07/27 00:12:29 autossh[1487]: clear alarm timer (0 secs left)
+2023/07/27 00:12:29 autossh[1487]: set alarm for 600 secs
+2023/07/27 00:12:29 autossh[1488]: child of 1487 execing /usr/bin/ssh

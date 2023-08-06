@@ -16133,3 +16133,83 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2001ms
 rtt min/avg/max/mdev = 131.788/209.520/355.037/102.975 ms
+
+############################ bjorn - 08/06/23 14:12:32 EST -0500 ############################
+
+ 14:12:32 up 1 min,  0 users,  load average: 0.24, 0.11, 0.04
+
+
+reboot   system boot  5.15.0-75-generi Sun Aug  6 14:11   still running
+reboot   system boot  5.15.0-75-generi Sun Aug  6 08:11 - 08:41  (00:30)
+reboot   system boot  5.15.0-75-generi Sun Aug  6 00:11 - 00:41  (00:30)
+reboot   system boot  5.15.0-75-generi Sat Aug  5 20:11 - 20:41  (00:30)
+reboot   system boot  5.15.0-75-generi Sat Aug  5 14:11 - 14:41  (00:30)
+
+
+
+
+Bus 001 Device 005: ID 1410:9031 Novatel Wireless MiFi USB730L
+
+
+[    3.487479] cdc_ether 1-6:1.0 enx0015ff170646: renamed from eth0
+[    8.170381] cdc_ether 1-6:1.0 enx0015ff170646: unregister 'cdc_ether' usb-0000:00:15.0-6, CDC Ethernet Device
+[    9.145704] rndis_host 1-6:1.0 enx0015ff170646: renamed from eth0
+
+
+[   15.648522] igb 0000:03:00.0 eno1: igb: eno1 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   15.843731] Initializing XFRM netlink socket
+[   17.793529] systemd-journald[23]: Received client request to flush runtime journal.
+[   17.817655] systemd-journald[23]: File /var/log/journal/a390ab7b5da041789c7c8333c3ddc3b9/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[   18.564085] device ovs-system entered promiscuous mode
+[   18.571311] Timeout policy base is empty
+[   18.571320] Failed to associated timeout policy `ovs_test_tp'
+[   18.636697] device eviCIBR6 entered promiscuous mode
+[   18.676435] device appCIBR6 entered promiscuous mode
+[   47.448789] device CIBR6a110007fff entered promiscuous mode
+
+
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2                     2.0G  253M  1.6G  14% /boot
+/dev/mmcblk0p1                     1.1G  6.1M  1.1G   1% /boot/efi
+/dev/sda1                           59G  401M   55G   1% /data
+
+
+Sun Aug  6 14:12:05 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 341 bytes, 89.40Kbyte/sec
+Sun Aug  6 14:12:06 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 339 bytes, 84.93Kbyte/sec
+Sun Aug  6 14:12:07 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 341 bytes, 93.33Kbyte/sec
+Sun Aug  6 14:12:08 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 337 bytes, 107.44Kbyte/sec
+Sun Aug  6 14:12:09 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 340 bytes, 86.71Kbyte/sec
+Sun Aug  6 14:12:10 2023 [pid 877] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 340 bytes, 93.08Kbyte/sec
+Sun Aug  6 14:12:11 2023 [pid 1285] CONNECT: Client "::ffff:10.10.1.1"
+Sun Aug  6 14:12:14 2023 [pid 1284] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Sun Aug  6 14:12:26 2023 [pid 1298] CONNECT: Client "::ffff:10.10.1.1"
+Sun Aug  6 14:12:28 2023 [pid 1297] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+
+
+enx0015ff170646:
+100.92.162.216/28
+
+
+
+
+enp2s0:
+
+
+PING github.com (140.82.112.3) 56(84) bytes of data.
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=1 ttl=50 time=50.8 ms
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=2 ttl=50 time=62.2 ms
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=3 ttl=50 time=59.7 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 50.820/57.554/62.183/4.872 ms
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=65.5 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=58.3 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=54 time=54.2 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 54.239/59.369/65.525/4.664 ms

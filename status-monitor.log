@@ -16758,3 +16758,75 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 3 packets transmitted, 2 received, 33.3333% packet loss, time 2003ms
 rtt min/avg/max/mdev = 118.572/204.892/291.213/86.320 ms
+
+############################ bjorn - 08/08/23 00:19:01 EST -0500 ############################
+
+ 00:19:01 up 7 min,  0 users,  load average: 0.02, 0.11, 0.07
+
+
+reboot   system boot  5.15.0-75-generi Tue Aug  8 00:11   still running
+reboot   system boot  5.15.0-75-generi Mon Aug  7 20:11 - 20:41  (00:30)
+reboot   system boot  5.15.0-75-generi Mon Aug  7 14:11 - 14:43  (00:31)
+reboot   system boot  5.15.0-75-generi Mon Aug  7 08:11 - 08:41  (00:30)
+reboot   system boot  5.15.0-75-generi Mon Aug  7 00:11 - 00:41  (00:30)
+
+
+
+
+Bus 001 Device 006: ID 1410:9031 Novatel Wireless MiFi USB730L
+
+
+[    3.443075] cdc_ether 1-6:1.0 enx0015ff170646: renamed from eth0
+[    8.283102] cdc_ether 1-6:1.0 enx0015ff170646: unregister 'cdc_ether' usb-0000:00:15.0-6, CDC Ethernet Device
+[    9.297123] rndis_host 1-6:1.0 enx0015ff170646: renamed from eth0
+[  436.620258] rndis_host 1-6:1.0 enx0015ff170646: unregister 'rndis_host' usb-0000:00:15.0-6, RNDIS device
+[  437.701099] rndis_host 1-6:1.0 enx0015ff170646: renamed from eth0
+
+
+[  437.620514] usb 1-6: config 1 has no interface number 7
+[  437.621290] usb 1-6: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[  437.621300] usb 1-6: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  437.621303] usb 1-6: Product: MiFi USB730L
+[  437.621306] usb 1-6: Manufacturer: Novatel Wireless
+[  437.621308] usb 1-6: SerialNumber: 0123456789ABCDEF
+[  437.681087] rndis_host 1-6:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-6, RNDIS device, 00:15:ff:17:06:46
+[  437.684555] cdc_acm 1-6:1.12: ttyACM0: USB ACM device
+[  437.686037] hid-generic 0003:1410:9031.0003: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-6/input14
+[  437.701099] rndis_host 1-6:1.0 enx0015ff170646: renamed from eth0
+
+
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2                     2.0G  253M  1.6G  14% /boot
+/dev/mmcblk0p1                     1.1G  6.1M  1.1G   1% /boot/efi
+/dev/sda1                           59G  402M   55G   1% /data
+
+
+Tue Aug  8 00:18:06 2023 [pid 1957] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:18 2023 [pid 1972] CONNECT: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:19 2023 [pid 1971] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:31 2023 [pid 1994] CONNECT: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:34 2023 [pid 1993] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:46 2023 [pid 2021] CONNECT: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:46 2023 [pid 2020] [ftpuser] OK LOGIN: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:48 2023 [pid 2022] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 333 bytes, 94.75Kbyte/sec
+Tue Aug  8 00:18:49 2023 [pid 2024] CONNECT: Client "::ffff:10.10.1.1"
+Tue Aug  8 00:18:51 2023 [pid 2023] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+
+
+enx0015ff170646:
+100.107.161.136/28
+
+
+
+
+enp2s0:
+
+
+ping: github.com: Temporary failure in name resolution
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2056ms
+

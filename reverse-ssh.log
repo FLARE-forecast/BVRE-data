@@ -6615,3 +6615,14 @@
 2023/08/08 00:20:17 autossh[1450]: clear alarm timer (0 secs left)
 2023/08/08 00:20:17 autossh[1450]: set alarm for 600 secs
 2023/08/08 00:20:17 autossh[2234]: child of 1450 execing /usr/bin/ssh
+2023/08/08 00:22:36 autossh[1450]: check on child 2234
+2023/08/08 00:22:36 autossh[1450]: ssh exited with error status 255; restarting ssh
+2023/08/08 00:22:36 autossh[1450]: expired child, returning 1
+2023/08/08 00:22:36 autossh[1450]: clear alarm timer (461 secs left)
+2023/08/08 00:22:36 autossh[1450]: checking for grace period, tries = 0
+2023/08/08 00:22:36 autossh[1450]: starting ssh (count 3)
+2023/08/08 00:22:36 autossh[1450]: ssh child pid is 2345
+2023/08/08 00:22:36 autossh[1450]: check on child 2345
+2023/08/08 00:22:36 autossh[1450]: clear alarm timer (0 secs left)
+2023/08/08 00:22:36 autossh[1450]: set alarm for 600 secs
+2023/08/08 00:22:36 autossh[2345]: child of 1450 execing /usr/bin/ssh

@@ -19841,3 +19841,83 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2001ms
 rtt min/avg/max/mdev = 158.949/791.973/1340.593/486.082 ms
+
+############################ bjorn - 08/16/23 00:12:34 EST -0500 ############################
+
+ 00:12:34 up 1 min,  0 users,  load average: 0.24, 0.11, 0.04
+
+
+reboot   system boot  5.15.0-75-generi Wed Aug 16 00:11   still running
+reboot   system boot  5.15.0-75-generi Tue Aug 15 20:11 - 20:41  (00:30)
+reboot   system boot  5.15.0-75-generi Tue Aug 15 14:11 - 14:41  (00:30)
+reboot   system boot  5.15.0-75-generi Tue Aug 15 08:11 - 08:41  (00:30)
+reboot   system boot  5.15.0-75-generi Tue Aug 15 00:11 - 00:41  (00:30)
+
+
+
+
+Bus 001 Device 005: ID 1410:9031 Novatel Wireless MiFi USB730L
+
+
+[    3.683683] cdc_ether 1-6:1.0 enx0015ff170646: renamed from eth0
+[    8.369899] cdc_ether 1-6:1.0 enx0015ff170646: unregister 'cdc_ether' usb-0000:00:15.0-6, CDC Ethernet Device
+[    9.800679] rndis_host 1-6:1.0 enx0015ff170646: renamed from eth0
+
+
+[   15.278505] Bridge firewalling registered
+[   15.476162] Initializing XFRM netlink socket
+[   15.981662] igb 0000:03:00.0 eno1: igb: eno1 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   17.317392] systemd-journald[23]: Received client request to flush runtime journal.
+[   17.334953] systemd-journald[23]: File /var/log/journal/a390ab7b5da041789c7c8333c3ddc3b9/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[   18.208595] device ovs-system entered promiscuous mode
+[   18.210720] Timeout policy base is empty
+[   18.210730] Failed to associated timeout policy `ovs_test_tp'
+[   18.288453] device eviCIBR6 entered promiscuous mode
+[   18.321741] device appCIBR6 entered promiscuous mode
+
+
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2                     2.0G  253M  1.6G  14% /boot
+/dev/mmcblk0p1                     1.1G  6.1M  1.1G   1% /boot/efi
+/dev/sda1                           59G  425M   55G   1% /data
+
+
+Wed Aug 16 00:11:57 2023 [pid 949] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 342 bytes, 97.34Kbyte/sec
+Wed Aug 16 00:11:58 2023 [pid 949] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 342 bytes, 105.69Kbyte/sec
+Wed Aug 16 00:11:59 2023 [pid 949] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 333 bytes, 92.02Kbyte/sec
+Wed Aug 16 00:12:00 2023 [pid 949] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-data/bvre-waterquality.csv", 331 bytes, 97.69Kbyte/sec
+Wed Aug 16 00:12:01 2023 [pid 1277] CONNECT: Client "::ffff:10.10.1.1"
+Wed Aug 16 00:12:03 2023 [pid 1276] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Wed Aug 16 00:12:16 2023 [pid 1292] CONNECT: Client "::ffff:10.10.1.1"
+Wed Aug 16 00:12:18 2023 [pid 1291] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+Wed Aug 16 00:12:30 2023 [pid 1294] CONNECT: Client "::ffff:10.10.1.1"
+Wed Aug 16 00:12:32 2023 [pid 1293] [ftpuser] FAIL LOGIN: Client "::ffff:10.10.1.1"
+
+
+enx0015ff170646:
+100.117.22.185/30
+
+
+
+
+enp2s0:
+
+
+PING github.com (140.82.114.3) 56(84) bytes of data.
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=1 ttl=50 time=159 ms
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=2 ttl=50 time=90.9 ms
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=3 ttl=50 time=81.8 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 81.848/110.498/158.764/34.327 ms
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=90.7 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=44.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=54 time=66.2 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 44.598/67.167/90.727/18.845 ms

@@ -1,0 +1,13 @@
+FLARE gateway modules and their current status:
+           1. shutdown_scheduler: [0;32m[+] enabled[0m
+           2. startup_notifier: [0;32m[+] enabled[0m
+           3. status_monitor: [0;32m[+] enabled[0m
+           4. git_push: [0;32m[+] enabled[0m
+           5. git_garbage_collector: [0;32m[+] enabled[0m
+           6. health_checks_io: [0;32m[+] enabled[0m
+           7. reverse_ssh: [0;32m[+] enabled[0m
+           8. datalogger_mock_data_generator: [0;31m[-] disabled[0m
+           9. network_interface_monitor: [0;31m[-] disabled[0m
+          10. led_monitor: [0;31m[-] disabled[0m
+          11. lora_radio: [0;31m[-] disabled[0m
+          12. nebula_overlay_network: [0;32m[+] enabled[0m

@@ -16,3 +16,34 @@
 12/14/23 12:40:26 EST -0500 | ########## START ##########
 12/14/23 12:40:26 EST -0500 | Processing: /data/bvre-platform-data
 12/14/23 12:40:26 EST -0500 | On branch bvre-platform-data
+12/14/23 12:40:26 EST -0500 | Your branch is up to date with 'origin/bvre-platform-data'.
+12/14/23 12:40:26 EST -0500 | 
+12/14/23 12:40:26 EST -0500 | nothing to commit, working tree clean
+12/14/23 12:40:26 EST -0500 | Processing: /data/bjorn-logs
+12/14/23 12:40:26 EST -0500 | [bjorn-logs 71ae09f] 12/14/23 12:40:26 EST -0500
+12/14/23 12:40:26 EST -0500 |  3 files changed, 80 insertions(+)
+12/14/23 12:40:27 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git
+12/14/23 12:40:27 EST -0500 |    d6b188b..71ae09f  71ae09f2eb0f39a2c195f7ad0b191fb1be81a96e -> bjorn-logs
+12/14/23 12:40:27 EST -0500 | ##########  END  ##########
+12/14/23 12:44:49 EST -0500 | ########## START ##########
+12/14/23 12:44:49 EST -0500 | Processing: /data/bvre-platform-data
+12/14/23 12:44:56 EST -0500 | [bvre-platform-data 8ce5d56] 12/14/23 12:44:49 EST -0500
+12/14/23 12:44:56 EST -0500 |  1 file changed, 1 insertion(+)
+12/14/23 12:45:03 EST -0500 | remote: warning: See https://gh.io/lfs for more information.        
+12/14/23 12:45:03 EST -0500 | remote: warning: File bvre-waterquality.csv is 71.01 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+12/14/23 12:45:03 EST -0500 | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+12/14/23 12:45:04 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git
+12/14/23 12:45:04 EST -0500 |    5ec1ac2..8ce5d56  8ce5d561c3e0e00fdf0d4bc51cfc4d4eebaa5f32 -> bvre-platform-data
+12/14/23 12:45:04 EST -0500 | Processing: /data/bjorn-logs
+12/14/23 12:45:04 EST -0500 | fatal: detected dubious ownership in repository at '/data/bjorn-logs'
+12/14/23 12:45:04 EST -0500 | To add an exception for this directory, call:
+12/14/23 12:45:04 EST -0500 | 
+12/14/23 12:45:04 EST -0500 | 	git config --global --add safe.directory /data/bjorn-logs
+12/14/23 12:52:50 EST -0500 | ########## START ##########
+12/14/23 12:52:50 EST -0500 | Processing: /data/bvre-platform-data
+12/14/23 12:52:56 EST -0500 | [bvre-platform-data 2b640e5] 12/14/23 12:52:50 EST -0500
+12/14/23 12:52:56 EST -0500 |  1 file changed, 457 insertions(+), 1 deletion(-)
+12/14/23 12:53:07 EST -0500 | remote: warning: See https://gh.io/lfs for more information.        
+12/14/23 12:53:07 EST -0500 | remote: warning: File bvre-waterquality.csv is 71.16 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+12/14/23 12:53:07 EST -0500 | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+12/14/23 12:53:07 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git

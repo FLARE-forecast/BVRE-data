@@ -2741,3 +2741,34 @@
 2023/12/31 04:27:06 autossh[5183]: check on child 5186
 2023/12/31 04:27:06 autossh[5183]: clear alarm timer (0 secs left)
 2023/12/31 04:27:06 autossh[5183]: set alarm for 600 secs
+2023/12/31 04:37:06 autossh[5183]: received SIGALRM (end-of-life 0)
+2023/12/31 04:37:21 autossh[5183]: timeout polling to accept read connection
+2023/12/31 04:37:21 autossh[5183]: port down, restarting ssh
+2023/12/31 04:37:21 autossh[5183]: clear alarm timer (0 secs left)
+2023/12/31 04:37:21 autossh[5183]: checking for grace period, tries = 0
+2023/12/31 04:37:21 autossh[5183]: starting ssh (count 2)
+2023/12/31 04:37:21 autossh[5183]: ssh child pid is 10627
+2023/12/31 04:37:21 autossh[5183]: check on child 10627
+2023/12/31 04:37:21 autossh[5183]: clear alarm timer (0 secs left)
+2023/12/31 04:37:21 autossh[5183]: set alarm for 600 secs
+2023/12/31 04:37:21 autossh[10627]: child of 5183 execing /usr/bin/ssh
+2023/12/31 04:47:21 autossh[5183]: received SIGALRM (end-of-life 0)
+2023/12/31 04:47:36 autossh[5183]: timeout polling to accept read connection
+2023/12/31 04:47:36 autossh[5183]: port down, restarting ssh
+2023/12/31 04:47:36 autossh[5183]: clear alarm timer (0 secs left)
+2023/12/31 04:47:36 autossh[5183]: checking for grace period, tries = 0
+2023/12/31 04:47:36 autossh[5183]: starting ssh (count 3)
+2023/12/31 04:47:37 autossh[5183]: ssh child pid is 14742
+2023/12/31 04:47:37 autossh[5183]: check on child 14742
+2023/12/31 04:47:37 autossh[5183]: clear alarm timer (0 secs left)
+2023/12/31 04:47:37 autossh[5183]: set alarm for 600 secs
+2023/12/31 04:47:37 autossh[14742]: child of 5183 execing /usr/bin/ssh
+2023/12/31 04:55:49 autossh[5183]: received signal to exit (15)
+2023/12/31 04:55:49 autossh[5183]: clear alarm timer (108 secs left)
+2023/12/31 08:27:08 autossh[5163]: checking for grace period, tries = 0
+2023/12/31 08:27:08 autossh[5163]: starting ssh (count 1)
+2023/12/31 08:27:08 autossh[5163]: ssh child pid is 5167
+2023/12/31 08:27:08 autossh[5163]: check on child 5167
+2023/12/31 08:27:08 autossh[5163]: clear alarm timer (0 secs left)
+2023/12/31 08:27:08 autossh[5163]: set alarm for 600 secs
+2023/12/31 08:27:08 autossh[5167]: child of 5163 execing /usr/bin/ssh

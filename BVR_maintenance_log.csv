@@ -1,0 +1,84 @@
+Reservoir; Site; DataStream; TIMESTAMP_start; TIMESTAMP_end; start_parameter;end_parameter;flag;update_value;adjustment_code;notes
+BVR;50;BVRplatform; 2020-06-18 17:50:00 EST; 2020-10-05 12:00:00 EST; ThermistorTemp_C_11; ThermistorTemp_C_13;1;NA;NA; the bottom three sensors were not programed to be read into the datafile
+BVR;50;BVRplatform; 2020-06-25 12:50:00 EST; 2020-06-25 14:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-07-02 12:50:00 EST; 2020-07-02 13:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-07-11 09:00:00 EST; 2020-07-11 09:20:00 EST; ThermistorTemp_C_5;NA;5;NA;NA;questionable temperature values
+BVR;50;BVRplatform; 2020-07-13 02:20:00 EST; 2020-07-13 02:40:00 EST; ThermistorTemp_C_5;NA;5;NA;NA;questionable temperature values
+BVR;50;BVRplatform; 2020-07-23 12:12:00 EST; 2020-07-23 12:21:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-08-01 12:40:00 EST; 2020-08-01 12:50:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA;NA; questionable EXO values
+BVR;50;BVRplatform; 2020-08-06 11:29:00 EST; 2020-08-06 11:41:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-08-13 10:40:00 EST; 2020-08-13 11:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-08-17 10:20:00 EST; 2020-08-17 11:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-08-20 09:40:00 EST; 2020-08-20 10:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-08-26 11:25:00 EST; 2020-08-26 11:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-09-09 09:30:00 EST; 2020-09-09 10:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2020-09-16 11:15:00 EST; 2020-09-16 13:10:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated DO sensors and Depth to current air pressure
+BVR;50;BVRplatform; 2020-10-01 15:20:00 EST; 2020-10-01 17:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-10-05 09:10:00 EST; 2020-10-05 11:50:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; reprogramed the data logger to read the bottom three sensors so no data recorded
+BVR;50;BVRplatform; 2020-10-14 10:55:00 EST; 2020-10-14 11:10:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2020-10-22 08:50:00 EST; 2020-10-22 09:20:00 EST; RDO_mgL_6; RDOsat_percent_6;5;NA;NA; questionable DO values with no one at the reservoir
+BVR;50;BVRplatform; 2020-10-26 12:10:00 EST; 2020-10-26 13:50:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated DO sensor
+BVR;50;BVRplatform; 2020-10-29 10:10:00 EST; 2020-10-29 12:00:00 EST; EXOChla_RFU_1.5; EXOBGAPC_ugL_1.5;2;NA;NA; high chla and phyco values removed
+BVR;50;BVRplatform; 2020-10-26 12:10:00 EST; 2020-10-30 09:40:00 EST; LvlPressure_psi_13; LvlTemp_C_13;7;NA;NA; wire into the data logger came loose and did not record data
+BVR;50;BVRplatform; 2020-11-10 11:28:00 EST; 2020-11-10 12:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2020-11-12 20:30:00 EST; 2020-11-12 20:40:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;5;NA;NA; questionable high values on conductivity sensor
+BVR;50;BVRplatform; 2020-10-22 09:00:00 EST; 2020-12-02 11:30:00 EST; ThermistorTemp_C_1;NA;1;NA;NA; no thermoster connected took thermoster from BVRplatform to replace a broken one at FCR
+BVR;50;BVRplatform; 2020-12-28 03:15:00 EST; 2020-12-28 03:25:00 EST; EXOChla_RFU_1.5; EXOBGAPC_ugL_1.5;2;NA;NA; high chla and phyco values removed
+BVR;50;BVRplatform; 2021-01-12 04:10:00 EST; 2021-01-12 04:10:00 EST; LvlPressure_psi_13;NA;5;NA;NA; low psi value 
+BVR;50;BVRplatform; 2021-01-28 08:00:00 EST; 2021-01-28 08:00:00 EST; LvlPressure_psi_13;NA;5;NA;NA; low psi value
+BVR;50;BVRplatform; 2021-02-03 06:30:00 EST; 2021-02-03 06:40:00 EST; LvlPressure_psi_13;NA;5;NA;NA; low psi value
+BVR;50;BVRplatform; 2021-03-08 11:28:00 EST; 2021-03-08 13:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated DO sensors. EXO Buoy was underwater so repositioned it
+BVR;50;BVRplatform; 2021-04-05 11:20:00 EST; 2021-04-05 13:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated fDOM and depth sensor and moved thermistors so pressure sensor is at the bottom and stretched out top thermistor
+BVR;50;BVRplatform; 2021-04-05 13:30:00 EST; 2021-04-05 13:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning add turbidity and TSS and made a new dataframe and Factory reset the depth sensor and calibrated fDOM to 0 with DI water
+BVR;50;BVRplatform; 2021-03-08 13:40:00 EST; 2021-04-16 09:10:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;5;NA;NA; decrease in sp. cond which lines up with when people were at the reservoir but these are the only two low variables
+BVR;50;BVRplatform; 2021-04-16 09:00:00 EST; 2021-04-16 10:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA;NA; Repositioned the EXO buoy to make sure it was floating
+BVR;50;BVRplatform; 2021-05-03 10:10:00 EST; 2021-05-03 10:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2021-05-14 10:40:00 EST; 2021-05-14 11:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-05-14 11:00:00 EST; 2021-05-14 15:20:00 EST; RDO_mgL_13; RDOsat_percent_13;1;NA;NA; No DO in the reservoir but sensor is measuring it so take out values until they are 0 
+BVR;50;BVRplatform; 2021-05-31 09:10:00 EST; 2021-05-31 09:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-06-28 11:00:00 EST; 2021-06-28 11:15:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2021-07-12 14:20:00 EST; 2021-07-12 14:50:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and replaced EXO DO cap SN21D103611
+BVR;50;BVRplatform; 2021-07-12 17:00:00 EST; 2021-07-12 17:15:00 EST;EXODOsat_percent_1.5;NA;5;NA;NA; DO cap was changed and DO sat increased. This is a note just flagging that
+BVR;50;BVRplatform; 2021-08-09 11:00:00 EST; 2021-08-09 11:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-08-23 09:40:00 EST; 2021-08-23 10:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-09-06 10:20:00 EST; 2021-09-06 10:50:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and look if it was a calibration too
+BVR;50;BVRplatform; 2021-10-12 12:00:00 EST; 2021-10-12 12:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-10-12 12:40:00 EST; 2021-10-12 21:40:00 EST; RDO_mgL_13; RDOsat_percent_13;1;NA;NA; No DO in reservoir but sensor is measuring it so take out values until they are 0
+BVR;50;BVRplatform; 2021-10-26 11:50:00 EST; 2021-10-26 12:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning changed RDO DO caps and took off antifouling guards
+BVR;50;BVRplatform; 2021-11-09 12:20:00 EST; 2021-11-09 12:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and let out more cable for the EXO so depth changed
+BVR;50;BVRplatform; 2021-11-22 11:00:00 EST; 2021-11-22 11:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-12-06 11:00:00 EST; 2021-12-06 11:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2021-12-06 11:00:00 EST; 2022-01-26 15:10:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA;NA; EXO returned for maintenance and calibration
+BVR;50;BVRplatform; 2022-01-26 15:10:00 EST; 2022-12-16 11:40:00 EST; EXOCond_uScm_1.5;NA;6;NA; (bvrdata[Time, maintenance_cols]*0.69)+4.99; correcting conductivity with linear realtionship with CTD Cond
+BVR;50;BVRplatform; 2022-01-26 15:10:00 EST; 2022-12-16 11:40:00 EST; EXOSpCond_uScm_1.5;NA;6;NA; bvrdata[Time, 'EXOCond_uScm_1.5']/(1+((bvrdata[Time, 'EXOTemp_C_1.5']-25)*0.02)); correcting spcond with cond
+BVR;50;BVRplatform; 2022-01-26 15:10:00 EST; 2022-12-16 11:40:00 EST; EXOTDS_mgL_1.5;NA;6;NA;"bvrdata[Time, 'EXOSpCond_uScm_1.5']*0.65"; correcting TDS from SpCond 
+BVR;50;BVRplatform; 2022-03-22 11:30:00 EST; 2022-03-22 12:50:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrate YSI DO and RDO sensors
+BVR;50;BVRplatform; 2022-04-12 14:40:00 EST; 2022-04-12 15:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2022-05-02 10:50:00 EST; 2022-05-02 11:10:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
+BVR;50;BVRplatform; 2022-05-09 11:10:00 EST; 2022-05-09 11:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-05-09 11:30:00 EST; 2022-05-12 13:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA;NA; EXO in the wrong position so removed data
+BVR;50;BVRplatform; 2022-05-12 12:20:00 EST; 2022-05-12 13:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string moved and EXO repositioned
+BVR;50;BVRplatform; 2022-05-23 12:10:00 EST; 2022-05-23 12:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-06-20 12:10:00 EST; 2022-06-20 13:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-07-15 11:10:00 EST; 2022-07-15 12:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-09-05 08:40:00 EST; 2022-09-05 10:40:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibration and reposition to 1.5m
+BVR;50;BVRplatform; 2022-09-19 09:30:00 EST; 2022-09-19 10:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-10-11 10:50:00 EST; 2022-10-11 11:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-10-24 11:00:00 EST; 2022-10-24 11:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2022-11-01 16:10:00 EST; 2022-11-01 16:10:00 EST; EXOChla_RFU_1.5; EXOBGAPC_ugL_1.5;2;NA;NA; high chla and phyco values removed 
+BVR;50;BVRplatform; 2022-12-16 11:00:00 EST; 2022-12-16 11:40:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA;NA; EXO up and replaced with the EXO2 from CCR after it was calibrated
+BVR;50;BVRplatform; 2023-01-24 20:55:00 EST; 2023-01-24 21:05:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;2;NA; NA; very strange values for all sensors
+BVR;50;BVRplatform; 2023-03-21 09:55:00 EST; 2023-03-21 10:25:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning and switching EXO2 back from FCR to BVR
+BVR;50;BVRplatform; 2023-04-10 09:35:00 EST; 2023-04-10 09:45:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2023-06-05 11:45:00 EST; 2023-06-05 11:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-06-08 18:15:00 EST; 2023-06-08 18:25:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;2;NA; NA; all sensors out of position
+BVR;50;BVRplatform; 2023-06-19 09:45:00 EST; 2023-06-19 09:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-06-26 09:45:00 EST; 2023-06-26 09:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-07-31 10:25:00 EST; 2023-07-31 10:35:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-08-22 10:15:00 EST; 2023-08-22 10:25:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-09-12 10:35:00 EST; 2023-09-12 10:55:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2023-09-18 10:55:00 EST; 2023-09-18 11:05:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-09-26 11:15:00 EST; 2023-09-26 11:25:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-10-06 14:55:00 EST; 2023-10-06 15:25:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
+BVR;50;BVRplatform; 2023-10-24 09:45:00 EST; 2023-10-24 11:05:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-12-18 11:35:00 EST; 2023-12-18 12:15:00 EST; EXOTemp_C_1.5; EXOWiper_V;2;NA; NA; EXO2 float broke and EXO was deeper than usual-fixed and put EXO2 back at correct depth

@@ -1,8 +1,16 @@
-qaqc_bvr <- function(data_file, data2_file, 
-                     maintenance_file,  output_file, start_date, end_date)
+qaqc_bvr <- function(
+            data_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/bvre-waterquality.csv',
+            data2_file = 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv',
+            maintenance_file = './Data/DataAlreadyUploadedToEDI/EDIProductionFiles/MakeEML_BVRplatform/BVR_maintenance_log.csv',  
+            output_file, 
+            start_date = NULL, 
+            end_date = NULL)
 {
   
-  #bvrdata=data_file
+  # Call the source function to get the depths
+  #source("./Data/DataAlreadyUploadedToEDI/EDIProductionFiles/MakeEML_BVRplatform/2023/find_depths.R")
+  source_url("https://raw.githubusercontent.com/LTREB-reservoirs/vera4cast/main/targets/target_functions/find_depths.R")
+  
   #change column names
   BVRDATA_COL_NAMES = c("DateTime", "RECORD", "CR6Battery_V", "CR6Panel_Temp_C", "ThermistorTemp_C_1",
                         "ThermistorTemp_C_2", "ThermistorTemp_C_3", "ThermistorTemp_C_4", "ThermistorTemp_C_5",
@@ -17,253 +25,262 @@ qaqc_bvr <- function(data_file, data2_file,
   
   
   #Adjustment period of time to stabilization after cleaning in seconds
-  ADJ_PERIOD = 2*60*60 
+  ADJ_PERIOD_DO = 2*60*60 
+  ADJ_PERIOD_Temp = 30*60
   
-  #read in data from obs1 above
+  # The if statement is so we can use the function in the visual inspection script if we need
+  # to qaqc historical data files from EDI
   
-  # read bvrwalk data and maintenance log
-  # NOTE: date-times throughout this script are processed as UTC
-  # read_csv was not working for me on 01 SEP 22 so went to read.csv
-  # Maybe it will work again 
-  # bvrdata1 <- read_csv(data_file, skip=1, col_names = BVRDATA_COL_NAMES,
-  #col_types = cols(.default = col_double(), DateTime = col_datetime()))
+  if(is.character(data_file)){
+    # read catwalk data and maintenance log
+    # NOTE: date-times throughout this script are processed as UTC
+    bvrdata <- read_csv(data_file, skip = 1, col_names = BVRDATA_COL_NAMES,
+                        col_types = cols(.default = col_double(), DateTime = col_datetime()))
+  } else {
+    
+    bvrdata <- data_file
+  }
   
-  bvrdata1 <- read.csv(data_file, skip=1, col.names = BVRDATA_COL_NAMES)
+  #read in manual data from the data logger to fill in missing gaps
   
-  bvrdata2<-read_csv(data2_file, skip=1, col_names = BVRDATA_COL_NAMES)
+  if(is.null(data2_file)){
+    
+    # If there is no manual files then set data2_file to NULL
+    bvrdata2 <- NULL
+    
+  } else{
+    
+    bvrdata2 <- read_csv(data2_file, skip = 1, col_names = BVRDATA_COL_NAMES,
+                         col_types = cols(.default = col_double(), DateTime = col_datetime()))
+  }
+  
+  # Bind the streaming data and the manual downloads together so we can get any missing observations 
+  bvrdata <-bind_rows(bvrdata,bvrdata2)%>%
+    drop_na(DateTime)
+  
+  # There are going to be lots of duplicates so get rid of them
+  bvrdata <- bvrdata[!duplicated(bvrdata$DateTime), ]
+  
+  #reorder 
+  bvrdata <- bvrdata[order(bvrdata$DateTime),]
+  
+  # Take out the EXO_Date and EXO_Time column because we don't publish them 
+  
+  if("EXO_Date" %in% colnames(bvrdata)){
+    bvrdata <- bvrdata%>%select(-c(EXO_Date, EXO_Time))
+  }
+  
+  # convert NaN to NAs in the dataframe
+  bvrdata[sapply(bvrdata, is.nan)] <- NA
+  
   
   ## read in maintenance file 
-  log_read <- read_csv(maintenance_file, col_types = cols(
+  log <- read_csv2(maintenance_file, col_types = cols(
     .default = col_character(),
     TIMESTAMP_start = col_datetime("%Y-%m-%d %H:%M:%S%*"),
     TIMESTAMP_end = col_datetime("%Y-%m-%d %H:%M:%S%*"),
     flag = col_integer()
   ))
   
-  log <- log_read
-  
   ### identify the date subsetting for the data
   if (!is.null(start_date)){
-    bvrdata1 <- bvrdata1 %>% 
+    bvrdata <- bvrdata %>% 
       filter(DateTime >= start_date)
     bvrdata2 <- bvrdata2 %>% 
       filter(DateTime >= start_date)
-    log <- log %>% 
-      filter(TIMESTAMP_start >= start_date)
+      log <- log %>% 
+     filter(TIMESTAMP_start <= end_date)
   }
   
   if(!is.null(end_date)){
-    bvrdata1 <- bvrdata1 %>% 
+    bvrdata <- bvrdata %>% 
       filter(DateTime <= end_date)
     bvrdata2 <- bvrdata2 %>% 
       filter(DateTime <= end_date)
     log <- log %>% 
-      filter(TIMESTAMP_end <= end_date)
+    filter(TIMESTAMP_end >= start_date)
+    
   }
   
   if (nrow(log) == 0){
     log <- log_read
   }
   
-  #bad headers so remove them
+  ### add Reservoir and Site columns
+  bvrdata$Reservoir="BVR"
+  bvrdata$Site=50
   
-  bvrdata1<-bvrdata1%>%filter(grepl("^20", DateTime)) #keep only the right TIMESTAMP rows 
+
+  #####Create Flag columns#####
   
-  bvrdata1$DateTime=ymd_hms(bvrdata1$DateTime)#convert the DateTime column
-  
-  bvrdata1[,-1] <- sapply(bvrdata1[, -1], as.numeric)#converts all columns to numeric minus the DateTime
-  
-  
-  bvrdata= bvrdata1%>%
-    rbind(.,bvrdata2)%>% #combine manual and most recent files
-    drop_na(DateTime)%>% #take out the rows with blank timestamps
-    distinct(DateTime, .keep_all= TRUE) #taking out the duplicate values 
-  
-  #bvrdata$DateTime<-as.POSIXct(bvrdata$DateTime,format = "%Y-%m-%d %H:%M:%S", tz="UTC")
-  #after$DateTime<-as.POSIXct(strptime(after$DateTime, "%Y-%m-%d %H:%M"), tz = "EST")
-  
-  
-  #######Chekc for gaps and missing data####################################################################################################################
-  #order data by timestamp
-  BVRdata2=bvrdata
-  BVRdata2=BVRdata2[order(BVRdata2$DateTime),]
-  BVRdata2$DOY=yday(BVRdata2$DateTime)
-  
-  
-  #check record for gaps
-  #daily record gaps by day of year
-  for(i in 2:nrow(BVRdata2)){ #this identifies if there are any data gaps in the long-term record, and where they are by record number
-    if(BVRdata2$DOY[i]-BVRdata2$DOY[i-1]>1){
-      print(c(BVRdata2$DateTime[i-1],BVRdata2$DateTime[i]))
-    }
-  }
-  BVR2=BVRdata2%>%filter(!is.na(RECORD))
-  for(i in 2:length(BVR2$RECORD)){ #this identifies if there are any data gaps in the long-term record, and where they are by record number
-    if(abs(BVR2$RECORD[i]-BVR2$RECORD[i-1])>1){
-      print(c(BVR2$DateTime[i-1],BVR2$DateTime[i]))
-    }
-  }
-  ########Create Flag columns####################################################################################################################### 
-  
-  # Change NaN into NA
-  bvrdata[sapply(bvrdata, is.nan)] <- NA
   
   # for loop to create flag columns
-  for(j in c(5:23,26:46)) { #for loop to create new columns in data frame
-    bvrdata[,paste0("Flag_",colnames(bvrdata[j]))] <- 0 #creates flag column + name of variable
-    bvrdata[c(which(is.na(bvrdata[,j]))),paste0("Flag_",colnames(bvrdata[j]))] <-7 #puts in flag 7 if value not collected
+  for(j in colnames(bvrdata%>%select(ThermistorTemp_C_1:LvlTemp_C_13))) { #for loop to create new columns in data frame
+    bvrdata[,paste0("Flag_",j)] <- 0 #creates flag column + name of variable
+    bvrdata[c(which(is.na(bvrdata[,j]))),paste0("Flag_",j)] <-7 #puts in flag 7 if value not collected
   }
   #update 
-  for(k in c(18:19,21:22,27:39)) { #for loop to create new columns in data frame
-    bvrdata[c(which((bvrdata[,k]<0))),paste0("Flag_",colnames(bvrdata[k]))] <- 3
+  for(k in colnames(bvrdata%>%select(RDO_mgL_6, RDOsat_percent_6,RDO_mgL_13, RDOsat_percent_13,EXOCond_uScm_1.5:EXOTurbidity_FNU_1.5))) { #for loop to create new columns in data frame
+    bvrdata[c(which((bvrdata[,k]<0))),paste0("Flag_",k)] <- 3
     bvrdata[c(which((bvrdata[,k]<0))),k] <- 0 #replaces value with 0
   }
   
-  ##########Maintenance Log QAQC############ 
   
-  #Read in the maintneance log 
+    
   
-  # log <- read_csv(maintenance_file, col_types = cols(
-  #   .default = col_character(),
-  #   TIMESTAMP_start = col_datetime("%Y-%m-%d %H:%M:%S%*"),
-  #   TIMESTAMP_end = col_datetime("%Y-%m-%d %H:%M:%S%*"),
-  #   flag = col_integer()
-  # )) 
+  #####Maintenance Log QAQC############ 
   
-  # modify catdata based on the information in the log  
   
-  #Filter out the 7 flag because it is already NAs in the dataset and not maintenance
-  log=log%>%filter(flag!=7)
+  # modify bvrdata based on the information in the log   
   
-  # modify bvrdata based on the information in the log
   for(i in 1:nrow(log))
   {
-    # get start and end time of one maintenance event
+    ### get start and end time of one maintenance event
     start <- log$TIMESTAMP_start[i]
     end <- log$TIMESTAMP_end[i]
     
     
-    # get indices of columns affected by maintenance
-    if(grepl("^\\d+$", log$colnumber[i])) # single num
-    {
-      maintenance_cols <- intersect(c(2:46), as.integer(log$colnumber[i]))
-    }
+    ### Get the Reservoir
     
-    else if(grepl("^c\\(\\s*\\d+\\s*(;\\s*\\d+\\s*)*\\)$", log$colnumber[i])) # c(x;y;...)
-    {
-      maintenance_cols <- intersect(c(2:46), as.integer(unlist(regmatches(log$colnumber[i],
-                                                                          gregexpr("\\d+", log$colnumber[i])))))
-    }
-    else if(grepl("^c\\(\\s*\\d+\\s*:\\s*\\d+\\s*\\)$", log$colnumber[i])) # c(x:y)
-    {
-      bounds <- as.integer(unlist(regmatches(log$colnumber[i], gregexpr("\\d+", log$colnumber[i]))))
-      maintenance_cols <- intersect(c(2:46), c(bounds[1]:bounds[2]))
-    }
-    else
-    {
-      warning(paste("Could not parse column colnumber in row", i, "of the maintenance log. Skipping maintenance for",
-                    "that row. The value of colnumber should be in one of three formats: a single number (\"47\"), a",
-                    "semicolon-separated list of numbers in c() (\"c(47;48;49)\"), or a range of numbers in c() (\"c(47:74)\").",
-                    "Other values (even valid calls to c()) will not be parsed properly."))
-      next
-    }
+    Reservoir <- log$Reservoir[i]
     
-    # remove EXO_Date and EXO_Time columns from the list of maintenance columns, because they will be deleted later
-    maintenance_cols <- setdiff(maintenance_cols, c(24, 25))
+    ### Get the Site
     
-    if(length(maintenance_cols) == 0)
-    {
-      warning(paste("Did not parse any valid data columns in row", i, "of the maintenance log. Valid columns have",
-                    "indices 2 through 46, excluding 24 and 25, which are deleted by this script. Skipping maintenance for that row."))
-      next
-    }
+    Site <- log$Site[i]
     
-    #index the Flag columns
-    if(grepl("^\\d+$", log$flagcol[i])) # single num
-    {
-      flag_cols <- intersect(c(47:86), as.integer(log$flagcol[i]))
-      
-    }
-    else if(grepl("^c\\(\\s*\\d+\\s*(;\\s*\\d+\\s*)*\\)$", log$flagcol[i])) # c(x;y;...)
-    {
-      flag_cols <- intersect(c(47:86), as.integer(unlist(regmatches(log$flagcol[i],
-                                                                    gregexpr("\\d+", log$flagcol[i])))))
-    }
-    
-    else if(grepl("^c\\(\\s*\\d+\\s*:\\s*\\d+\\s*\\)$", log$flagcol[i])) # c(x:y)
-    {
-      bounds_flag <- as.integer(unlist(regmatches(log$flagcol[i], gregexpr("\\d+", log$flagcol[i]))))
-      flag_cols <- intersect(c(47:86), c(bounds_flag[1]:bounds_flag[2]))
-    }
-    else
-    {
-      warning(paste("Could not parse column flagcol in row", i, "of the maintenance log. Skipping maintenance for",
-                    "that row. The value of colnumber should be in one of three formats: a single number (\"47\"), a",
-                    "semicolon-separated list of numbers in c() (\"c(47;48;49)\"), or a range of numbers in c() (\"c(47:74)\").",
-                    "Other values (even valid calls to c()) will not be parsed properly."))
-      next
-    }
-    
-    #Get the Maintenance Flag 
+    ### Get the Maintenance Flag 
     
     flag <- log$flag[i]
     
-    # replace relevant data with NAs and set flags while maintenance was in effect
-    if(flag==6 && maintenance_cols==27){# correct bad temp data
-      # Correct conductivity with a linear realationship to the CTD
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOCond_uScm_1.5"]<- (bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOCond_uScm_1.5"]*0.69)+4.99
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "Flag_EXOCond_uScm_1.5"] <- flag
-    }else if (flag==6 && maintenance_cols==28){
-      # Correct Specific Conductivity based on specific conductivity 
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOSpCond_uScm_1.5"]<- bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOCond_uScm_1.5"]/(1+((bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOTemp_C_1.5"]-25)*0.02))
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "Flag_EXOSpCond_uScm_1.5"] <- flag
-    }else if (flag==6 && maintenance_cols==29){
-      # Correct TDS based on corrected specific conductivity
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOTDS_mgL_1.5"]<-bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "EXOSpCond_uScm_1.5"]*0.65
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, "Flag_EXOTDS_mgL_1.5"]<-flag
-    }else if (flag==5){
+    ### Get the update_value that an observation will be changed to 
+    
+    update_value <- as.numeric(log$update_value[i])
+    
+    ### Get the adjustment_code for a column to fix a value. If it is not an NA
+    
+    if(flag==6){
+      # These update_values are expressions so they should not be set to numeric
+      adjustment_code <- log$adjustment_code[i]
       
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, flag_cols] <- flag
-    }
-    else{
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, maintenance_cols] <- NA
-      bvrdata[bvrdata$DateTime >= start & bvrdata$DateTime <= end, flag_cols] <- flag
-      next
+    }else{
+      adjustment_code <- as.numeric(log$adjustment_code[i])
     }
     
-    #Add the 2 hour adjustment for DO 
-    if (log$colnumber[i]=="c(1:46)" & flag==1){
-      DO_col=c("RDO_mgL_6", "RDOsat_percent_6", "RDO_mgL_13","RDOsat_percent_13","EXODOsat_percent_1.5", "EXODO_mgL_1.5")
-      DO_flag_col=c("Flag_RDO_mgL_6", "Flag_RDOsat_percent_6", "Flag_RDO_mgL_13","Flag_RDOsat_percent_13","Flag_EXODOsat_percent_1.5", "Flag_EXODO_mgL_1.5")
-      bvrdata[bvrdata$DateTime>start&bvrdata$DateTime<(end+ADJ_PERIOD),DO_col] <- NA
-      bvrdata[bvrdata$DateTime>start&bvrdata$DateTime<(end+ADJ_PERIOD),DO_flag_col] <- flag
+    
+    ### Get the names of the columns affected by maintenance
+ 
+    colname_start <- log$start_parameter[i]
+    colname_end <- log$end_parameter[i]
+    
+    ### if it is only one parameter parameter then only one column will be selected
+    
+    if(is.na(colname_start)){
+      
+      maintenance_cols <- colnames(bvrdata%>%select(any_of(colname_end))) 
+      
+    }else if(is.na(colname_end)){
+      
+      maintenance_cols <- colnames(bvrdata%>%select(any_of(colname_start)))
+      
+    }else{
+      maintenance_cols <- colnames(bvrdata%>%select(c(colname_start:colname_end)))
     }
-    else if(log$colnumber[i] %in% c(" 18"," 19") & flag==1){
-      DO_col=c(RDO_mgL_6, RDOsat_percent_6)
-      DO_flag_col=c(Flag_RDO_mgL_6, Flag_RDOsat_percent_6)
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<end[i]+ADJ_PERIOD,DO_col] <- NA
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<end[i]+ADJ_PERIOD,DO_flag_col] <- flag
+   
+    
+    ### Get the name of the flag column
+    
+    flag_cols <- paste0("Flag_", maintenance_cols)
+    
+    
+    ### Getting the start and end time vector to fix. If the end time is NA then it will put NAs 
+    # until the maintenance log is updated
+    
+    if(is.na(end)){
+      # If there the maintenance is on going then the columns will be removed until
+      # and end date is added
+      Time <- bvrdata$DateTime >= start
+      
+    }else if (is.na(start)){
+      # If there is only an end date change columns from beginning of data frame until end date
+      Time <- bvrdata$DateTime <= end
+      
+    }else {
+      
+      Time <- bvrdata$DateTime >= start & bvrdata$DateTime <= end
       
     }
-    else if(log$colnumber[i] %in% c(" 21"," 22") & flag==1){
-      DO_col=c(RDO_mgL_13,RDOsat_percent_13)
-      DO_flag_col=c(Flag_RDO_mgL_13,Flag_RDOsat_percent_13)
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<end[i]+ADJ_PERIOD,DO_col] <- NA
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<end[i]+ADJ_PERIOD,DO_flag_col] <- flag
+    
+    # replace relevant data with NAs and set flags while maintenance was in effect
+    if (flag==1){
+      # The observations are changed to NA for maintenance or other issues found in the maintenance log
+      bvrdata[Time, maintenance_cols] <- NA
+      bvrdata[Time, flag_cols] <- flag
       
-    }
-    else if (log$colnumber[i] %in% c(" c(26:44)"," 30"," 31") & flag==1){
-      DO_col=c(EXODOsat_percent_1.5, EXODO_mgL_1.5)
-      DO_flag_col=c(Flag_EXODOsat_percent_1.5, Flag_EXODO_mgL_1.5)
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<(end[i]+ADJ_PERIOD),DO_col] <- NA
-      bvrdata[bvrdata$DateTime>start[i]&bvrdata$DateTime<(end[i]+ADJ_PERIOD),DO_flag_col] <-1
+    } else if (flag==2){
       
-    }
-    else{
-      warning(paste("No DO time to adjust in row",i,"."))
+      # The observations are changed to NA for maintenance or other issues found in the maintenance log
+      bvrdata[Time, maintenance_cols] <- NA
+      bvrdata[Time, flag_cols] <- flag
       
+      ## Flag 3 is removed in the for loop before the maintenance log where negative values are changed to 0
+      
+    } else if (flag==4){
+      
+        # Set the values to NA and flag
+        bvrdata[Time, maintenance_cols] <- NA
+        bvrdata[Time, flag_cols] <- flag
+
+    } else if (flag==5){
+      
+        # Values are flagged but left in the dataset
+        bvrdata[Time, flag_cols] <- flag
+
+    } else if (flag==6){ #adjusting the conductivity based on the equation in the maintenance log 
+      
+      if (maintenance_cols %in% c("EXOCond_uScm_1.5", "EXOSpCond_uScm_1.5", "EXOTDS_mgL_1.5")){
+        
+        bvrdata[Time, maintenance_cols] <- eval(parse(text=adjustment_code))
+        
+        bvrdata[Time, flag_cols] <- flag
+    
+    }else if (flag==7){
+      # Data was not collected and already flagged as NA above 
+      
+    }else{
+      # Flag is not in Maintenance Log
+      warning(paste0("Flag ", flag, " used not defined in the L1 script. 
+                     Talk to Austin and Adrienne if you get this message"))
     }
-  }
+    
+    # Add the 2 hour adjustment for DO. This means values less than 2 hours after the DO sensor is out of the water are changed to NA and flagged
+    # In 2023 added a 30 minute adjustment for Temp sensors on the temp string  
+    
+    # Make a vector of the DO columns
+    
+    DO <- colnames(bvrdata%>%select(grep("DO_mgL|DOsat", colnames(bvrdata))))
+    
+    # Vector of thermistors on the temp string 
+    Temp <- colnames(bvrdata%>%select(grep("Thermistor|RDOTemp|LvlTemp", colnames(bvrdata))))
+    
+    # make a vector of the adjusted time
+    Time_adj_DO <- bvrdata$DateTime>start&bvrdata$DateTime<end+ADJ_PERIOD_DO
+    
+    Time_adj_Temp <- bvrdata$DateTime>start&bvrdata$DateTime<end+ADJ_PERIOD_Temp
+    
+    # Change values to NA after any maintenance for up to 2 hours for DO sensors
+    
+    if (flag ==1 ){
+      
+      # This is for DO add a 2 hour buffer after the DO sensor was out of the water
+      bvrdata[Time_adj_DO,  maintenance_cols[maintenance_cols%in%DO]] <- NA
+      bvrdata[Time_adj_DO, flag_cols[flag_cols%in%DO]] <- flag
+      
+      # Add a 30 minute buffer for when the temp string was out of the water
+      bvrdata[Time_adj_Temp,  maintenance_cols[maintenance_cols%in%Temp]] <- NA
+      bvrdata[Time_adj_Temp, flag_cols[flag_cols%in%Temp]] <- flag
+      }
+    }
+  }    
   
   ############## Remove and Flag when sensors are out of position ####################
   
@@ -281,13 +298,11 @@ qaqc_bvr <- function(data_file, data2_file,
   bvrdata[which(bvrdata$EXODepth_m<0.2),exo_flag]<- 2
   bvrdata[which(bvrdata$EXODepth_m < 0.2), exo_idx] <- NA
   
-  
-  #Change the EXO data to NAs when the EXO is above 0.2m and not due to maintenance
+  # Flag the EXO data when the wiper isn't parked in the right position because it could be on the sensor when taking a reading
   #Flag the data that was removed with 2 for outliers
-  #bvrdata[which(bvrdata$EXOCond_uScm_1.5 < 14),exo_flag]<- 2
-  #bvrdata[which(bvrdata$EXOCond_uScm_1.5 < 14), exo_idx] <- NA
-  
-  
+  bvrdata[which(bvrdata$EXOWiper_V !=0 & bvrdata$EXOWiper_V < 0.7 & bvrdata$EXOWiper_V > 1.6),exo_flag]<- 2
+  bvrdata[which(bvrdata$EXOWiper_V !=0 & bvrdata$EXOWiper_V < 0.7 & bvrdata$EXOWiper_V > 1.6), exo_idx] <- NA
+ 
   
   #change the temp string and pressure sensor to NA if the psi is less than XXXXX and Flag as 2
   
@@ -297,7 +312,7 @@ qaqc_bvr <- function(data_file, data2_file,
   #create list of the Flag columns that need to be changed to 2
   temp_flag <- grep("^Flag_Ther*|^Flag_RDO*|^Flag_Lvl*",colnames(bvrdata))
   
-  #Change the EXO data to NAs when the pressure sensor is less than 9.94 psi which is roughly 7m and not due to maintenance. 
+  #Change the EXO data to NAs when the pressure sensor is less than 10 psi which is roughly 7m and not due to maintenance. 
   # Also remove when the pressure sensor is NA because we don't know at what depth the sensors are at. 
   bvrdata[which(bvrdata$LvlPressure_psi_13 < 10), temp_flag]<- 2
   bvrdata[which(bvrdata$LvlPressure_psi_13 < 10), temp_idx] <- NA
@@ -319,7 +334,7 @@ qaqc_bvr <- function(data_file, data2_file,
   
   bvrdata=data.frame(bvrdata)
   
-  for (a in c(5:23,26:46)){
+  for (a in colnames(bvrdata%>%select(ThermistorTemp_C_1:EXOTurbidity_FNU_1.5, LvlPressure_psi_13:LvlTemp_C_13))){
     Var_mean <- mean(bvrdata[,a], na.rm = TRUE)
     
     # For Algae sensors we use 4 sd as a threshold but for the others we use 2
@@ -346,57 +361,42 @@ qaqc_bvr <- function(data_file, data2_file,
   
   bvrdata<-bvrdata%>%select(-c(Var, Var_lag, Var_lead))
   
-  ########################################################################################################################### 
+  ### Remove observations when sensors are out of the water ###
   
   #create depth column
-  bvrdata=bvrdata%>%mutate(Depth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
-  
-  #offsets from BVR_
-  bvrdata=bvrdata%>%
-    mutate(
-      depth_1=Depth_m_13-11.82, #Gets depth of thermistor 1
-      depth_2=Depth_m_13-11.478, #Gets depth of thermistor 2
-      depth_3=Depth_m_13-10.47, #Gets depth of thermistor 3
-      depth_4=Depth_m_13-9.423, # Gets depth of thermistor 4
-      depth_5=Depth_m_13-8.376) #Gets depth of thermistor 5. This will have to be recalculated if/when the thermistor comees out of the water. 
+  bvrdata=bvrdata%>%mutate(LvlDepth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
   
   
-  # For loop to set the values to NA when the thermistor is out of the water
-  for(b in c(88:92)){
-    if (colnames(bvrdata[b])=="depth_1"){
-      d="ThermistorTemp_C_1"
-    } else if (colnames(bvrdata[b])=="depth_2"){
-      d="ThermistorTemp_C_2"
-    }else if (colnames(bvrdata[b])=="depth_3"){
-      d="ThermistorTemp_C_3"
-    }else if (colnames(bvrdata[b])=="depth_4"){
-      d="ThermistorTemp_C_4"
-    }else if (colnames(bvrdata[b])=="depth_5"){
-      d="ThermistorTemp_C_5"
-    }
-    
-    bvrdata[c(which(!is.na(bvrdata[,b])& bvrdata[,b]<0)),paste0("Flag_",d)]<-2
-    bvrdata[c(which(!is.na(bvrdata[,b])& bvrdata[,b]<0)),d]<-NA
-    
+  # Using the find_depths function
+  
+  bvrdata2 <- find_depths (data_file = bvrdata, # data_file = the file of most recent data either from EDI or GitHub. Currently reads in the L1 file
+                          depth_offset = "https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data-qaqc/BVR_Depth_offsets.csv",  # depth_offset = the file of depth of each sensor relative to each other. This file for BVR is on GitHub
+                          output = NULL, # output = the path where you would like the data saved
+                          date_offset = "2021-04-05", # Date_offset = the date we moved the sensors so we know where to split the file. If you don't need to split the file put NULL
+                          offset_column1 = "Offset_before_05APR21",# offset_column1 = name of the column in the depth_offset file to subtract against the actual depth to get the sensor depth
+                          offset_column2 = "Current_offset", # offset_column2 = name of the second column if applicable for the column with the depth offsets
+                          round_digits = 2, #round_digits = number of digits you would like to round to
+                          bin_width = 0.25, # bin width in m
+                          wide_data = T)  
+  
+  # Flag observations that were removed but don't have a flag yet
+  
+  for(j in colnames(bvrdata2%>%select(ThermistorTemp_C_1:EXOWiper_V))) { #for loop to create new columns in data frame
+    bvrdata2[c(which(is.na(bvrdata2[,j]) & bvrdata2[,paste0("Flag_",j)]==0)),paste0("Flag_",j)] <-2 #put a flag of 2 for observations out of the water
   }
   
-  ################################################################################################################################  
-  # delete EXO_Date and EXO_Time columns
-  bvrdata <- bvrdata %>% select(-EXO_Date, -EXO_Time, -depth_1, -depth_2, -depth_3, -depth_4, -depth_5)
+  #### Organize the file for saving########  
   
-  # add Reservoir and Site columns
-  bvrdata$Reservoir="BVR"
-  bvrdata$Site=50
   
   
   # reorder columns
-  bvrdata <- bvrdata %>% select(Reservoir, Site, DateTime, ThermistorTemp_C_1:ThermistorTemp_C_13,
+  bvrdata2 <- bvrdata2 %>% select(Reservoir, Site, DateTime, ThermistorTemp_C_1:ThermistorTemp_C_13,
                                 RDO_mgL_6, RDOsat_percent_6,
                                 RDOTemp_C_6, RDO_mgL_13, RDOsat_percent_13, RDOTemp_C_13,
                                 EXOTemp_C_1.5, EXOCond_uScm_1.5, EXOSpCond_uScm_1.5, EXOTDS_mgL_1.5, EXODOsat_percent_1.5,
                                 EXODO_mgL_1.5, EXOChla_RFU_1.5, EXOChla_ugL_1.5, EXOBGAPC_RFU_1.5, EXOBGAPC_ugL_1.5,
                                 EXOfDOM_RFU_1.5, EXOfDOM_QSU_1.5,EXOTurbidity_FNU_1.5, EXOPressure_psi, EXODepth_m, EXOBattery_V, EXOCablepower_V,
-                                EXOWiper_V, LvlPressure_psi_13,Depth_m_13, LvlTemp_C_13, RECORD, CR6Battery_V, CR6Panel_Temp_C,
+                                EXOWiper_V, LvlPressure_psi_13, LvlDepth_m_13, LvlTemp_C_13, RECORD, CR6Battery_V, CR6Panel_Temp_C,
                                 Flag_ThermistorTemp_C_1:Flag_ThermistorTemp_C_13,Flag_RDO_mgL_6, Flag_RDOsat_percent_6, Flag_RDOTemp_C_6,
                                 Flag_RDO_mgL_13, Flag_RDOsat_percent_13, Flag_RDOTemp_C_13,Flag_EXOTemp_C_1.5, Flag_EXOCond_uScm_1.5, Flag_EXOSpCond_uScm_1.5,Flag_EXOTDS_mgL_1.5,
                                 Flag_EXODOsat_percent_1.5, Flag_EXODO_mgL_1.5, Flag_EXOChla_RFU_1.5,Flag_EXOChla_ugL_1.5, Flag_EXOBGAPC_RFU_1.5,Flag_EXOBGAPC_ugL_1.5,
@@ -404,15 +404,20 @@ qaqc_bvr <- function(data_file, data2_file,
                                 Flag_EXOPressure_psi, Flag_EXODepth_m, Flag_EXOBattery_V, Flag_EXOCablepower_V,Flag_EXOWiper_V,Flag_LvlPressure_psi_13, Flag_LvlTemp_C_13)
   
   #order by date and time
-  bvrdata <- bvrdata[order(bvrdata$DateTime),]
+  bvrdata2 <- bvrdata2[order(bvrdata2$DateTime),]
   
   
   # convert datetimes to characters so that they are properly formatted in the output file
-  bvrdata$DateTime <- as.character(bvrdata$DateTime)
+  bvrdata2$DateTime <- as.character(bvrdata2$DateTime)
   
+  # subset to only the current year when using for EDI publishing
+  # current_time_end is set in Chunk 1 Set Up in Inflow_QAQC_Plots_2013_2022.Rmd
+  # if(is.null(start_date)){
+  #   bvrdata <- bvrdata[bvrdata$DateTime<ymd_hms(current_time_end),]
+  # }
   
   # write to output file
-  write.csv(bvrdata, output_file, row.names = FALSE, quote=FALSE)
+  write_csv(bvrdata2, output_file)
   
 } 
 
@@ -425,4 +430,5 @@ qaqc_bvr <- function(data_file, data2_file,
 #      "https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/BVR_maintenance_log.txt",
 #       "BVRplatform_clean.csv", 
 #     "BVR_Maintenance_2020.csv")
+
 

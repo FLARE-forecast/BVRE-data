@@ -1,10 +1,12 @@
 #install.packages("EDIutils")
 #install.packages("xml2")
 #install.packages("here")
+install.packages("devtools")
 library(tidyverse)
 library(EDIutils)
 library(xml2)
 library(lubridate)
+library(devtools)
 
 home_directory <- here::here()
 setwd(home_directory)
@@ -25,8 +27,8 @@ day_of_run <- Sys.Date() + lubridate::days(1)
 
 ## assign data files 
 wq_data <- 'bvre-waterquality.csv'
-manual_data_url <- 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/BVRPlatform/BVR_manual_2022.csv'
-maintenance_file <- 'BVR_maintenance_log.txt'
+manual_data_url <- 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv'
+maintenance_file <- 'BVR_maintenance_log.csv'
 outfile <-'bvre-waterquality_L1.csv'
 
 ## run QAQC on the data within github

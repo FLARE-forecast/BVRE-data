@@ -158,7 +158,7 @@ qaqc_bvr <- function(
     
     ### Get the adjustment_code for a column to fix a value. If it is not an NA
     
-    if(flag==6){
+    if(flag==8){
       # These update_values are expressions so they should not be set to numeric
       adjustment_code <- log$adjustment_code[i]
       
@@ -217,11 +217,19 @@ qaqc_bvr <- function(
       bvrdata[Time, flag_cols] <- flag
       
     } else if (flag==2){
-      
+                if(!is.na(adjustment_code)){
+         
+          # Add a flag based on the conditions in the maintenance log
+          eval(parse(text=paste0(adjustment_code, "flag_cols] <- flag")))
+          # Change to NA based on the conditions in the maintenance log
+          eval(parse(text=paste0(adjustment_code, "maintenance_cols] <- NA")))
+          
+        }else{
+
       # The observations are changed to NA for maintenance or other issues found in the maintenance log
       bvrdata[Time, maintenance_cols] <- NA
       bvrdata[Time, flag_cols] <- flag
-      
+      }
       ## Flag 3 is removed in the for loop before the maintenance log where negative values are changed to 0
       
     } else if (flag==4){
@@ -364,7 +372,7 @@ qaqc_bvr <- function(
   ### Remove observations when sensors are out of the water ###
   
   #create depth column
-  bvrdata=bvrdata%>%mutate(LvlDepth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
+  bvrdata=bvrdata%>%mutate(Depth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
   
   
   # Using the find_depths function
@@ -396,7 +404,7 @@ qaqc_bvr <- function(
                                 EXOTemp_C_1.5, EXOCond_uScm_1.5, EXOSpCond_uScm_1.5, EXOTDS_mgL_1.5, EXODOsat_percent_1.5,
                                 EXODO_mgL_1.5, EXOChla_RFU_1.5, EXOChla_ugL_1.5, EXOBGAPC_RFU_1.5, EXOBGAPC_ugL_1.5,
                                 EXOfDOM_RFU_1.5, EXOfDOM_QSU_1.5,EXOTurbidity_FNU_1.5, EXOPressure_psi, EXODepth_m, EXOBattery_V, EXOCablepower_V,
-                                EXOWiper_V, LvlPressure_psi_13, LvlDepth_m_13, LvlTemp_C_13, RECORD, CR6Battery_V, CR6Panel_Temp_C,
+                                EXOWiper_V, LvlPressure_psi_13, Depth_m_13, LvlTemp_C_13, RECORD, CR6Battery_V, CR6Panel_Temp_C,
                                 Flag_ThermistorTemp_C_1:Flag_ThermistorTemp_C_13,Flag_RDO_mgL_6, Flag_RDOsat_percent_6, Flag_RDOTemp_C_6,
                                 Flag_RDO_mgL_13, Flag_RDOsat_percent_13, Flag_RDOTemp_C_13,Flag_EXOTemp_C_1.5, Flag_EXOCond_uScm_1.5, Flag_EXOSpCond_uScm_1.5,Flag_EXOTDS_mgL_1.5,
                                 Flag_EXODOsat_percent_1.5, Flag_EXODO_mgL_1.5, Flag_EXOChla_RFU_1.5,Flag_EXOChla_ugL_1.5, Flag_EXOBGAPC_RFU_1.5,Flag_EXOBGAPC_ugL_1.5,

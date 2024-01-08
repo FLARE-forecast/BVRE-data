@@ -72,7 +72,9 @@ qaqc_bvr <- function(
   
   # convert NaN to NAs in the dataframe
   bvrdata[sapply(bvrdata, is.nan)] <- NA
-  
+
+  # tz check
+  bvrdata$DateTime <- force_tz(as.POSIXct(bvrdata$DateTime), tzone = "America/New_York")
   
   ## read in maintenance file 
   log <- read_csv2(maintenance_file, col_types = cols(

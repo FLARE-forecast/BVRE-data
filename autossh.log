@@ -5127,3 +5127,25 @@
 2024/01/12 20:27:30 autossh[5178]: clear alarm timer (0 secs left)
 2024/01/12 20:27:30 autossh[5178]: set alarm for 600 secs
 2024/01/12 20:27:30 autossh[5180]: child of 5178 execing /usr/bin/ssh
+2024/01/12 20:30:02 autossh[5178]: check on child 5180
+2024/01/12 20:30:02 autossh[5178]: ssh exited with error status 255; restarting ssh
+2024/01/12 20:30:02 autossh[5178]: expired child, returning 1
+2024/01/12 20:30:02 autossh[5178]: clear alarm timer (448 secs left)
+2024/01/12 20:30:02 autossh[5178]: checking for grace period, tries = 0
+2024/01/12 20:30:02 autossh[5178]: starting ssh (count 2)
+2024/01/12 20:30:02 autossh[5178]: ssh child pid is 8579
+2024/01/12 20:30:02 autossh[5178]: check on child 8579
+2024/01/12 20:30:02 autossh[5178]: clear alarm timer (0 secs left)
+2024/01/12 20:30:02 autossh[5178]: set alarm for 600 secs
+2024/01/12 20:30:02 autossh[8579]: child of 5178 execing /usr/bin/ssh
+2024/01/12 20:32:12 autossh[5178]: check on child 8579
+2024/01/12 20:32:12 autossh[5178]: ssh exited with error status 255; restarting ssh
+2024/01/12 20:32:12 autossh[5178]: expired child, returning 1
+2024/01/12 20:32:12 autossh[5178]: clear alarm timer (470 secs left)
+2024/01/12 20:32:12 autossh[5178]: checking for grace period, tries = 0
+2024/01/12 20:32:12 autossh[5178]: starting ssh (count 3)
+2024/01/12 20:32:12 autossh[5178]: ssh child pid is 9421
+2024/01/12 20:32:12 autossh[5178]: check on child 9421
+2024/01/12 20:32:12 autossh[5178]: clear alarm timer (0 secs left)
+2024/01/12 20:32:12 autossh[5178]: set alarm for 600 secs
+2024/01/12 20:32:12 autossh[9421]: child of 5178 execing /usr/bin/ssh

@@ -7219,3 +7219,19 @@
 01/16/24 12:28:57 EST -0500 | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
 01/16/24 12:28:57 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git
 01/16/24 12:28:57 EST -0500 |    88cf02b..820da54  820da54fb60e35909f4d0124a53ac5d748955849 -> bvre-platform-data
+01/16/24 12:28:57 EST -0500 | Processing: /data/bjorn-logs
+01/16/24 12:28:57 EST -0500 | [bjorn-logs db2ac9b] 01/16/24 12:28:57 EST -0500
+01/16/24 12:28:57 EST -0500 |  2 files changed, 24 insertions(+)
+01/16/24 12:28:59 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git
+01/16/24 12:28:59 EST -0500 |    998320c..db2ac9b  db2ac9ba8da06796f2210db1668db524d3f83acc -> bjorn-logs
+01/16/24 12:28:59 EST -0500 | ##########  END  ##########
+01/16/24 16:28:08 EST -0500 | ########## START ##########
+01/16/24 16:28:08 EST -0500 | Processing: /data/bvre-platform-data
+01/16/24 16:28:14 EST -0500 | [bvre-platform-data 5cc2b55] 01/16/24 16:28:08 EST -0500
+01/16/24 16:28:14 EST -0500 |  1 file changed, 23 insertions(+)
+01/16/24 16:28:22 EST -0500 | remote: warning: See https://gh.io/lfs for more information.        
+01/16/24 16:28:22 EST -0500 | remote: warning: File bvre-waterquality.csv is 72.68 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+01/16/24 16:28:22 EST -0500 | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+01/16/24 16:28:22 EST -0500 | To github.com:FLARE-forecast/BVRE-data.git
+01/16/24 16:28:22 EST -0500 |    820da54..5cc2b55  5cc2b556789f5c8e194049dc9285aff0f878dacc -> bvre-platform-data
+01/16/24 16:28:22 EST -0500 | Processing: /data/bjorn-logs

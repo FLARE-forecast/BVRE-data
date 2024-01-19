@@ -378,7 +378,7 @@ qaqc_bvr <- function(
   ### Remove observations when sensors are out of the water ###
   
   #create depth column
-  bvrdata=bvrdata%>%mutate(Depth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
+  bvrdata=bvrdata%>%mutate(LvlDepth_m_13=LvlPressure_psi_13*0.70455)#1psi=2.31ft, 1ft=0.305m
   
   
   # Using the find_depths function

@@ -1,7 +1,7 @@
 qaqc_bvr <- function(
             data_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/bvre-waterquality.csv',
             data2_file = 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv',
-            maintenance_file = './Data/DataAlreadyUploadedToEDI/EDIProductionFiles/MakeEML_BVRplatform/BVR_maintenance_log.csv',  
+            maintenance_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data-qaqc/BVR_maintenance_log.csv',  
             output_file, 
             start_date = NULL, 
             end_date = NULL)

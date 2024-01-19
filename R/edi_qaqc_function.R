@@ -74,7 +74,7 @@ qaqc_bvr <- function(
   bvrdata[sapply(bvrdata, is.nan)] <- NA
 
   # tz check
-  bvrdata$DateTime <- force_tz(as.POSIXct(bvrdata$DateTime), tzone = "America/New_York")
+  bvrdata$DateTime <- force_tz(as.POSIXct(bvrdata$DateTime), tzone = "EST")
   
   ## read in maintenance file 
   log <- read_csv2(maintenance_file, col_types = cols(
@@ -83,6 +83,10 @@ qaqc_bvr <- function(
     TIMESTAMP_end = col_datetime("%Y-%m-%d %H:%M:%S%*"),
     flag = col_integer()
   ))
+
+# Set timezone as EST. Streaming sensors don't observe daylight savings
+  log$TIMESTAMP_start <- force_tz(as.POSIXct(log$TIMESTAMP_start), tzone = "EST")
+  log$TIMESTAMP_end <- force_tz(as.POSIXct(log$TIMESTAMP_end), tzone = "EST")
   
   ### identify the date subsetting for the data
   if (!is.null(start_date)){
@@ -417,17 +421,15 @@ qaqc_bvr <- function(
   bvrdata2 <- bvrdata2[order(bvrdata2$DateTime),]
   
   
-  # convert datetimes to characters so that they are properly formatted in the output file
-  bvrdata2$DateTime <- as.character(bvrdata2$DateTime)
-  
-  # subset to only the current year when using for EDI publishing
-  # current_time_end is set in Chunk 1 Set Up in Inflow_QAQC_Plots_2013_2022.Rmd
-  # if(is.null(start_date)){
-  #   bvrdata <- bvrdata[bvrdata$DateTime<ymd_hms(current_time_end),]
-  # }
-  
-  # write to output file
-  write_csv(bvrdata2, output_file)
+ # write_csv was giving the wrong times. Let's see if this is better. 
+  # If the output file is NULL then we are using it in a function and want the file returned and not saved. 
+  if (is.null(output_file)){
+    return(bvrdata2)
+  }else{
+    # convert datetimes to characters so that they are properly formatted in the output file
+    bvrdata2$DateTime <- as.character(bvrdata2$DateTime)
+    write_csv(bvrdata2, output_file)
+  }
   
 } 
 

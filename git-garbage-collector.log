@@ -2982,3 +2982,12 @@
 01/20/24 20:30:04 EST -0500 | Disk status before Git garbage collection:
 01/20/24 20:30:04 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
 01/20/24 20:30:04 EST -0500 | Processing: /data/bvre-platform-data
+01/20/24 20:30:13 EST -0500 | ########## START ##########
+01/20/24 20:30:13 EST -0500 | Disk status before Git garbage collection:
+01/20/24 20:30:13 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
+01/20/24 20:30:13 EST -0500 | Processing: /data/bvre-platform-data
+01/20/24 20:30:13 EST -0500 | fatal: gc is already running on machine 'bjorn' pid 7124 (use --force if not)
+01/20/24 20:30:13 EST -0500 | Processing: /data/bjorn-logs
+01/20/24 20:30:14 EST -0500 | Disk status after Git garbage collection:
+01/20/24 20:30:14 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
+01/20/24 20:30:14 EST -0500 | ##########  END  ##########

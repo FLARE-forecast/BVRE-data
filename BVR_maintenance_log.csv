@@ -77,15 +77,15 @@ BVR;50;BVRplatform; 2023-06-05 11:45:00 EST; 2023-06-05 12:05:00 EST; Thermistor
 BVR;50;BVRplatform; 2023-06-07 00:00:00 EST; 2023-06-19 10:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA; NA; wiper voltage more variable than normal- cold affect the sensor readings
 BVR;50;BVRplatform; 2023-06-05 12:00:00 EST; 2023-06-19 10:00:00 EST; EXOTurbidity_FNU_1.5; NA;2;NA; "bvrdata[c(which(Time & bvrdata[,'EXOTurbidity_FNU_1.5']>5)),"; Bad Turbidity reading probably due to EXO2 wiper over sensor during reading take out readings below 5
 BVR;50;BVRplatform; 2023-06-05 12:00:00 EST; 2023-06-19 10:00:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA; "bvrdata[c(which(Time & bvrdata[,'EXOSpCond_uScm_1.5']<29.5)),"; Bad Conductivity reading probably due to EXO2 wiper over sensor during reading take out readings below 29.5
-BVR;50;BVRplatform; 2023-06-07 04:25:00 EST; 2023-06-14 12:00:00 EST; EXOfDOM_RFU_1.5; EXOfDOM_QSU_1.5;2;NA; "bvrdata[c(which(Time & bvrdata[,'EXOfDOM_RFU_1.5']<3)),"; Bad fDOM reading probably due to EXO2 wiper over sensor during reading take out readings below 3
+BVR;50;BVRplatform; 2023-06-07 00:00:00 EST; 2023-06-14 12:00:00 EST; EXOfDOM_RFU_1.5; EXOfDOM_QSU_1.5;2;NA; "bvrdata[c(which(Time & bvrdata[,'EXOfDOM_RFU_1.5']<3)),"; Bad fDOM reading probably due to EXO2 wiper over sensor during reading take out readings below 3
 BVR;50;BVRplatform; 2023-06-14 11:35:00 EST; 2023-06-14 11:45:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning
 BVR;50;BVRplatform; 2023-06-08 18:15:00 EST; 2023-06-08 18:25:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;2;NA; NA; all sensors out of position
 BVR;50;BVRplatform; 2023-06-19 10:00:00 EST; 2023-09-26 09:30:00 EST; EXOWiper_V;NA; 5;NA; NA; Wiper removed - cleaned sensors weekly
 BVR;50;BVRplatform; 2023-06-19 09:45:00 EST; 2023-06-19 09:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning and removed wiper
 BVR;50;BVRplatform; 2023-06-26 09:45:00 EST; 2023-06-26 09:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning
-BVR;50;BVRplatform; 2023-07-19 12:00:00 EST; 2023-07-31 10:40:00 EST; EXOTurbidity_FNU_1.5;NA;4;NA;NA; High turbidity values due to fouling
+BVR;50;BVRplatform; 2023-07-19 00:00:00 EST; 2023-07-31 10:40:00 EST; EXOTurbidity_FNU_1.5;NA;4;NA;NA; High turbidity values due to fouling
 BVR;50;BVRplatform; 2023-07-31 10:25:00 EST; 2023-07-31 10:35:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning
-BVR;50;BVRplatform; 2023-08-14 11:35:00 EST; 2023-08-14 11:55:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning
+BVR;50;BVRplatform; 2023-08-14 11:35:00 EST; 2023-08-14 11:55:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; EXO2 up for cleaning
 BVR;50;BVRplatform; 2023-08-22 10:15:00 EST; 2023-08-22 10:25:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning
 BVR;50;BVRplatform; 2023-09-12 10:35:00 EST; 2023-09-12 11:15:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
 BVR;50;BVRplatform; 2023-09-18 10:55:00 EST; 2023-09-18 11:05:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA; NA; EXO2 up for cleaning

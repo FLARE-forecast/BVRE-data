@@ -6778,3 +6778,46 @@
 2024/01/21 16:27:54 autossh[4810]: clear alarm timer (0 secs left)
 2024/01/21 16:27:54 autossh[4810]: set alarm for 600 secs
 2024/01/21 16:27:54 autossh[4813]: child of 4810 execing /usr/bin/ssh
+2024/01/21 16:37:54 autossh[4810]: received SIGALRM (end-of-life 0)
+2024/01/21 16:38:09 autossh[4810]: timeout polling to accept read connection
+2024/01/21 16:38:09 autossh[4810]: port down, restarting ssh
+2024/01/21 16:38:09 autossh[4810]: clear alarm timer (0 secs left)
+2024/01/21 16:38:09 autossh[4810]: checking for grace period, tries = 0
+2024/01/21 16:38:09 autossh[4810]: starting ssh (count 2)
+2024/01/21 16:38:09 autossh[4810]: ssh child pid is 10632
+2024/01/21 16:38:09 autossh[4810]: check on child 10632
+2024/01/21 16:38:09 autossh[4810]: clear alarm timer (0 secs left)
+2024/01/21 16:38:09 autossh[4810]: set alarm for 600 secs
+2024/01/21 16:38:09 autossh[10632]: child of 4810 execing /usr/bin/ssh
+2024/01/21 16:48:09 autossh[4810]: received SIGALRM (end-of-life 0)
+2024/01/21 16:48:24 autossh[4810]: timeout polling to accept read connection
+2024/01/21 16:48:24 autossh[4810]: port down, restarting ssh
+2024/01/21 16:48:24 autossh[4810]: clear alarm timer (0 secs left)
+2024/01/21 16:48:24 autossh[4810]: checking for grace period, tries = 0
+2024/01/21 16:48:24 autossh[4810]: starting ssh (count 3)
+2024/01/21 16:48:24 autossh[4810]: ssh child pid is 14752
+2024/01/21 16:48:24 autossh[4810]: check on child 14752
+2024/01/21 16:48:24 autossh[4810]: clear alarm timer (0 secs left)
+2024/01/21 16:48:24 autossh[4810]: set alarm for 600 secs
+2024/01/21 16:48:24 autossh[14752]: child of 4810 execing /usr/bin/ssh
+2024/01/21 16:56:37 autossh[4810]: check on child 14752
+2024/01/21 16:56:37 autossh[4810]: clear alarm timer (108 secs left)
+2024/01/21 16:56:37 autossh[4810]: set alarm for 108 secs
+2024/01/21 16:56:37 autossh[4810]: signalled to exit
+2024/01/21 16:56:37 autossh[4810]: check on child 14752
+2024/01/21 16:56:37 autossh[4810]: clear alarm timer (108 secs left)
+2024/01/21 16:56:37 autossh[4810]: set alarm for 108 secs
+2024/01/21 16:56:37 autossh[4810]: signalled to exit
+2024/01/21 16:56:37 autossh[4810]: check on child 14752
+2024/01/21 16:56:37 autossh[4810]: clear alarm timer (108 secs left)
+2024/01/21 16:56:37 autossh[4810]: set alarm for 108 secs
+2024/01/21 16:56:37 autossh[4810]: signalled to exit
+2024/01/21 16:56:37 autossh[4810]: waitpid() not successful: No child processes
+2024/01/21 16:56:37 autossh[4810]: clear alarm timer (108 secs left)
+2024/01/21 20:27:55 autossh[4789]: checking for grace period, tries = 0
+2024/01/21 20:27:55 autossh[4789]: starting ssh (count 1)
+2024/01/21 20:27:55 autossh[4789]: ssh child pid is 4797
+2024/01/21 20:27:55 autossh[4789]: check on child 4797
+2024/01/21 20:27:55 autossh[4789]: clear alarm timer (0 secs left)
+2024/01/21 20:27:55 autossh[4789]: set alarm for 600 secs
+2024/01/21 20:27:55 autossh[4797]: child of 4789 execing /usr/bin/ssh

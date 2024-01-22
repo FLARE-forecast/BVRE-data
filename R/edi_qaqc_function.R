@@ -1,3 +1,16 @@
+# Title: QAQC Function for Beaverdam Reservoir In Situ Water Sensors
+# This QAQC cleaning script was applied to create the data files included in this data package.
+# Author: Adrienne Breef-Pilz
+# First Developed Jan. 2023
+# Last edited: 19 Jan. 2024
+
+# This text is for EDI:
+#Additional notes: This script is included with this EDI package to show which QAQC has already been applied to 
+# generate data from 2023 in the BVRPlatform_2020_2023.csv. This function uses an additional function find_depths.R
+# that is available with this package. 
+# This script is only for internal use by the data creator team and is provided as a reference; it will not run as-is. 
+
+
 qaqc_bvr <- function(
             data_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/bvre-waterquality.csv',
             data2_file = 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv',

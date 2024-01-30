@@ -3787,3 +3787,13 @@
 01/30/24 04:29:44 EST -0500 | Disk status after Git garbage collection:
 01/30/24 04:29:44 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
 01/30/24 04:29:44 EST -0500 | ##########  END  ##########
+01/30/24 08:28:53 EST -0500 | ########## START ##########
+01/30/24 08:28:53 EST -0500 | Disk status before Git garbage collection:
+01/30/24 08:28:53 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
+01/30/24 08:28:53 EST -0500 | Processing: /data/bvre-platform-data
+01/30/24 08:29:12 EST -0500 | Disk status after Git garbage collection:
+01/30/24 08:29:12 EST -0500 | /dev/sda1                           59G   38G   19G  68% /data
+01/30/24 08:29:12 EST -0500 | Processing: /data/bjorn-logs
+01/30/24 08:29:12 EST -0500 | error: pack-objects died of signal 11
+01/30/24 08:29:12 EST -0500 | fatal: failed to run repack
+01/30/24 08:29:12 EST -0500 | ##########  END  ##########

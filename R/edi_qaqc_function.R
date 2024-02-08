@@ -2,7 +2,7 @@
 # This QAQC cleaning script was applied to create the data files included in this data package.
 # Author: Adrienne Breef-Pilz
 # First Developed Jan. 2023
-# Last edited: 19 Jan. 2024
+# Last edited: 08 Feb. 2024
 
 # This text is for EDI:
 #Additional notes: This script is included with this EDI package to show which QAQC has already been applied to 
@@ -148,7 +148,10 @@ qaqc_bvr <- function(
     
   
   #####Maintenance Log QAQC############ 
-  
+  if(nrow(log)==0){
+     print('No Maintenance Events Found...')
+
+   } else {
   
   # modify bvrdata based on the information in the log   
   
@@ -308,7 +311,7 @@ qaqc_bvr <- function(
       }
     }
   }    
-  
+} 
   ############## Remove and Flag when sensors are out of position ####################
   
   #change EXO values to NA if EXO depth is less than 0.5m and Flag as 2

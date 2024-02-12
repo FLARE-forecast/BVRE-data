@@ -10868,3 +10868,34 @@
 2024/02/12 12:28:26 autossh[5179]: clear alarm timer (0 secs left)
 2024/02/12 12:28:26 autossh[5179]: set alarm for 600 secs
 2024/02/12 12:28:26 autossh[5181]: child of 5179 execing /usr/bin/ssh
+2024/02/12 12:38:26 autossh[5179]: received SIGALRM (end-of-life 0)
+2024/02/12 12:38:41 autossh[5179]: timeout polling to accept read connection
+2024/02/12 12:38:41 autossh[5179]: port down, restarting ssh
+2024/02/12 12:38:41 autossh[5179]: clear alarm timer (0 secs left)
+2024/02/12 12:38:41 autossh[5179]: checking for grace period, tries = 0
+2024/02/12 12:38:41 autossh[5179]: starting ssh (count 2)
+2024/02/12 12:38:41 autossh[5179]: ssh child pid is 10622
+2024/02/12 12:38:41 autossh[5179]: check on child 10622
+2024/02/12 12:38:41 autossh[5179]: clear alarm timer (0 secs left)
+2024/02/12 12:38:41 autossh[5179]: set alarm for 600 secs
+2024/02/12 12:38:41 autossh[10622]: child of 5179 execing /usr/bin/ssh
+2024/02/12 12:48:41 autossh[5179]: received SIGALRM (end-of-life 0)
+2024/02/12 12:48:56 autossh[5179]: timeout polling to accept read connection
+2024/02/12 12:48:56 autossh[5179]: port down, restarting ssh
+2024/02/12 12:48:56 autossh[5179]: clear alarm timer (0 secs left)
+2024/02/12 12:48:56 autossh[5179]: checking for grace period, tries = 0
+2024/02/12 12:48:56 autossh[5179]: starting ssh (count 3)
+2024/02/12 12:48:56 autossh[5179]: ssh child pid is 14749
+2024/02/12 12:48:56 autossh[5179]: check on child 14749
+2024/02/12 12:48:56 autossh[5179]: clear alarm timer (0 secs left)
+2024/02/12 12:48:56 autossh[5179]: set alarm for 600 secs
+2024/02/12 12:48:56 autossh[14749]: child of 5179 execing /usr/bin/ssh
+2024/02/12 12:57:08 autossh[5179]: received signal to exit (15)
+2024/02/12 12:57:08 autossh[5179]: clear alarm timer (108 secs left)
+2024/02/12 16:28:26 autossh[5190]: checking for grace period, tries = 0
+2024/02/12 16:28:26 autossh[5190]: starting ssh (count 1)
+2024/02/12 16:28:26 autossh[5190]: ssh child pid is 5193
+2024/02/12 16:28:26 autossh[5190]: check on child 5193
+2024/02/12 16:28:26 autossh[5190]: clear alarm timer (0 secs left)
+2024/02/12 16:28:26 autossh[5190]: set alarm for 600 secs
+2024/02/12 16:28:26 autossh[5193]: child of 5190 execing /usr/bin/ssh

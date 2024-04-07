@@ -404,7 +404,7 @@ qaqc_bvr <- function(
                           output = NULL, # output = the path where you would like the data saved
                           date_offset = "2021-04-05", # Date_offset = the date we moved the sensors so we know where to split the file. If you don't need to split the file put NULL
                           offset_column1 = "Offset_before_05APR21",# offset_column1 = name of the column in the depth_offset file to subtract against the actual depth to get the sensor depth
-                          offset_column2 = "Current_offset", # offset_column2 = name of the second column if applicable for the column with the depth offsets
+                          offset_column2 = "Offset_after_05APR21", # offset_column2 = name of the second column if applicable for the column with the depth offsets
                           round_digits = 2, #round_digits = number of digits you would like to round to
                           bin_width = 0.25, # bin width in m
                           wide_data = T)  

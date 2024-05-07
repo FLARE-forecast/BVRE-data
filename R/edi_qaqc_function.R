@@ -121,9 +121,9 @@ qaqc_bvr <- function(
     
   }
   
-  if (nrow(log) == 0){
-    log <- log_read
-  }
+ # if (nrow(log) == 0){
+ #   log <- log_read
+ # }
   
   ### add Reservoir and Site columns
   bvrdata$Reservoir="BVR"

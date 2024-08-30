@@ -2,7 +2,7 @@
 # This QAQC cleaning script was applied to create the data files included in this data package.
 # Author: Adrienne Breef-Pilz
 # First Developed Jan. 2023
-# Last edited: 08 Feb. 2024
+# Last edited: 30 Aug. 2024 - took out if statement for adjustment code
 
 # This text is for EDI:
 #Additional notes: This script is included with this EDI package to show which QAQC has already been applied to 
@@ -180,13 +180,13 @@ qaqc_bvr <- function(
     
     ### Get the adjustment_code for a column to fix a value. If it is not an NA
     
-    if(flag==8){
+    #if(flag==8){
       # These update_values are expressions so they should not be set to numeric
       adjustment_code <- log$adjustment_code[i]
       
-    }else{
-      adjustment_code <- as.numeric(log$adjustment_code[i])
-    }
+    #}else{
+    #  adjustment_code <- as.numeric(log$adjustment_code[i])
+   # }
     
     
     ### Get the names of the columns affected by maintenance
@@ -267,11 +267,15 @@ qaqc_bvr <- function(
 
     } else if (flag==6){ #adjusting the conductivity based on the equation in the maintenance log 
       
-      if (maintenance_cols %in% c("EXOCond_uScm_1.5", "EXOSpCond_uScm_1.5", "EXOTDS_mgL_1.5")){
+      #if (maintenance_cols %in% c("EXOCond_uScm_1.5", "EXOSpCond_uScm_1.5", "EXOTDS_mgL_1.5")){
         
         bvrdata[Time, maintenance_cols] <- eval(parse(text=adjustment_code))
         
         bvrdata[Time, flag_cols] <- flag
+
+         # Change negative values to 0 but leave flag of 6 
+      
+        bvrdata[c(which(Time & bvrdata[,maintenance_cols]<0)),maintenance_cols] <- 0 
     
     }else if (flag==7){
       # Data was not collected and already flagged as NA above 
@@ -311,7 +315,7 @@ qaqc_bvr <- function(
       }
     }
   }    
-} 
+
   ############## Remove and Flag when sensors are out of position ####################
   
   #change EXO values to NA if EXO depth is less than 0.5m and Flag as 2

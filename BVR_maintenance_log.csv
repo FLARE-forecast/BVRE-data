@@ -67,7 +67,8 @@ BVR;50;BVRplatform; 2022-10-11 10:50:00 EST; 2022-10-11 11:30:00 EST; Thermistor
 BVR;50;BVRplatform; 2022-10-24 11:00:00 EST; 2022-10-24 11:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
 BVR;50;BVRplatform; 2022-11-01 16:10:00 EST; 2022-11-01 16:10:00 EST; EXOChla_RFU_1.5; EXOBGAPC_ugL_1.5;2;NA;NA; high chla and phyco values removed 
 BVR;50;BVRplatform; 2022-12-16 11:00:00 EST; 2022-12-16 11:40:00 EST; EXOTemp_C_1.5; EXOWiper_V;1;NA;NA; EXO up and replaced with the EXO2 from CCR after it was calibrated
-BVR;50;BVRplatform; 2022-12-16 11:45:00 EST; 2023-03-21 10:30:00 EST; EXOBGAPC_RFU_1.5; EXOBGAPC_ugL_1.5;5;NA;NA; High Blue Green readings after calibration. Especially RFU
+BVR;50;BVRplatform; 2022-12-16 11:45:00 EST; 2023-03-21 10:30:00 EST; EXOBGAPC_RFU_1.5; NA;6;NA;"bvrdata[Time, maintenance_cols]-1.98"; High Blue Green readings after replacing EXO2 so downcorrected values. 
+BVR;50;BVRplatform; 2022-12-16 11:45:00 EST; 2023-03-21 10:30:00 EST; EXOBGAPC_ugL_1.5; NA;6;NA;"bvrdata[Time, maintenance_cols]-0.88"; High Blue Green readings after replacing EXO2 so downcorrected values. 
 BVR;50;BVRplatform; 2023-01-24 20:55:00 EST; 2023-01-24 21:05:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;2;NA; NA; very strange values for all sensors
 BVR;50;BVRplatform; 2023-03-21 09:55:00 EST; 2023-03-21 10:25:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning and switching EXO2 back from FCR to BVR
 BVR;50;BVRplatform; 2023-03-25 00:00:00 EST; 2023-04-17 12:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA; NA; wiper voltage more variable than normal- cold affect the sensor readings

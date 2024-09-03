@@ -29,9 +29,16 @@ BVR;50;BVRplatform; 2021-01-28 08:00:00 EST; 2021-01-28 08:00:00 EST; LvlPressur
 BVR;50;BVRplatform; 2021-02-03 06:30:00 EST; 2021-02-03 06:40:00 EST; LvlPressure_psi_13;NA;5;NA;NA; low psi value
 BVR;50;BVRplatform; 2021-03-08 11:28:00 EST; 2021-03-08 13:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated DO sensors. EXO Buoy was underwater so repositioned it
 BVR;50;BVRplatform; 2021-04-05 11:20:00 EST; 2021-04-05 13:20:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning and calibrated fDOM and depth sensor and moved thermistors so pressure sensor is at the bottom and stretched out top thermistor
-BVR;50;BVRplatform; 2021-04-05 13:30:00 EST; 2021-04-05 13:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning add turbidity and TSS and made a new dataframe and Factory reset the depth sensor and calibrated fDOM to 0 with DI water
-BVR;50;BVRplatform; 2021-03-08 13:40:00 EST; 2021-04-16 09:10:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;5;NA;NA; decrease in sp. cond which lines up with when people were at the reservoir but these are the only two low variables
-BVR;50;BVRplatform; 2021-04-16 09:00:00 EST; 2021-04-16 10:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA;NA; Repositioned the EXO buoy to make sure it was floating
+BVR;50;BVRplatform; 2021-04-05 13:30:00 EST; 2021-04-05 13:45:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning add turbidity and TSS and made a new dataframe and Factory reset the depth sensor and calibrated fDOM to 0 with DI water
+BVR;50;BVRplatform; 2021-03-08 13:40:00 EST; 2021-04-16 09:10:00 EST; EXOCond_uScm_1.5; NA;6;NA;"bvrdata[Time, maintenance_cols]+0.62"; moved sensor and these observations are slightly low so corrected when it was out of position
+BVR;50;BVRplatform; 2021-03-08 13:40:00 EST; 2021-04-16 09:10:00 EST; EXOSpCond_uScm_1.5; NA;6;NA;"bvrdata[Time, maintenance_cols]+1.46"; moved sensor and these observations are slightly low so corrected when it was out of position
+BVR;50;BVRplatform; 2021-03-08 13:40:00 EST; 2021-04-16 09:10:00 EST; EXOTDS_mgL_1.5; NA;6;NA;"bvrdata[Time, maintenance_cols]+0.95"; moved sensor and these observations are slightly low so corrected when it was out of position
+BVR;50;BVRplatform; 2021-03-12 11:45:00 EST; 2021-03-12 11:55:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA;NA; low value on conductivity sensor
+BVR;50;BVRplatform; 2021-03-24 12:25:00 EST; 2021-03-24 12:35:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA;NA; low value on conductivity sensor
+BVR;50;BVRplatform; 2021-03-24 22:45:00 EST; 2021-03-24 22:55:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA;NA; low value on conductivity sensor
+BVR;50;BVRplatform; 2021-03-25 18:05:00 EST; 2021-03-25 18:15:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA;NA; low value on conductivity sensor
+BVR;50;BVRplatform; 2021-04-07 13:05:00 EST; 2021-04-07 13:15:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2;NA;NA; low value on conductivity sensor
+BVR;50;BVRplatform; 2021-04-16 09:00:00 EST; 2021-04-16 13:10:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA;NA; Repositioned the EXO buoy to make sure it was floating
 BVR;50;BVRplatform; 2021-05-03 10:10:00 EST; 2021-05-03 10:30:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning 
 BVR;50;BVRplatform; 2021-05-14 10:40:00 EST; 2021-05-14 11:00:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA;NA; sensor string up for cleaning
 BVR;50;BVRplatform; 2021-05-14 11:00:00 EST; 2021-05-14 15:20:00 EST; RDO_mgL_13; RDOsat_percent_13;1;NA;NA; No DO in the reservoir but sensor is measuring it so take out values until they are 0 
@@ -74,6 +81,7 @@ BVR;50;BVRplatform; 2023-03-21 09:55:00 EST; 2023-03-21 10:25:00 EST; Thermistor
 BVR;50;BVRplatform; 2023-03-25 00:00:00 EST; 2023-04-17 12:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA; NA; wiper voltage more variable than normal- cold affect the sensor readings
 BVR;50;BVRplatform; 2023-04-10 09:35:00 EST; 2023-04-10 09:45:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
 BVR;50;BVRplatform; 2023-05-18 04:55:00 EST; 2023-05-18 05:25:00 EST; EXOBGAPC_RFU_1.5; EXOBGAPC_ugL_1.5;2;NA;NA; High Blue Green readings 
+BVR;50;BVRplatform; 2023-05-27 10:35:00 EST; 2023-05-27 10:45:00 EST; EXOCond_uScm_1.5; EXOTDS_mgL_1.5;2:NA;NA; Out of range observation on the cond senssor
 BVR;50;BVRplatform; 2023-06-05 11:45:00 EST; 2023-06-05 12:05:00 EST; ThermistorTemp_C_1; LvlTemp_C_13;1;NA; NA; sensor string up for cleaning
 BVR;50;BVRplatform; 2023-06-07 00:00:00 EST; 2023-06-19 10:00:00 EST; EXOTemp_C_1.5; EXOWiper_V;5;NA; NA; wiper voltage more variable than normal- cold affect the sensor readings
 BVR;50;BVRplatform; 2023-06-05 12:00:00 EST; 2023-06-19 10:00:00 EST; EXOTurbidity_FNU_1.5; NA;2;NA; "bvrdata[c(which(Time & bvrdata[,'EXOTurbidity_FNU_1.5']>5)),"; Bad Turbidity reading probably due to EXO2 wiper over sensor during reading take out readings below 5

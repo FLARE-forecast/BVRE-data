@@ -11827,3 +11827,10 @@
 2024/02/17 04:28:33 autossh[4821]: clear alarm timer (0 secs left)
 2024/02/17 04:28:33 autossh[4821]: set alarm for 600 secs
 2024/02/17 04:28:33 autossh[4823]: child of 4821 execing /usr/bin/ssh
+2024/12/06 12:31:27 autossh[5577]: checking for grace period, tries = 0
+2024/12/06 12:31:27 autossh[5577]: starting ssh (count 1)
+2024/12/06 12:31:27 autossh[5577]: ssh child pid is 5578
+2024/12/06 12:31:27 autossh[5577]: check on child 5578
+2024/12/06 12:31:27 autossh[5577]: clear alarm timer (0 secs left)
+2024/12/06 12:31:27 autossh[5577]: set alarm for 600 secs
+2024/12/06 12:31:27 autossh[5578]: child of 5577 execing /usr/bin/ssh

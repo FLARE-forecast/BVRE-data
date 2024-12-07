@@ -11858,3 +11858,10 @@
 2024/12/06 12:51:57 autossh[15423]: child of 5577 execing /usr/bin/ssh
 2024/12/06 13:00:09 autossh[5577]: received signal to exit (15)
 2024/12/06 13:00:09 autossh[5577]: clear alarm timer (108 secs left)
+2024/12/06 20:31:29 autossh[6866]: checking for grace period, tries = 0
+2024/12/06 20:31:29 autossh[6866]: starting ssh (count 1)
+2024/12/06 20:31:29 autossh[6866]: ssh child pid is 6867
+2024/12/06 20:31:29 autossh[6866]: check on child 6867
+2024/12/06 20:31:29 autossh[6866]: clear alarm timer (0 secs left)
+2024/12/06 20:31:29 autossh[6866]: set alarm for 600 secs
+2024/12/06 20:31:29 autossh[6867]: child of 6866 execing /usr/bin/ssh

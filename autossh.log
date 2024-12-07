@@ -11865,3 +11865,27 @@
 2024/12/06 20:31:29 autossh[6866]: clear alarm timer (0 secs left)
 2024/12/06 20:31:29 autossh[6866]: set alarm for 600 secs
 2024/12/06 20:31:29 autossh[6867]: child of 6866 execing /usr/bin/ssh
+2024/12/06 20:41:29 autossh[6866]: received SIGALRM (end-of-life 0)
+2024/12/06 20:41:44 autossh[6866]: timeout polling to accept read connection
+2024/12/06 20:41:44 autossh[6866]: port down, restarting ssh
+2024/12/06 20:41:44 autossh[6866]: clear alarm timer (0 secs left)
+2024/12/06 20:41:44 autossh[6866]: checking for grace period, tries = 0
+2024/12/06 20:41:44 autossh[6866]: starting ssh (count 2)
+2024/12/06 20:41:44 autossh[6866]: ssh child pid is 12430
+2024/12/06 20:41:44 autossh[6866]: check on child 12430
+2024/12/06 20:41:44 autossh[6866]: clear alarm timer (0 secs left)
+2024/12/06 20:41:44 autossh[6866]: set alarm for 600 secs
+2024/12/06 20:41:44 autossh[12430]: child of 6866 execing /usr/bin/ssh
+2024/12/06 20:51:44 autossh[6866]: received SIGALRM (end-of-life 0)
+2024/12/06 20:51:59 autossh[6866]: timeout polling to accept read connection
+2024/12/06 20:51:59 autossh[6866]: port down, restarting ssh
+2024/12/06 20:51:59 autossh[6866]: clear alarm timer (0 secs left)
+2024/12/06 20:51:59 autossh[6866]: checking for grace period, tries = 0
+2024/12/06 20:51:59 autossh[6866]: starting ssh (count 3)
+2024/12/06 20:51:59 autossh[6866]: ssh child pid is 16686
+2024/12/06 20:51:59 autossh[6866]: check on child 16686
+2024/12/06 20:51:59 autossh[6866]: clear alarm timer (0 secs left)
+2024/12/06 20:51:59 autossh[6866]: set alarm for 600 secs
+2024/12/06 20:51:59 autossh[16686]: child of 6866 execing /usr/bin/ssh
+2024/12/06 21:00:11 autossh[6866]: received signal to exit (15)
+2024/12/06 21:00:11 autossh[6866]: clear alarm timer (108 secs left)

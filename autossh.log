@@ -12681,3 +12681,14 @@
 2024/12/10 16:41:49 autossh[4806]: clear alarm timer (0 secs left)
 2024/12/10 16:41:49 autossh[4806]: set alarm for 600 secs
 2024/12/10 16:41:49 autossh[10244]: child of 4806 execing /usr/bin/ssh
+2024/12/10 16:51:49 autossh[4806]: received SIGALRM (end-of-life 0)
+2024/12/10 16:52:04 autossh[4806]: timeout polling to accept read connection
+2024/12/10 16:52:04 autossh[4806]: port down, restarting ssh
+2024/12/10 16:52:04 autossh[4806]: clear alarm timer (0 secs left)
+2024/12/10 16:52:04 autossh[4806]: checking for grace period, tries = 0
+2024/12/10 16:52:04 autossh[4806]: starting ssh (count 3)
+2024/12/10 16:52:04 autossh[4806]: ssh child pid is 15635
+2024/12/10 16:52:04 autossh[4806]: check on child 15635
+2024/12/10 16:52:04 autossh[4806]: clear alarm timer (0 secs left)
+2024/12/10 16:52:04 autossh[4806]: set alarm for 600 secs
+2024/12/10 16:52:04 autossh[15635]: child of 4806 execing /usr/bin/ssh

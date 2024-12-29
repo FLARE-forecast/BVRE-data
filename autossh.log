@@ -16308,3 +16308,42 @@
 2024/12/29 12:32:07 autossh[5143]: clear alarm timer (0 secs left)
 2024/12/29 12:32:07 autossh[5143]: set alarm for 600 secs
 2024/12/29 12:32:07 autossh[5147]: child of 5143 execing /usr/bin/ssh
+2024/12/29 12:42:07 autossh[5143]: received SIGALRM (end-of-life 0)
+2024/12/29 12:42:07 autossh[5143]: not what I sent: "bjorn autossh 5143 1485048884 
+" : ""
+2024/12/29 12:42:07 autossh[5143]: not what I sent: "bjorn autossh 5143 1485048884 
+" : ""
+2024/12/29 12:42:07 autossh[5143]: tried connection 3 times and failed
+2024/12/29 12:42:07 autossh[5143]: port down, restarting ssh
+2024/12/29 12:42:07 autossh[5143]: clear alarm timer (0 secs left)
+2024/12/29 12:42:07 autossh[5143]: checking for grace period, tries = 0
+2024/12/29 12:42:07 autossh[5143]: starting ssh (count 2)
+2024/12/29 12:42:07 autossh[5143]: ssh child pid is 10583
+2024/12/29 12:42:07 autossh[5143]: check on child 10583
+2024/12/29 12:42:07 autossh[5143]: clear alarm timer (0 secs left)
+2024/12/29 12:42:07 autossh[5143]: set alarm for 600 secs
+2024/12/29 12:42:07 autossh[10583]: child of 5143 execing /usr/bin/ssh
+2024/12/29 12:52:07 autossh[5143]: received SIGALRM (end-of-life 0)
+2024/12/29 12:52:07 autossh[5143]: not what I sent: "bjorn autossh 5143 768630971 
+" : ""
+2024/12/29 12:52:07 autossh[5143]: not what I sent: "bjorn autossh 5143 768630971 
+" : ""
+2024/12/29 12:52:07 autossh[5143]: tried connection 3 times and failed
+2024/12/29 12:52:07 autossh[5143]: port down, restarting ssh
+2024/12/29 12:52:07 autossh[5143]: clear alarm timer (0 secs left)
+2024/12/29 12:52:07 autossh[5143]: checking for grace period, tries = 0
+2024/12/29 12:52:07 autossh[5143]: starting ssh (count 3)
+2024/12/29 12:52:07 autossh[5143]: ssh child pid is 14719
+2024/12/29 12:52:07 autossh[5143]: check on child 14719
+2024/12/29 12:52:07 autossh[5143]: clear alarm timer (0 secs left)
+2024/12/29 12:52:07 autossh[5143]: set alarm for 600 secs
+2024/12/29 12:52:07 autossh[14719]: child of 5143 execing /usr/bin/ssh
+2024/12/29 13:00:50 autossh[5143]: received signal to exit (15)
+2024/12/29 13:00:50 autossh[5143]: clear alarm timer (77 secs left)
+2024/12/29 16:32:07 autossh[5086]: checking for grace period, tries = 0
+2024/12/29 16:32:07 autossh[5086]: starting ssh (count 1)
+2024/12/29 16:32:07 autossh[5086]: ssh child pid is 5089
+2024/12/29 16:32:07 autossh[5086]: check on child 5089
+2024/12/29 16:32:07 autossh[5086]: clear alarm timer (0 secs left)
+2024/12/29 16:32:07 autossh[5086]: set alarm for 600 secs
+2024/12/29 16:32:07 autossh[5089]: child of 5086 execing /usr/bin/ssh

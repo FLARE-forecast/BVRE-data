@@ -17951,3 +17951,32 @@
 2025/01/06 04:32:22 autossh[5047]: clear alarm timer (0 secs left)
 2025/01/06 04:32:22 autossh[5047]: set alarm for 600 secs
 2025/01/06 04:32:22 autossh[5049]: child of 5047 execing /usr/bin/ssh
+2025/01/06 04:42:22 autossh[5047]: received SIGALRM (end-of-life 0)
+2025/01/06 04:42:37 autossh[5047]: timeout polling to accept read connection
+2025/01/06 04:42:37 autossh[5047]: port down, restarting ssh
+2025/01/06 04:42:37 autossh[5047]: clear alarm timer (0 secs left)
+2025/01/06 04:42:37 autossh[5047]: checking for grace period, tries = 0
+2025/01/06 04:42:37 autossh[5047]: starting ssh (count 2)
+2025/01/06 04:42:37 autossh[5047]: ssh child pid is 10496
+2025/01/06 04:42:37 autossh[5047]: check on child 10496
+2025/01/06 04:42:37 autossh[5047]: clear alarm timer (0 secs left)
+2025/01/06 04:42:37 autossh[5047]: set alarm for 600 secs
+2025/01/06 04:42:37 autossh[10496]: child of 5047 execing /usr/bin/ssh
+2025/01/06 04:52:37 autossh[5047]: received SIGALRM (end-of-life 0)
+2025/01/06 04:52:52 autossh[5047]: timeout polling to accept read connection
+2025/01/06 04:52:52 autossh[5047]: port down, restarting ssh
+2025/01/06 04:52:52 autossh[5047]: clear alarm timer (0 secs left)
+2025/01/06 04:52:52 autossh[5047]: checking for grace period, tries = 0
+2025/01/06 04:52:52 autossh[5047]: starting ssh (count 3)
+2025/01/06 04:52:52 autossh[5047]: ssh child pid is 14696
+2025/01/06 04:52:52 autossh[5047]: check on child 14696
+2025/01/06 04:52:52 autossh[5047]: clear alarm timer (0 secs left)
+2025/01/06 04:52:52 autossh[5047]: set alarm for 600 secs
+2025/01/06 04:52:52 autossh[14696]: child of 5047 execing /usr/bin/ssh
+2025/01/06 05:00:46 autossh[5911]: checking for grace period, tries = 0
+2025/01/06 05:00:46 autossh[5911]: starting ssh (count 1)
+2025/01/06 05:00:46 autossh[5911]: ssh child pid is 5914
+2025/01/06 05:00:46 autossh[5911]: check on child 5914
+2025/01/06 05:00:46 autossh[5911]: clear alarm timer (0 secs left)
+2025/01/06 05:00:46 autossh[5911]: set alarm for 600 secs
+2025/01/06 05:00:46 autossh[5914]: child of 5911 execing /usr/bin/ssh

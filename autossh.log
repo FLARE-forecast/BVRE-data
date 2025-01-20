@@ -21285,3 +21285,21 @@
 2025/01/20 04:33:36 autossh[4760]: clear alarm timer (0 secs left)
 2025/01/20 04:33:36 autossh[4760]: set alarm for 600 secs
 2025/01/20 04:33:36 autossh[4765]: child of 4760 execing /usr/bin/ssh
+2025/01/20 04:43:36 autossh[4760]: received SIGALRM (end-of-life 0)
+2025/01/20 04:43:51 autossh[4760]: timeout polling to accept read connection
+2025/01/20 04:43:51 autossh[4760]: port down, restarting ssh
+2025/01/20 04:43:51 autossh[4760]: clear alarm timer (0 secs left)
+2025/01/20 04:43:51 autossh[4760]: checking for grace period, tries = 0
+2025/01/20 04:43:51 autossh[4760]: starting ssh (count 2)
+2025/01/20 04:43:51 autossh[4760]: ssh child pid is 10205
+2025/01/20 04:43:51 autossh[4760]: check on child 10205
+2025/01/20 04:43:51 autossh[4760]: clear alarm timer (0 secs left)
+2025/01/20 04:43:51 autossh[4760]: set alarm for 600 secs
+2025/01/20 04:43:51 autossh[10205]: child of 4760 execing /usr/bin/ssh
+2025/01/20 08:33:07 autossh[5152]: checking for grace period, tries = 0
+2025/01/20 08:33:07 autossh[5152]: starting ssh (count 1)
+2025/01/20 08:33:07 autossh[5152]: ssh child pid is 5153
+2025/01/20 08:33:07 autossh[5152]: check on child 5153
+2025/01/20 08:33:07 autossh[5152]: clear alarm timer (0 secs left)
+2025/01/20 08:33:07 autossh[5152]: set alarm for 600 secs
+2025/01/20 08:33:07 autossh[5153]: child of 5152 execing /usr/bin/ssh

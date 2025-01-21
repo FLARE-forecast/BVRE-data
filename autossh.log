@@ -21346,3 +21346,32 @@
 2025/01/20 12:34:39 autossh[4812]: clear alarm timer (0 secs left)
 2025/01/20 12:34:39 autossh[4812]: set alarm for 600 secs
 2025/01/20 12:34:39 autossh[4815]: child of 4812 execing /usr/bin/ssh
+2025/01/20 12:44:39 autossh[4812]: received SIGALRM (end-of-life 0)
+2025/01/20 12:44:54 autossh[4812]: timeout polling to accept read connection
+2025/01/20 12:44:54 autossh[4812]: port down, restarting ssh
+2025/01/20 12:44:54 autossh[4812]: clear alarm timer (0 secs left)
+2025/01/20 12:44:54 autossh[4812]: checking for grace period, tries = 0
+2025/01/20 12:44:54 autossh[4812]: starting ssh (count 2)
+2025/01/20 12:44:54 autossh[4812]: ssh child pid is 10230
+2025/01/20 12:44:54 autossh[4812]: check on child 10230
+2025/01/20 12:44:54 autossh[4812]: clear alarm timer (0 secs left)
+2025/01/20 12:44:54 autossh[4812]: set alarm for 600 secs
+2025/01/20 12:44:54 autossh[10230]: child of 4812 execing /usr/bin/ssh
+2025/01/20 12:54:54 autossh[4812]: received SIGALRM (end-of-life 0)
+2025/01/20 12:55:09 autossh[4812]: timeout polling to accept read connection
+2025/01/20 12:55:09 autossh[4812]: port down, restarting ssh
+2025/01/20 12:55:09 autossh[4812]: clear alarm timer (0 secs left)
+2025/01/20 12:55:09 autossh[4812]: checking for grace period, tries = 0
+2025/01/20 12:55:09 autossh[4812]: starting ssh (count 3)
+2025/01/20 12:55:09 autossh[4812]: ssh child pid is 14722
+2025/01/20 12:55:09 autossh[4812]: check on child 14722
+2025/01/20 12:55:09 autossh[4812]: clear alarm timer (0 secs left)
+2025/01/20 12:55:09 autossh[4812]: set alarm for 600 secs
+2025/01/20 12:55:09 autossh[14722]: child of 4812 execing /usr/bin/ssh
+2025/01/20 20:33:39 autossh[4675]: checking for grace period, tries = 0
+2025/01/20 20:33:39 autossh[4675]: starting ssh (count 1)
+2025/01/20 20:33:39 autossh[4675]: ssh child pid is 4676
+2025/01/20 20:33:39 autossh[4675]: check on child 4676
+2025/01/20 20:33:39 autossh[4675]: clear alarm timer (0 secs left)
+2025/01/20 20:33:39 autossh[4675]: set alarm for 600 secs
+2025/01/20 20:33:39 autossh[4676]: child of 4675 execing /usr/bin/ssh

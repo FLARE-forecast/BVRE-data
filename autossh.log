@@ -21546,3 +21546,32 @@
 2025/01/21 20:33:12 autossh[5173]: clear alarm timer (0 secs left)
 2025/01/21 20:33:12 autossh[5173]: set alarm for 600 secs
 2025/01/21 20:33:12 autossh[5176]: child of 5173 execing /usr/bin/ssh
+2025/01/21 20:43:12 autossh[5173]: received SIGALRM (end-of-life 0)
+2025/01/21 20:43:27 autossh[5173]: timeout polling to accept read connection
+2025/01/21 20:43:27 autossh[5173]: port down, restarting ssh
+2025/01/21 20:43:27 autossh[5173]: clear alarm timer (0 secs left)
+2025/01/21 20:43:27 autossh[5173]: checking for grace period, tries = 0
+2025/01/21 20:43:27 autossh[5173]: starting ssh (count 2)
+2025/01/21 20:43:27 autossh[5173]: ssh child pid is 10628
+2025/01/21 20:43:27 autossh[5173]: check on child 10628
+2025/01/21 20:43:27 autossh[5173]: clear alarm timer (0 secs left)
+2025/01/21 20:43:27 autossh[5173]: set alarm for 600 secs
+2025/01/21 20:43:27 autossh[10628]: child of 5173 execing /usr/bin/ssh
+2025/01/21 20:53:27 autossh[5173]: received SIGALRM (end-of-life 0)
+2025/01/21 20:53:42 autossh[5173]: timeout polling to accept read connection
+2025/01/21 20:53:42 autossh[5173]: port down, restarting ssh
+2025/01/21 20:53:42 autossh[5173]: clear alarm timer (0 secs left)
+2025/01/21 20:53:42 autossh[5173]: checking for grace period, tries = 0
+2025/01/21 20:53:42 autossh[5173]: starting ssh (count 3)
+2025/01/21 20:53:42 autossh[5173]: ssh child pid is 14737
+2025/01/21 20:53:42 autossh[5173]: check on child 14737
+2025/01/21 20:53:42 autossh[5173]: clear alarm timer (0 secs left)
+2025/01/21 20:53:42 autossh[5173]: set alarm for 600 secs
+2025/01/21 20:53:42 autossh[14737]: child of 5173 execing /usr/bin/ssh
+2025/01/22 00:33:13 autossh[5170]: checking for grace period, tries = 0
+2025/01/22 00:33:13 autossh[5170]: starting ssh (count 1)
+2025/01/22 00:33:13 autossh[5170]: ssh child pid is 5171
+2025/01/22 00:33:13 autossh[5170]: check on child 5171
+2025/01/22 00:33:13 autossh[5170]: clear alarm timer (0 secs left)
+2025/01/22 00:33:13 autossh[5170]: set alarm for 600 secs
+2025/01/22 00:33:13 autossh[5171]: child of 5170 execing /usr/bin/ssh

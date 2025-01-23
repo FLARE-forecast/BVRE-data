@@ -21792,3 +21792,34 @@
 2025/01/23 12:33:49 autossh[4752]: clear alarm timer (0 secs left)
 2025/01/23 12:33:49 autossh[4752]: set alarm for 600 secs
 2025/01/23 12:33:49 autossh[4755]: child of 4752 execing /usr/bin/ssh
+2025/01/23 12:43:49 autossh[4752]: received SIGALRM (end-of-life 0)
+2025/01/23 12:44:04 autossh[4752]: timeout polling to accept read connection
+2025/01/23 12:44:04 autossh[4752]: port down, restarting ssh
+2025/01/23 12:44:04 autossh[4752]: clear alarm timer (0 secs left)
+2025/01/23 12:44:04 autossh[4752]: checking for grace period, tries = 0
+2025/01/23 12:44:04 autossh[4752]: starting ssh (count 2)
+2025/01/23 12:44:04 autossh[4752]: ssh child pid is 10622
+2025/01/23 12:44:04 autossh[4752]: check on child 10622
+2025/01/23 12:44:04 autossh[4752]: clear alarm timer (0 secs left)
+2025/01/23 12:44:04 autossh[4752]: set alarm for 600 secs
+2025/01/23 12:44:04 autossh[10622]: child of 4752 execing /usr/bin/ssh
+2025/01/23 12:54:04 autossh[4752]: received SIGALRM (end-of-life 0)
+2025/01/23 12:54:19 autossh[4752]: timeout polling to accept read connection
+2025/01/23 12:54:19 autossh[4752]: port down, restarting ssh
+2025/01/23 12:54:19 autossh[4752]: clear alarm timer (0 secs left)
+2025/01/23 12:54:19 autossh[4752]: checking for grace period, tries = 0
+2025/01/23 12:54:19 autossh[4752]: starting ssh (count 3)
+2025/01/23 12:54:19 autossh[4752]: ssh child pid is 14739
+2025/01/23 12:54:19 autossh[4752]: check on child 14739
+2025/01/23 12:54:19 autossh[4752]: clear alarm timer (0 secs left)
+2025/01/23 12:54:19 autossh[4752]: set alarm for 600 secs
+2025/01/23 12:54:19 autossh[14739]: child of 4752 execing /usr/bin/ssh
+2025/01/23 13:02:31 autossh[4752]: received signal to exit (15)
+2025/01/23 13:02:31 autossh[4752]: clear alarm timer (108 secs left)
+2025/01/23 16:33:19 autossh[5194]: checking for grace period, tries = 0
+2025/01/23 16:33:19 autossh[5194]: starting ssh (count 1)
+2025/01/23 16:33:19 autossh[5196]: child of 5194 execing /usr/bin/ssh
+2025/01/23 16:33:19 autossh[5194]: ssh child pid is 5196
+2025/01/23 16:33:19 autossh[5194]: check on child 5196
+2025/01/23 16:33:19 autossh[5194]: clear alarm timer (0 secs left)
+2025/01/23 16:33:19 autossh[5194]: set alarm for 600 secs

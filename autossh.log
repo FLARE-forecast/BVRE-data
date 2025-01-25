@@ -22127,3 +22127,10 @@
 2025/01/25 04:33:23 autossh[5165]: clear alarm timer (0 secs left)
 2025/01/25 04:33:23 autossh[5165]: set alarm for 600 secs
 2025/01/25 04:33:23 autossh[5167]: child of 5165 execing /usr/bin/ssh
+2025/01/25 04:44:51 autossh[4728]: checking for grace period, tries = 0
+2025/01/25 04:44:51 autossh[4728]: starting ssh (count 1)
+2025/01/25 04:44:51 autossh[4728]: ssh child pid is 4730
+2025/01/25 04:44:51 autossh[4728]: check on child 4730
+2025/01/25 04:44:51 autossh[4728]: clear alarm timer (0 secs left)
+2025/01/25 04:44:51 autossh[4728]: set alarm for 600 secs
+2025/01/25 04:44:51 autossh[4730]: child of 4728 execing /usr/bin/ssh

@@ -19439,3 +19439,29 @@
 02/28/25 08:34:23 EST -0500 | time="2025-02-28T08:34:23-05:00" level=info msg="Nebula interface is active" boringcrypto=false build=1.7.1 interface=nebula1 network=10.10.200.5/24 udpAddr="0.0.0.0:4242"
 02/28/25 08:34:23 EST -0500 | time="2025-02-28T08:34:23-05:00" level=info msg="Handshake message sent" handshake="map[stage:1 style:ix_psk0]" initiatorIndex=1917826948 localIndex=1917826948 remoteIndex=0 udpAddrs="[54.71.171.66:4242]" vpnIp=10.10.200.1
 02/28/25 08:34:23 EST -0500 | time="2025-02-28T08:34:23-05:00" level=info msg="Handshake message received" certName=nebula_001 durationNs=156027389 fingerprint=f17bbbd73581e8910e0b9458be5d155ab5d1df90002e2c5f26a8896ab54608aa handshake="map[stage:2 style:ix_psk0]" initiatorIndex=1917826948 issuer=c767287dd919b573342625585e391ee4a3a1e443703d2c8738c8538945c804cd remoteIndex=1917826948 responderIndex=4125109136 sentCachedPackets=1 udpAddr="54.71.171.66:4242" vpnIp=10.10.200.1
+02/28/25 09:00:02 EST -0500 | ########## START ##########
+02/28/25 09:00:02 EST -0500 | time="2025-02-28T09:00:02-05:00" level=info msg="Caught signal, shutting down" signal=terminated
+02/28/25 09:00:02 EST -0500 | time="2025-02-28T09:00:02-05:00" level=info msg=Goodbye
+02/28/25 09:00:03 EST -0500 | ##########  END  ##########
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Firewall rule added" firewallRule="map[caName: caSha: direction:outgoing endPort:0 groups:[] host:any ip: localIp: proto:0 startPort:0]"
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Firewall rule added" firewallRule="map[caName: caSha: direction:incoming endPort:0 groups:[] host:any ip: localIp: proto:0 startPort:0]"
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Firewall started" firewallHash=498215dec4e5687a2353f51c10838c113bd1af35ef72b8e8c9f536986ada5417
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Main HostMap created" network=10.10.200.5/24 preferredRanges="[]"
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="punchy enabled"
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Loaded send_recv_error config" sendRecvError=always
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Nebula interface is active" boringcrypto=false build=1.7.1 interface=nebula1 network=10.10.200.5/24 udpAddr="0.0.0.0:4242"
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Handshake message sent" handshake="map[stage:1 style:ix_psk0]" initiatorIndex=1550618703 localIndex=1550618703 remoteIndex=0 udpAddrs="[54.71.171.66:4242]" vpnIp=10.10.200.1
+02/28/25 09:00:03 EST -0500 | time="2025-02-28T09:00:03-05:00" level=info msg="Handshake message received" certName=nebula_001 durationNs=134183216 fingerprint=f17bbbd73581e8910e0b9458be5d155ab5d1df90002e2c5f26a8896ab54608aa handshake="map[stage:2 style:ix_psk0]" initiatorIndex=1550618703 issuer=c767287dd919b573342625585e391ee4a3a1e443703d2c8738c8538945c804cd remoteIndex=1550618703 responderIndex=3299534038 sentCachedPackets=1 udpAddr="54.71.171.66:4242" vpnIp=10.10.200.1
+02/28/25 09:03:03 EST -0500 | time="2025-02-28T09:03:03-05:00" level=error msg="Failed to write outgoing packet" certName=nebula_001 error="sendto: network is unreachable" localIndex=1550618703 remoteIndex=3299534038 udpAddr="<nil>" vpnIp=10.10.200.1
+02/28/25 12:34:21 EST -0500 | ########## START ##########
+02/28/25 12:34:21 EST -0500 | nebula: no process found
+02/28/25 12:34:22 EST -0500 | ##########  END  ##########
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Firewall rule added" firewallRule="map[caName: caSha: direction:outgoing endPort:0 groups:[] host:any ip: localIp: proto:0 startPort:0]"
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Firewall rule added" firewallRule="map[caName: caSha: direction:incoming endPort:0 groups:[] host:any ip: localIp: proto:0 startPort:0]"
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Firewall started" firewallHash=498215dec4e5687a2353f51c10838c113bd1af35ef72b8e8c9f536986ada5417
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Main HostMap created" network=10.10.200.5/24 preferredRanges="[]"
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="punchy enabled"
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Loaded send_recv_error config" sendRecvError=always
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Nebula interface is active" boringcrypto=false build=1.7.1 interface=nebula1 network=10.10.200.5/24 udpAddr="0.0.0.0:4242"
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Handshake message sent" handshake="map[stage:1 style:ix_psk0]" initiatorIndex=650501963 localIndex=650501963 remoteIndex=0 udpAddrs="[54.71.171.66:4242]" vpnIp=10.10.200.1
+02/28/25 12:34:23 EST -0500 | time="2025-02-28T12:34:23-05:00" level=info msg="Handshake message received" certName=nebula_001 durationNs=128964468 fingerprint=f17bbbd73581e8910e0b9458be5d155ab5d1df90002e2c5f26a8896ab54608aa handshake="map[stage:2 style:ix_psk0]" initiatorIndex=650501963 issuer=c767287dd919b573342625585e391ee4a3a1e443703d2c8738c8538945c804cd remoteIndex=650501963 responderIndex=2946893651 sentCachedPackets=1 udpAddr="54.71.171.66:4242" vpnIp=10.10.200.1

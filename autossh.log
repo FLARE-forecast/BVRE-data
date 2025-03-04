@@ -30110,3 +30110,10 @@
 2025/03/04 04:34:27 autossh[5118]: clear alarm timer (0 secs left)
 2025/03/04 04:34:27 autossh[5118]: set alarm for 600 secs
 2025/03/04 04:34:27 autossh[5120]: child of 5118 execing /usr/bin/ssh
+2025/03/04 08:34:29 autossh[5105]: checking for grace period, tries = 0
+2025/03/04 08:34:29 autossh[5105]: starting ssh (count 1)
+2025/03/04 08:34:29 autossh[5105]: ssh child pid is 5108
+2025/03/04 08:34:29 autossh[5105]: check on child 5108
+2025/03/04 08:34:29 autossh[5105]: clear alarm timer (0 secs left)
+2025/03/04 08:34:29 autossh[5105]: set alarm for 600 secs
+2025/03/04 08:34:29 autossh[5108]: child of 5105 execing /usr/bin/ssh

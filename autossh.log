@@ -34993,3 +34993,34 @@
 2025/03/28 01:34:42 autossh[4755]: clear alarm timer (0 secs left)
 2025/03/28 01:34:42 autossh[4755]: set alarm for 600 secs
 2025/03/28 01:34:42 autossh[4758]: child of 4755 execing /usr/bin/ssh
+2025/03/28 01:44:42 autossh[4755]: received SIGALRM (end-of-life 0)
+2025/03/28 01:44:57 autossh[4755]: timeout polling to accept read connection
+2025/03/28 01:44:57 autossh[4755]: port down, restarting ssh
+2025/03/28 01:44:57 autossh[4755]: clear alarm timer (0 secs left)
+2025/03/28 01:44:57 autossh[4755]: checking for grace period, tries = 0
+2025/03/28 01:44:57 autossh[4755]: starting ssh (count 2)
+2025/03/28 01:44:57 autossh[4755]: ssh child pid is 10226
+2025/03/28 01:44:57 autossh[4755]: check on child 10226
+2025/03/28 01:44:57 autossh[4755]: clear alarm timer (0 secs left)
+2025/03/28 01:44:57 autossh[4755]: set alarm for 600 secs
+2025/03/28 01:44:57 autossh[10226]: child of 4755 execing /usr/bin/ssh
+2025/03/28 01:54:57 autossh[4755]: received SIGALRM (end-of-life 0)
+2025/03/28 01:55:12 autossh[4755]: timeout polling to accept read connection
+2025/03/28 01:55:12 autossh[4755]: port down, restarting ssh
+2025/03/28 01:55:12 autossh[4755]: clear alarm timer (0 secs left)
+2025/03/28 01:55:12 autossh[4755]: checking for grace period, tries = 0
+2025/03/28 01:55:12 autossh[4755]: starting ssh (count 3)
+2025/03/28 01:55:12 autossh[4755]: ssh child pid is 14743
+2025/03/28 01:55:12 autossh[4755]: check on child 14743
+2025/03/28 01:55:12 autossh[4755]: clear alarm timer (0 secs left)
+2025/03/28 01:55:12 autossh[4755]: set alarm for 600 secs
+2025/03/28 01:55:12 autossh[14743]: child of 4755 execing /usr/bin/ssh
+2025/03/28 02:03:24 autossh[4755]: received signal to exit (15)
+2025/03/28 02:03:24 autossh[4755]: clear alarm timer (108 secs left)
+2025/03/28 05:34:42 autossh[4732]: checking for grace period, tries = 0
+2025/03/28 05:34:42 autossh[4732]: starting ssh (count 1)
+2025/03/28 05:34:42 autossh[4732]: ssh child pid is 4742
+2025/03/28 05:34:42 autossh[4732]: check on child 4742
+2025/03/28 05:34:42 autossh[4732]: clear alarm timer (0 secs left)
+2025/03/28 05:34:42 autossh[4732]: set alarm for 600 secs
+2025/03/28 05:34:42 autossh[4742]: child of 4732 execing /usr/bin/ssh

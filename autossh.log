@@ -41272,3 +41272,38 @@
 2025/04/26 05:34:59 autossh[4839]: clear alarm timer (0 secs left)
 2025/04/26 05:34:59 autossh[4839]: set alarm for 600 secs
 2025/04/26 05:34:59 autossh[4842]: child of 4839 execing /usr/bin/ssh
+2025/04/26 05:44:59 autossh[4839]: received SIGALRM (end-of-life 0)
+2025/04/26 05:45:14 autossh[4839]: timeout polling to accept read connection
+2025/04/26 05:45:14 autossh[4839]: port down, restarting ssh
+2025/04/26 05:45:14 autossh[4839]: clear alarm timer (0 secs left)
+2025/04/26 05:45:14 autossh[4839]: checking for grace period, tries = 0
+2025/04/26 05:45:14 autossh[4839]: starting ssh (count 2)
+2025/04/26 05:45:14 autossh[4839]: ssh child pid is 14556
+2025/04/26 05:45:14 autossh[4839]: check on child 14556
+2025/04/26 05:45:14 autossh[4839]: clear alarm timer (0 secs left)
+2025/04/26 05:45:14 autossh[4839]: set alarm for 600 secs
+2025/04/26 05:45:14 autossh[14556]: child of 4839 execing /usr/bin/ssh
+2025/04/26 05:55:14 autossh[4839]: received SIGALRM (end-of-life 0)
+2025/04/26 05:55:14 autossh[4839]: not what I sent: "bjorn autossh 4839 462782394 
+" : ""
+2025/04/26 05:55:14 autossh[4839]: not what I sent: "bjorn autossh 4839 462782394 
+" : ""
+2025/04/26 05:55:14 autossh[4839]: tried connection 3 times and failed
+2025/04/26 05:55:14 autossh[4839]: port down, restarting ssh
+2025/04/26 05:55:14 autossh[4839]: clear alarm timer (0 secs left)
+2025/04/26 05:55:14 autossh[4839]: checking for grace period, tries = 0
+2025/04/26 05:55:14 autossh[4839]: starting ssh (count 3)
+2025/04/26 05:55:14 autossh[4839]: ssh child pid is 22580
+2025/04/26 05:55:14 autossh[4839]: check on child 22580
+2025/04/26 05:55:14 autossh[4839]: clear alarm timer (0 secs left)
+2025/04/26 05:55:14 autossh[4839]: set alarm for 600 secs
+2025/04/26 05:55:14 autossh[22580]: child of 4839 execing /usr/bin/ssh
+2025/04/26 06:03:41 autossh[4839]: received signal to exit (15)
+2025/04/26 06:03:41 autossh[4839]: clear alarm timer (93 secs left)
+2025/04/26 09:35:00 autossh[4884]: checking for grace period, tries = 0
+2025/04/26 09:35:00 autossh[4884]: starting ssh (count 1)
+2025/04/26 09:35:00 autossh[4884]: ssh child pid is 4888
+2025/04/26 09:35:00 autossh[4884]: check on child 4888
+2025/04/26 09:35:00 autossh[4884]: clear alarm timer (0 secs left)
+2025/04/26 09:35:00 autossh[4884]: set alarm for 600 secs
+2025/04/26 09:35:00 autossh[4888]: child of 4884 execing /usr/bin/ssh

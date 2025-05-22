@@ -1,0 +1,81 @@
+name: bvre-generate-graphs
+
+# Controls when the action will run.
+on:
+  schedule:
+    - cron: '00 06 * * *'
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Generate Graphs"]  # Replace with your actual workflow name
+    types:
+      - completed
+
+jobs: 
+  generate-graphs:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # # Specify retry settings with delays
+    # strategy:
+    #   fail-fast: false
+    #   matrix:
+    #     max-retries: [5]  # Number of retries
+    #     retry-delay-seconds: [15, 60, 300, 1800, 7200]  # Delays between retries in seconds
+
+        # Wrap the job in a strategy matrix for retries
+  #  strategy:
+   #   matrix:
+   #     max-retries: [0, 1, 2]  # Adjust the number of retries as needed
+        
+    # Load repo and install R
+    steps:
+      - name: Checkout with bvre-generate-graphs branch
+        uses: actions/checkout@v2
+        with:
+          ref: bvre-generate-graphs
+          fetch-depth: 1
+
+      - name: Set Up R
+        uses: r-lib/actions/setup-r@v2
+      - name: Install packages
+        run: |
+          R -e 'install.packages("lubridate")'
+          R -e 'install.packages("tidyverse")'
+      - name: Run R Script
+        run: Rscript bvre-generate-graphs.R
+      
+      # Commit files ,and push
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add BVRDataFigures_$(date '+%Y-%m-%d').pdf
+          git commit -m "bvre-generate-graphs-$(date '+%Y-%m-%d')"
+          git branch bvre-graphs
+          git push --force origin bvre-graphs
+      
+ # send-mail:
+ #   needs: generate-graphs
+ #   if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+ #   runs-on: ubuntu-latest
+ #   steps:
+ #     - name: Send mail
+ #       uses: dawidd6/action-send-mail@v2
+ #       with:
+ #         # mail server settings
+ #         server_address: smtp.gmail.com
+ #         server_port: 465
+ #         # user credentials
+ #         username: ${{ secrets.EMAIL_USERNAME }}
+ #         password: ${{ secrets.EMAIL_PASSWORD }}
+ #         # email subject
+ #         subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+ #         # email body as text
+ #         body: |
+ #           ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+ #           The workflow link is https://github.com/FLARE-forecast/CCRE-data/actions/runs/${{ github.run_id }}
+ #         # comma-separated string, send email to
+ #         # to: abreefpilz@vt.edu, vdaneshmand@acis.ufl.edu, zhuzeh@oregonstate.edu
+ #         to: zhuzeh@oregonstate.edu
+ #         # from email name
+ #         from: FLARE

@@ -1,0 +1,39 @@
+name: QAQC catwalk data
+on:
+   push:
+      branches: [ bvre-platform-data ]
+      #paths: 
+      #- 'bvre-waterquality.csv'
+   #workflow_dispatch:
+jobs:
+  qaqc_run:
+     runs-on: ubuntu-22.04
+     container:
+      image: rocker/tidyverse:4.2
+     steps:
+       - name: Checkout repo
+         uses: actions/checkout@v3
+         with:
+           ref: bvre-platform-data-qaqc
+           fetch-depth: 1
+       - name: Download necessary files
+         run: |
+            wget https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/bvre-waterquality.csv
+       - name: Run QAQC script
+         run: | 
+           R -e 'remotes::install_version("EDIutils", version = "1.0.2")'
+           R -e 'remotes::install_version("xml2", version = "1.3.3")'
+           R -e 'remotes::install_version("here", version = "1.0.1")'
+           R -e 'remotes::install_version("suncalc", version = "0.5.1")'
+           Rscript $GITHUB_WORKSPACE/R/QAQC_workflow.R
+       - name: Configure Git
+         run: |
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git config --local user.name "$GITHUB_ACTOR"
+            git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+       - name: Commit files
+         run: |
+            git add bvre-waterquality_L1.csv
+            git commit -m "Updating QAQC files" || echo "No changes to commit"
+            git push -f || echo "No changes to commit"
+            

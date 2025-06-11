@@ -107,7 +107,7 @@ if (length(na.omit(bvrdata$TIMESTAMP[bvrdata$TIMESTAMP>start.time1]))<2) { #if t
   points(obs3$TIMESTAMP, obs3$Turbidity_FNU_1, col="brown", type='l', lwd=1.5)
   legend("topleft", c("TDS", "SpCond", "Cond", "Turbidity"), text.col=c("orange", "black","red", "brown"), x.intersp=0.001)
   
-  plot(obs3$TIMESTAMP,obs3$Chla_1, main="Chla, Phyco, fDOM", xlab="Time", ylab="ug/L or QSU", type='l', col="green", lwd=1.5, ylim=c(-0.5,30))
+  plot(obs3$TIMESTAMP,obs3$Chla_1, main="Chla, Phyco, fDOM", xlab="Time", ylab="ug/L or QSU", type='l', col="green", lwd=1.5, ylim=c(min(obs3$BGAPC_1, na.rm = TRUE) - 1, max(obs3$Chla_1, na.rm = TRUE) + 5))
   points(obs3$TIMESTAMP, obs3$BGAPC_1, col="blue", type='l', lwd=1.5)
   points(obs3$TIMESTAMP, obs3$fDOM_QSU_1, col="firebrick4", type='l', lwd=1.5)
   legend("topleft", c("Chla", "Phyco", "fDOM"), text.col=c("green", "blue", "firebrick4"), x.intersp=0.001)

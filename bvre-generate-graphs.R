@@ -35,7 +35,7 @@ if(bvrdata==0){
   bvrheader <- read.csv("bvre-waterquality.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
   bvrdata<-read.csv("bvre-waterquality.csv", skip=4, header = F)#get data minus wonky Campbell rows
   names(bvrdata)<-names(bvrheader) #combine the names to deal with Campbell logger formatting
-  }
+}
 
 bvrdata=bvrdata%>%
   filter(grepl("^20", TIMESTAMP))%>% #keep only the right TIMESTAMP rows 
@@ -85,18 +85,18 @@ if (length(na.omit(bvrdata$TIMESTAMP[bvrdata$TIMESTAMP>start.time1]))<2) { #if t
   legend("topleft", c("1.5m EXO", "11m PT"), text.col=c("black", "blue4"), x.intersp=0.001)
   
   par(mar=c(5.1, 4.1, 4.1, 2.1), mgp=c(3, 1, 0), las=0)
-  plot(obs3$TIMESTAMP,obs3$dotemp_13, main="Water temp of sondes", xlab="Time", ylab="degrees C", type='l', col="medium sea green", lwd=1.5, ylim=c(0,45))
+  plot(obs3$TIMESTAMP,obs3$dotemp_13, main="Water temp of sondes", xlab="Time", ylab="degrees C", type='l', col="medium sea green", lwd=1.5, ylim=c(min(obs3$dotemp_13, obs3$wtr_pt_13, na.rm = TRUE) - 1, max(obs3$EXO_wtr_1, na.rm = TRUE) + 5))
   points(obs3$TIMESTAMP, obs3$dotemp_6, col="black", type='l', lwd=1.5)
   points(obs3$TIMESTAMP, obs3$EXO_wtr_1, col="magenta", type='l', lwd=1.5)
   points(obs3$TIMESTAMP, obs3$wtr_pt_13, col="blue4", type='l', lwd=1.5)
   legend("topleft", c("1.5m EXO", "4m DO", "11m DO", "11m PT"), text.col=c("magenta", "black", "medium sea green", "blue4"), x.intersp=0.001)
   
-  plot(obs3$TIMESTAMP,obs3$doobs_13, main="DO", xlab="Time", ylab="mg/L", type='l', col="medium sea green", lwd=1.5, ylim=c(-0.5,18))
+  plot(obs3$TIMESTAMP,obs3$doobs_13, main="DO", xlab="Time", ylab="mg/L", type='l', col="medium sea green", lwd=1.5, ylim=c(min(obs3$doobs_13, obs3$doobs_6, obs3$doobs_1, na.rm = TRUE) - 1, max(obs3$doobs_13, obs3$doobs_6, obs3$doobs_1, na.rm = TRUE) + 2))
   points(obs3$TIMESTAMP, obs3$doobs_6, col="black", type='l', lwd=1.5)
   points(obs3$TIMESTAMP, obs3$doobs_1, col="magenta", type='l', lwd=1.5)
   legend("topleft", c("1.5m", "4m", "11m"), text.col=c("magenta", "black", "medium sea green"), x.intersp=0.001)
   
-  plot(obs3$TIMESTAMP,obs3$dosat_13, main="DO % saturation", xlab="Time", ylab="% saturation", type='l', col="medium sea green", lwd=1.5, ylim=c(-0.5,200))
+  plot(obs3$TIMESTAMP,obs3$dosat_13, main="DO % saturation", xlab="Time", ylab="% saturation", type='l', col="medium sea green", lwd=1.5, ylim=c(min(obs3$dosat_13, obs3$dosat_6, obs3$dosat_1, na.rm = TRUE) - 1, max(obs3$dosat_13, obs3$dosat_6, obs3$dosat_1, na.rm = TRUE) + 5))
   points(obs3$TIMESTAMP, obs3$dosat_6, col="black", type='l', lwd=1.5)
   points(obs3$TIMESTAMP, obs3$dosat_1, col="magenta", type='l', lwd=1.5)
   legend("topleft", c("1.5m", "4m", "11m"), text.col=c("magenta", "black", "medium sea green"), x.intersp=0.001)
@@ -204,4 +204,3 @@ if (length(na.omit(bvrdata$TIMESTAMP[bvrdata$TIMESTAMP>start.time1]))<2) { #if t
   dev.off() #file made!
   print("BVR file made with all data")
 }
-

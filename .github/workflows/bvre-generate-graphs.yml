@@ -40,6 +40,13 @@ jobs:
 
       - name: Create ~/rlib directory
         run: mkdir -p ~/rlib
+        
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev \
+            libxml2-dev pkg-config libglib2.0-dev libcairo2-dev
 
       - name: Install packages to ~/rlib
         run: |

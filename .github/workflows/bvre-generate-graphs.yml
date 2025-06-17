@@ -45,7 +45,7 @@ jobs:
         run: |
           Rscript -e '
             .libPaths("~/rlib")
-            packages <- c("lubridate", "tidyverse")
+            packages <- c("lubridate", "tidyverse", "cpp11", "generics", "timechange")
             install_if_missing <- function(pkg) {
               if (!require(pkg, character.only = TRUE))
                 install.packages(pkg, lib = "~/rlib", repos = "https://cloud.r-project.org")

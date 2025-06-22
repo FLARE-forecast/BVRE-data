@@ -6702,3 +6702,15 @@
 2025/06/21 21:36:07 autossh[5163]: clear alarm timer (599 secs left)
 2025/06/21 21:36:07 autossh[5163]: checking for grace period, tries = 9
 2025/06/21 21:36:07 autossh[5163]: sleeping for grace time 32 secs
+2025/06/21 21:36:39 autossh[5163]: starting ssh (count 10)
+2025/06/21 21:36:39 autossh[5163]: ssh child pid is 6467
+2025/06/21 21:36:39 autossh[5163]: check on child 6467
+2025/06/21 21:36:39 autossh[5163]: clear alarm timer (0 secs left)
+2025/06/21 21:36:39 autossh[5163]: set alarm for 600 secs
+2025/06/21 21:36:39 autossh[6467]: child of 5163 execing /usr/bin/ssh
+2025/06/21 21:36:40 autossh[5163]: check on child 6467
+2025/06/21 21:36:40 autossh[5163]: ssh exited with error status 255; restarting ssh
+2025/06/21 21:36:40 autossh[5163]: expired child, returning 1
+2025/06/21 21:36:40 autossh[5163]: clear alarm timer (599 secs left)
+2025/06/21 21:36:40 autossh[5163]: checking for grace period, tries = 10
+2025/06/21 21:36:40 autossh[5163]: sleeping for grace time 50 secs

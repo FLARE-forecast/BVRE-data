@@ -8933,3 +8933,9 @@
 2025/06/23 13:35:53 autossh[5158]: clear alarm timer (599 secs left)
 2025/06/23 13:35:53 autossh[5158]: checking for grace period, tries = 9
 2025/06/23 13:35:53 autossh[5158]: sleeping for grace time 32 secs
+2025/06/23 13:36:25 autossh[5158]: starting ssh (count 10)
+2025/06/23 13:36:25 autossh[5158]: ssh child pid is 6483
+2025/06/23 13:36:25 autossh[5158]: check on child 6483
+2025/06/23 13:36:25 autossh[5158]: clear alarm timer (0 secs left)
+2025/06/23 13:36:25 autossh[5158]: set alarm for 600 secs
+2025/06/23 13:36:25 autossh[6483]: child of 5158 execing /usr/bin/ssh

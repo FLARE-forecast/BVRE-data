@@ -8219,3 +8219,14 @@
 2025/06/23 01:35:27 autossh[5108]: clear alarm timer (0 secs left)
 2025/06/23 01:35:27 autossh[5108]: set alarm for 600 secs
 2025/06/23 01:35:27 autossh[5176]: child of 5108 execing /usr/bin/ssh
+2025/06/23 01:36:02 autossh[5108]: check on child 5176
+2025/06/23 01:36:02 autossh[5108]: ssh exited with error status 255; restarting ssh
+2025/06/23 01:36:02 autossh[5108]: expired child, returning 1
+2025/06/23 01:36:02 autossh[5108]: clear alarm timer (565 secs left)
+2025/06/23 01:36:02 autossh[5108]: checking for grace period, tries = 3
+2025/06/23 01:36:02 autossh[5108]: starting ssh (count 4)
+2025/06/23 01:36:02 autossh[5108]: ssh child pid is 6377
+2025/06/23 01:36:02 autossh[5108]: check on child 6377
+2025/06/23 01:36:02 autossh[5108]: clear alarm timer (0 secs left)
+2025/06/23 01:36:02 autossh[5108]: set alarm for 600 secs
+2025/06/23 01:36:02 autossh[6377]: child of 5108 execing /usr/bin/ssh

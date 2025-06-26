@@ -12059,3 +12059,15 @@
 2025/06/25 21:35:40 autossh[5077]: clear alarm timer (599 secs left)
 2025/06/25 21:35:40 autossh[5077]: checking for grace period, tries = 8
 2025/06/25 21:35:40 autossh[5077]: sleeping for grace time 18 secs
+2025/06/25 21:35:58 autossh[5077]: starting ssh (count 9)
+2025/06/25 21:35:58 autossh[5077]: ssh child pid is 5566
+2025/06/25 21:35:58 autossh[5077]: check on child 5566
+2025/06/25 21:35:58 autossh[5077]: clear alarm timer (0 secs left)
+2025/06/25 21:35:58 autossh[5077]: set alarm for 600 secs
+2025/06/25 21:35:58 autossh[5566]: child of 5077 execing /usr/bin/ssh
+2025/06/25 21:35:58 autossh[5077]: check on child 5566
+2025/06/25 21:35:58 autossh[5077]: ssh exited with error status 255; restarting ssh
+2025/06/25 21:35:58 autossh[5077]: expired child, returning 1
+2025/06/25 21:35:58 autossh[5077]: clear alarm timer (600 secs left)
+2025/06/25 21:35:58 autossh[5077]: checking for grace period, tries = 9
+2025/06/25 21:35:58 autossh[5077]: sleeping for grace time 32 secs

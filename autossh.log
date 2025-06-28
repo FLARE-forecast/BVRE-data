@@ -15140,3 +15140,37 @@
 2025/06/28 05:35:36 autossh[5075]: clear alarm timer (0 secs left)
 2025/06/28 05:35:36 autossh[5075]: set alarm for 600 secs
 2025/06/28 05:35:36 autossh[5160]: child of 5075 execing /usr/bin/ssh
+2025/06/28 05:36:11 autossh[5075]: check on child 5160
+2025/06/28 05:36:11 autossh[5075]: ssh exited with error status 255; restarting ssh
+2025/06/28 05:36:11 autossh[5075]: expired child, returning 1
+2025/06/28 05:36:11 autossh[5075]: clear alarm timer (565 secs left)
+2025/06/28 05:36:11 autossh[5075]: checking for grace period, tries = 4
+2025/06/28 05:36:11 autossh[5075]: starting ssh (count 5)
+2025/06/28 05:36:11 autossh[5075]: ssh child pid is 6347
+2025/06/28 05:36:11 autossh[5075]: check on child 6347
+2025/06/28 05:36:11 autossh[5075]: clear alarm timer (0 secs left)
+2025/06/28 05:36:11 autossh[5075]: set alarm for 600 secs
+2025/06/28 05:36:11 autossh[6347]: child of 5075 execing /usr/bin/ssh
+2025/06/28 05:36:17 autossh[5075]: check on child 6347
+2025/06/28 05:36:17 autossh[5075]: ssh exited with error status 255; restarting ssh
+2025/06/28 05:36:17 autossh[5075]: expired child, returning 1
+2025/06/28 05:36:17 autossh[5075]: clear alarm timer (594 secs left)
+2025/06/28 05:36:17 autossh[5075]: checking for grace period, tries = 5
+2025/06/28 05:36:17 autossh[5075]: starting ssh (count 6)
+2025/06/28 05:36:17 autossh[5075]: ssh child pid is 6373
+2025/06/28 05:36:17 autossh[5075]: check on child 6373
+2025/06/28 05:36:17 autossh[5075]: clear alarm timer (0 secs left)
+2025/06/28 05:36:17 autossh[5075]: set alarm for 600 secs
+2025/06/28 05:36:17 autossh[6373]: child of 5075 execing /usr/bin/ssh
+2025/06/28 05:36:24 autossh[5075]: check on child 6373
+2025/06/28 05:36:24 autossh[5075]: ssh exited with error status 255; restarting ssh
+2025/06/28 05:36:24 autossh[5075]: expired child, returning 1
+2025/06/28 05:36:24 autossh[5075]: clear alarm timer (594 secs left)
+2025/06/28 05:36:24 autossh[5075]: checking for grace period, tries = 6
+2025/06/28 05:36:24 autossh[5075]: sleeping for grace time 2 secs
+2025/06/28 05:36:26 autossh[5075]: starting ssh (count 7)
+2025/06/28 05:36:26 autossh[5075]: ssh child pid is 6374
+2025/06/28 05:36:26 autossh[5075]: check on child 6374
+2025/06/28 05:36:26 autossh[5075]: clear alarm timer (0 secs left)
+2025/06/28 05:36:26 autossh[5075]: set alarm for 600 secs
+2025/06/28 05:36:26 autossh[6374]: child of 5075 execing /usr/bin/ssh

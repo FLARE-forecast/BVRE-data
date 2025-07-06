@@ -26785,3 +26785,33 @@
 2025/07/06 17:35:56 autossh[5064]: clear alarm timer (0 secs left)
 2025/07/06 17:35:56 autossh[5064]: set alarm for 600 secs
 2025/07/06 17:35:56 autossh[5549]: child of 5064 execing /usr/bin/ssh
+2025/07/06 17:36:01 autossh[5064]: check on child 5549
+2025/07/06 17:36:01 autossh[5064]: ssh exited with error status 255; restarting ssh
+2025/07/06 17:36:01 autossh[5064]: expired child, returning 1
+2025/07/06 17:36:01 autossh[5064]: clear alarm timer (596 secs left)
+2025/07/06 17:36:01 autossh[5064]: checking for grace period, tries = 7
+2025/07/06 17:36:01 autossh[5064]: sleeping for grace time 8 secs
+2025/07/06 17:36:09 autossh[5064]: starting ssh (count 8)
+2025/07/06 17:36:09 autossh[5064]: ssh child pid is 6346
+2025/07/06 17:36:09 autossh[5064]: check on child 6346
+2025/07/06 17:36:09 autossh[5064]: clear alarm timer (0 secs left)
+2025/07/06 17:36:09 autossh[5064]: set alarm for 600 secs
+2025/07/06 17:36:09 autossh[6346]: child of 5064 execing /usr/bin/ssh
+2025/07/06 17:36:12 autossh[5064]: check on child 6346
+2025/07/06 17:36:12 autossh[5064]: ssh exited with error status 255; restarting ssh
+2025/07/06 17:36:12 autossh[5064]: expired child, returning 1
+2025/07/06 17:36:12 autossh[5064]: clear alarm timer (597 secs left)
+2025/07/06 17:36:12 autossh[5064]: checking for grace period, tries = 8
+2025/07/06 17:36:12 autossh[5064]: sleeping for grace time 18 secs
+2025/07/06 17:36:30 autossh[5064]: starting ssh (count 9)
+2025/07/06 17:36:30 autossh[5064]: ssh child pid is 6371
+2025/07/06 17:36:30 autossh[5064]: check on child 6371
+2025/07/06 17:36:30 autossh[5064]: clear alarm timer (0 secs left)
+2025/07/06 17:36:30 autossh[5064]: set alarm for 600 secs
+2025/07/06 17:36:30 autossh[6371]: child of 5064 execing /usr/bin/ssh
+2025/07/06 17:36:32 autossh[5064]: check on child 6371
+2025/07/06 17:36:32 autossh[5064]: ssh exited with error status 255; restarting ssh
+2025/07/06 17:36:32 autossh[5064]: expired child, returning 1
+2025/07/06 17:36:32 autossh[5064]: clear alarm timer (598 secs left)
+2025/07/06 17:36:32 autossh[5064]: checking for grace period, tries = 9
+2025/07/06 17:36:32 autossh[5064]: sleeping for grace time 32 secs

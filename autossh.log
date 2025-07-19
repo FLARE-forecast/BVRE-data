@@ -43609,3 +43609,36 @@
 2025/07/19 09:35:59 autossh[5058]: clear alarm timer (0 secs left)
 2025/07/19 09:35:59 autossh[5058]: set alarm for 600 secs
 2025/07/19 09:35:59 autossh[5522]: child of 5058 execing /usr/bin/ssh
+2025/07/19 09:36:31 autossh[5058]: check on child 5522
+2025/07/19 09:36:31 autossh[5058]: ssh exited with error status 255; restarting ssh
+2025/07/19 09:36:31 autossh[5058]: expired child, returning 1
+2025/07/19 09:36:31 autossh[5058]: clear alarm timer (568 secs left)
+2025/07/19 09:36:31 autossh[5058]: checking for grace period, tries = 3
+2025/07/19 09:36:31 autossh[5058]: starting ssh (count 4)
+2025/07/19 09:36:31 autossh[5058]: ssh child pid is 6351
+2025/07/19 09:36:31 autossh[5058]: check on child 6351
+2025/07/19 09:36:31 autossh[5058]: clear alarm timer (0 secs left)
+2025/07/19 09:36:31 autossh[5058]: set alarm for 600 secs
+2025/07/19 09:36:31 autossh[6351]: child of 5058 execing /usr/bin/ssh
+2025/07/19 09:36:34 autossh[5058]: check on child 6351
+2025/07/19 09:36:34 autossh[5058]: ssh exited with error status 255; restarting ssh
+2025/07/19 09:36:34 autossh[5058]: expired child, returning 1
+2025/07/19 09:36:34 autossh[5058]: clear alarm timer (597 secs left)
+2025/07/19 09:36:34 autossh[5058]: checking for grace period, tries = 4
+2025/07/19 09:36:34 autossh[5058]: starting ssh (count 5)
+2025/07/19 09:36:34 autossh[5058]: ssh child pid is 6352
+2025/07/19 09:36:34 autossh[5058]: check on child 6352
+2025/07/19 09:36:34 autossh[5058]: clear alarm timer (0 secs left)
+2025/07/19 09:36:34 autossh[5058]: set alarm for 600 secs
+2025/07/19 09:36:34 autossh[6352]: child of 5058 execing /usr/bin/ssh
+2025/07/19 09:36:41 autossh[5058]: check on child 6352
+2025/07/19 09:36:41 autossh[5058]: ssh exited with error status 255; restarting ssh
+2025/07/19 09:36:41 autossh[5058]: expired child, returning 1
+2025/07/19 09:36:41 autossh[5058]: clear alarm timer (594 secs left)
+2025/07/19 09:36:41 autossh[5058]: checking for grace period, tries = 5
+2025/07/19 09:36:41 autossh[5058]: starting ssh (count 6)
+2025/07/19 09:36:41 autossh[5058]: ssh child pid is 6353
+2025/07/19 09:36:41 autossh[5058]: check on child 6353
+2025/07/19 09:36:41 autossh[5058]: clear alarm timer (0 secs left)
+2025/07/19 09:36:41 autossh[5058]: set alarm for 600 secs
+2025/07/19 09:36:41 autossh[6353]: child of 5058 execing /usr/bin/ssh

@@ -9153,3 +9153,49 @@
 07/24/25 21:37:04 EDT -0400 | 
 07/24/25 21:37:04 EDT -0400 | nothing to commit, working tree clean
 07/24/25 21:37:04 EDT -0400 | Processing: /data/bjorn-logs
+07/24/25 21:37:06 EDT -0400 | [bjorn-logs fc0e136] 07/24/25 21:37:04 EDT -0400
+07/24/25 21:37:06 EDT -0400 |  5 files changed, 139 insertions(+)
+07/24/25 21:37:13 EDT -0400 | remote: error: GH013: Repository rule violations found for refs/heads/bjorn-logs.        
+07/24/25 21:37:13 EDT -0400 | remote: 
+07/24/25 21:37:13 EDT -0400 | remote: - GITHUB PUSH PROTECTION        
+07/24/25 21:37:13 EDT -0400 | remote:   —————————————————————————————————————————        
+07/24/25 21:37:13 EDT -0400 | remote:     Resolve the following violations before pushing again        
+07/24/25 21:37:13 EDT -0400 | remote: 
+07/24/25 21:37:13 EDT -0400 | remote:     - Push cannot contain secrets        
+07/24/25 21:37:13 EDT -0400 | remote: 
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:      (?) Learn how to resolve a blocked push        
+07/24/25 21:37:13 EDT -0400 | remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.        
+07/24/25 21:37:13 EDT -0400 | remote:      Visit the repository settings page, https://github.com/FLARE-forecast/BVRE-data/settings/security_analysis        
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:       —— Login with Amazon OAuth Client Secret —————————————        
+07/24/25 21:37:13 EDT -0400 | remote:        locations:        
+07/24/25 21:37:13 EDT -0400 | remote:          - blob id: 599240334e793d1c4633a84d1b2d483eed257cb8        
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+07/24/25 21:37:13 EDT -0400 | remote:        https://github.com/FLARE-forecast/BVRE-data/security/secret-scanning/unblock-secret/30LWf7iKJO64YGVz11qbydPx8q0        
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:     ——[ WARNING ]—————————————————————————————————————————        
+07/24/25 21:37:13 EDT -0400 | remote:      Scan incomplete: This push was large and we didn't finish on time.        
+07/24/25 21:37:13 EDT -0400 | remote:      It can still contain undetected secrets.        
+07/24/25 21:37:13 EDT -0400 | remote:             
+07/24/25 21:37:13 EDT -0400 | remote:      (?) Use the following command to find the path of the detected secret(s):        
+07/24/25 21:37:13 EDT -0400 | remote:          git rev-list --objects --all | grep blobid        
+07/24/25 21:37:13 EDT -0400 | remote:     ——————————————————————————————————————————————————————        
+07/24/25 21:37:13 EDT -0400 | remote: 
+07/24/25 21:37:13 EDT -0400 | remote: 
+07/24/25 21:37:13 EDT -0400 | To github.com:FLARE-forecast/BVRE-data.git
+07/24/25 21:37:13 EDT -0400 |  ! [remote rejected] fc0e136734764d1f1c59da9c4bfe5903673a6f0f -> bjorn-logs (push declined due to repository rule violations)
+07/24/25 21:37:13 EDT -0400 | error: failed to push some refs to 'github.com:FLARE-forecast/BVRE-data.git'
+07/24/25 21:37:13 EDT -0400 | ##########  END  ##########
+07/25/25 01:36:04 EDT -0400 | ########## START ##########
+07/25/25 01:36:04 EDT -0400 | Processing: /data/bvre-platform-data
+07/25/25 01:36:06 EDT -0400 | [bvre-platform-data 33f71d4] 07/25/25 01:36:04 EDT -0400
+07/25/25 01:36:06 EDT -0400 |  2 files changed, 264 insertions(+)
+07/25/25 01:36:10 EDT -0400 | To github.com:FLARE-forecast/BVRE-data.git
+07/25/25 01:36:10 EDT -0400 |    6f31752..33f71d4  33f71d4aa47c7781a5768312b4ae0008981c584b -> bvre-platform-data
+07/25/25 01:36:10 EDT -0400 | Processing: /data/bjorn-logs

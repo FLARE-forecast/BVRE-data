@@ -52622,3 +52622,15 @@
 2025/07/26 05:36:07 autossh[4673]: clear alarm timer (599 secs left)
 2025/07/26 05:36:07 autossh[4673]: checking for grace period, tries = 9
 2025/07/26 05:36:07 autossh[4673]: sleeping for grace time 32 secs
+2025/07/26 05:36:39 autossh[4673]: starting ssh (count 10)
+2025/07/26 05:36:39 autossh[4673]: ssh child pid is 6061
+2025/07/26 05:36:39 autossh[4673]: check on child 6061
+2025/07/26 05:36:39 autossh[4673]: clear alarm timer (0 secs left)
+2025/07/26 05:36:39 autossh[4673]: set alarm for 600 secs
+2025/07/26 05:36:39 autossh[6061]: child of 4673 execing /usr/bin/ssh
+2025/07/26 05:36:39 autossh[4673]: check on child 6061
+2025/07/26 05:36:39 autossh[4673]: ssh exited with error status 255; restarting ssh
+2025/07/26 05:36:39 autossh[4673]: expired child, returning 1
+2025/07/26 05:36:39 autossh[4673]: clear alarm timer (600 secs left)
+2025/07/26 05:36:39 autossh[4673]: checking for grace period, tries = 10
+2025/07/26 05:36:39 autossh[4673]: sleeping for grace time 50 secs

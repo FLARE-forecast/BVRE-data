@@ -14021,3 +14021,17 @@
 08/22/25 09:37:22 EDT -0400 | 
 08/22/25 09:37:22 EDT -0400 | nothing to commit, working tree clean
 08/22/25 09:37:22 EDT -0400 | Processing: /data/bjorn-logs
+08/22/25 09:37:27 EDT -0400 | [bjorn-logs 73c0757] 08/22/25 09:37:22 EDT -0400
+08/22/25 09:37:27 EDT -0400 |  5 files changed, 41 insertions(+)
+08/22/25 09:37:34 EDT -0400 | remote: warning: See https://gh.io/lfs for more information.        
+08/22/25 09:37:34 EDT -0400 | remote: warning: File nebula-overlay-network.log is 97.76 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+08/22/25 09:37:34 EDT -0400 | remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+08/22/25 09:37:35 EDT -0400 | To github.com:FLARE-forecast/BVRE-data.git
+08/22/25 09:37:35 EDT -0400 |    636cbdf..73c0757  73c075795c513959c0f8e1c0fd68b03487219c79 -> bjorn-logs
+08/22/25 09:37:35 EDT -0400 | ##########  END  ##########
+08/22/25 13:36:10 EDT -0400 | ########## START ##########
+08/22/25 13:36:10 EDT -0400 | Processing: /data/bvre-platform-data
+08/22/25 13:36:12 EDT -0400 | [bvre-platform-data 471eca8] 08/22/25 13:36:10 EDT -0400
+08/22/25 13:36:12 EDT -0400 |  2 files changed, 264 insertions(+)
+08/22/25 13:36:18 EDT -0400 | To github.com:FLARE-forecast/BVRE-data.git
+08/22/25 13:36:18 EDT -0400 |    412cd95..471eca8  471eca8d46edf56b4140824554c466d796422669 -> bvre-platform-data

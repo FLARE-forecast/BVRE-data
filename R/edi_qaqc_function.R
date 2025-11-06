@@ -348,8 +348,9 @@ qaqc_bvr <- function(
   
   #Change the EXO data to NAs when the pressure sensor is less than 10 psi which is roughly 7m and not due to maintenance. 
   # Also remove when the pressure sensor is NA because we don't know at what depth the sensors are at. 
-  bvrdata[which(bvrdata$LvlPressure_psi_13 < 10), temp_flag]<- 2
-  bvrdata[which(bvrdata$LvlPressure_psi_13 < 10), temp_idx] <- NA
+  # Changed to 5 during 2025 draw down because of work on the dam
+  bvrdata[which(bvrdata$LvlPressure_psi_13 < 5), temp_flag]<- 2
+  bvrdata[which(bvrdata$LvlPressure_psi_13 < 5), temp_idx] <- NA
   #Flag the data that was removed with 2 for outliers
   
   # If the pressure sensor is reading NA then have to take out all readings because we can't get a depth

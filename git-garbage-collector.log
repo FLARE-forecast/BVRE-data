@@ -5784,3 +5784,13 @@
 11/03/25 14:30:02 EST -0500 | fatal: unable to write new packed-refs: error closing file /data/bjorn-logs/.git/packed-refs.new: No space left on device
 11/03/25 14:30:02 EST -0500 | fatal: failed to run pack-refs
 11/03/25 14:30:02 EST -0500 | ##########  END  ##########
+11/05/25 23:02:41 EST -0500 | ########## START ##########
+11/05/25 23:02:41 EST -0500 | Disk status before Git garbage collection:
+11/05/25 23:02:41 EST -0500 | /dev/sda1                           59G   14G   42G  25% /data
+11/05/25 23:02:41 EST -0500 | Processing: /data/bvre-platform-data
+11/05/25 23:05:04 EST -0500 | Disk status after Git garbage collection:
+11/05/25 23:05:04 EST -0500 | /dev/sda1                           59G   11G   45G  20% /data
+11/05/25 23:05:04 EST -0500 | Processing: /data/bjorn-logs
+11/05/25 23:05:13 EST -0500 | Disk status after Git garbage collection:
+11/05/25 23:05:13 EST -0500 | /dev/sda1                           59G   11G   45G  20% /data
+11/05/25 23:05:13 EST -0500 | ##########  END  ##########

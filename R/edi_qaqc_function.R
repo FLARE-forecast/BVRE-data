@@ -3,6 +3,7 @@
 # Author: Adrienne Breef-Pilz
 # First Developed Jan. 2023
 # Last edited: 30 Aug. 2024 - took out if statement for adjustment code
+# 08 Jan. 2026 - added a new flag to make a new column in the data frame
 
 # This text is for EDI:
 #Additional notes: This script is included with this EDI package to show which QAQC has already been applied to 

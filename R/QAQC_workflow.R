@@ -27,13 +27,12 @@ last_edi_date <- as.Date(xml_text(date_attribute)) + lubridate::days(1)
 day_of_run <- Sys.Date() + lubridate::days(1)
 
 ## assign data files 
-wq_data <- 'bvre-waterquality.csv'
-manual_data_url <- 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv'
+wq_data <- c('bvre-waterquality.csv', 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv')
 maintenance_file <- 'BVR_maintenance_log.csv'
 outfile <-'bvre-waterquality_L1.csv'
 
 ## run QAQC on the data within github
-qaqc_bvr(data_file = wq_data, data2_file = manual_data_url, maintenance_file = maintenance_file, output_file = outfile, start_date = last_edi_date,  end_date = day_of_run)
+qaqc_bvr(data_file = wq_data, maintenance_file = maintenance_file, output_file = outfile, start_date = last_edi_date,  end_date = day_of_run)
 
 #wq_qaqc <- read_csv('bvre-waterquality_L1.csv')
 

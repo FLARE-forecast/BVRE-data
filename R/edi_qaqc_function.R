@@ -3,7 +3,7 @@
 # Author: Adrienne Breef-Pilz
 # First Developed Jan. 2023
 # Last edited: 30 Aug. 2024 - took out if statement for adjustment code
-# 08 Jan. 2026 - added a new flag to make a new column in the data frame
+# 08 Jan. 2026 - added a new column to make a new column in the data frame and removed a redundant argument
 
 # This text is for EDI:
 #Additional notes: This script is included with this EDI package to show which QAQC has already been applied to 
@@ -14,7 +14,6 @@
 
 qaqc_bvr <- function(
             data_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data/bvre-waterquality.csv',
-            data2_file = 'https://raw.githubusercontent.com/CareyLabVT/ManualDownloadsSCCData/master/current_files/BVRplatform_L1.csv',
             maintenance_file = 'https://raw.githubusercontent.com/FLARE-forecast/BVRE-data/bvre-platform-data-qaqc/BVR_maintenance_log.csv',  
             output_file, 
             start_date = NULL, 
@@ -55,21 +54,10 @@ qaqc_bvr <- function(
     bvrdata <- data_file
   }
   
-  #read in manual data from the data logger to fill in missing gaps
   
-  if(is.null(data2_file)){
-    
-    # If there is no manual files then set data2_file to NULL
-    bvrdata2 <- NULL
-    
-  } else{
-    
-    bvrdata2 <- read_csv(data2_file, skip = 1, col_names = BVRDATA_COL_NAMES,
-                         col_types = cols(.default = col_double(), DateTime = col_datetime()))
-  }
   
   # Bind the streaming data and the manual downloads together so we can get any missing observations 
-  bvrdata <-bind_rows(bvrdata,bvrdata2)%>%
+  bvrdata <- bvrdata|>
     drop_na(DateTime)
   
   # There are going to be lots of duplicates so get rid of them
@@ -106,8 +94,7 @@ qaqc_bvr <- function(
   if (!is.null(start_date)){
     bvrdata <- bvrdata %>% 
       filter(DateTime >= start_date)
-    bvrdata2 <- bvrdata2 %>% 
-      filter(DateTime >= start_date)
+    
       log <- log %>% 
      filter(TIMESTAMP_start <= end_date)
   }
@@ -115,8 +102,7 @@ qaqc_bvr <- function(
   if(!is.null(end_date)){
     bvrdata <- bvrdata %>% 
       filter(DateTime <= end_date)
-    bvrdata2 <- bvrdata2 %>% 
-      filter(DateTime <= end_date)
+    
     log <- log %>% 
     filter(TIMESTAMP_end >= start_date)
     
@@ -281,6 +267,27 @@ qaqc_bvr <- function(
     }else if (flag==7){
       # Data was not collected and already flagged as NA above 
       
+    }else if(flag == 8){
+      
+      # if the column doesn't exsist then make a new one
+      if(adjustment_code %in% colnames(bvrdata)){
+        
+      }else{
+        bvrdata[,adjustment_code] <- NA
+        bvrdata[,paste0("Flag_", adjustment_code)] <- 0
+      }
+      
+      # copy the values from the old column to the new one
+      
+      bvrdata[Time, adjustment_code] <- bvrdata[Time, maintenance_cols]
+      
+      # Flag and then copy flags
+      bvrdata[Time, maintenance_cols] <- flag
+      bvrdata[Time, paste0("Flag_",adjustment_code)] <- bvrdata[Time, flag_cols]
+      
+      # Take out the values from the original columsn
+      bvrdata[Time, maintenance_cols] <- NA
+      
     }else{
       # Flag is not in Maintenance Log
       warning(paste0("Flag ", flag, " used not defined in the L1 script. 
@@ -418,6 +425,12 @@ qaqc_bvr <- function(
     bvrdata2[c(which(is.na(bvrdata2[,j]) & bvrdata2[,paste0("Flag_",j)]==0)),paste0("Flag_",j)] <-2 #put a flag of 2 for observations out of the water
   }
   
+  # make sure all NAs have a flag
+  for(j in colnames(bvrdata%>%select(ThermistorTemp_C_1:LvlTemp_C_13, RDO_mgL_8, RDOsat_percent_8, RDOTemp_C_8))) { 
+    
+    bvrdata[c(which(is.na(bvrdata[,j] & bvrdata[,paste0("Flag_",j)]==0))),paste0("Flag_",j)] <-7 #puts in flag 7 if value not collected
+  }
+  
   #### Organize the file for saving########  
   
   
@@ -425,12 +438,12 @@ qaqc_bvr <- function(
   # reorder columns
   bvrdata2 <- bvrdata2 %>% select(Reservoir, Site, DateTime, ThermistorTemp_C_1:ThermistorTemp_C_13,
                                 RDO_mgL_6, RDOsat_percent_6,
-                                RDOTemp_C_6, RDO_mgL_13, RDOsat_percent_13, RDOTemp_C_13,
+                                RDOTemp_C_6, RDO_mgL_8, RDOsat_percent_8, RDOTemp_C_8,RDO_mgL_13, RDOsat_percent_13, RDOTemp_C_13,
                                 EXOTemp_C_1.5, EXOCond_uScm_1.5, EXOSpCond_uScm_1.5, EXOTDS_mgL_1.5, EXODOsat_percent_1.5,
                                 EXODO_mgL_1.5, EXOChla_RFU_1.5, EXOChla_ugL_1.5, EXOBGAPC_RFU_1.5, EXOBGAPC_ugL_1.5,
                                 EXOfDOM_RFU_1.5, EXOfDOM_QSU_1.5,EXOTurbidity_FNU_1.5, EXOPressure_psi, EXODepth_m, EXOBattery_V, EXOCablepower_V,
                                 EXOWiper_V, LvlPressure_psi_13, LvlDepth_m_13, LvlTemp_C_13, RECORD, CR6Battery_V, CR6Panel_Temp_C,
-                                Flag_ThermistorTemp_C_1:Flag_ThermistorTemp_C_13,Flag_RDO_mgL_6, Flag_RDOsat_percent_6, Flag_RDOTemp_C_6,
+                                Flag_ThermistorTemp_C_1:Flag_ThermistorTemp_C_13,Flag_RDO_mgL_6, Flag_RDOsat_percent_6, Flag_RDOTemp_C_6, Flag_RDO_mgL_8, Flag_RDOsat_percent_8, Flag_RDOTemp_C_8,
                                 Flag_RDO_mgL_13, Flag_RDOsat_percent_13, Flag_RDOTemp_C_13,Flag_EXOTemp_C_1.5, Flag_EXOCond_uScm_1.5, Flag_EXOSpCond_uScm_1.5,Flag_EXOTDS_mgL_1.5,
                                 Flag_EXODOsat_percent_1.5, Flag_EXODO_mgL_1.5, Flag_EXOChla_RFU_1.5,Flag_EXOChla_ugL_1.5, Flag_EXOBGAPC_RFU_1.5,Flag_EXOBGAPC_ugL_1.5,
                                 Flag_EXOfDOM_RFU_1.5,Flag_EXOfDOM_QSU_1.5, Flag_EXOTurbidity_FNU_1.5, 

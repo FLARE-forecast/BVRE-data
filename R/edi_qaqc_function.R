@@ -340,13 +340,13 @@ qaqc_bvr <- function(
   bvrdata[which(bvrdata$EXODepth_m<0.2),exo_flag]<- 2
   bvrdata[which(bvrdata$EXODepth_m < 0.2), exo_idx] <- NA
   
-  # Flag the EXO data when the wiper isn't parked in the right position because it could be on the sensor when taking a reading
+  # Flag the EXO data when the wiper isn't parked in the right position because it could be on the sensor when taking a reading. This uses the wiper voltage to deptermine when it isn't in the right postion. 
   #Flag the data that was removed with 2 for outliers
   bvrdata[which(bvrdata$EXOWiper_V !=0 & bvrdata$EXOWiper_V < 0.7 & bvrdata$EXOWiper_V > 1.6),exo_flag]<- 2
   bvrdata[which(bvrdata$EXOWiper_V !=0 & bvrdata$EXOWiper_V < 0.7 & bvrdata$EXOWiper_V > 1.6), exo_idx] <- NA
  
   
-  #change the temp string and pressure sensor to NA if the psi is less than XXXXX and Flag as 2
+  #change the temp string and pressure sensor to NA if the psi is less than 5 (during the lower waterlevel) and Flag as 2
   
   #index only the colummns with EXO at the beginning
   temp_idx <-grep("^Ther*|^RDO*|^Lvl*",colnames(bvrdata))

@@ -18,7 +18,7 @@ setwd(home_directory)
 source('R/edi_qaqc_function.R')
 
 ## identify latest date for data on EDI (need to add one (+1) to both dates because we want to exclude all possible start_day data and include all possible data for end_day)
-package_ID <- 'edi.725.5' # may need to change once package is fully published
+package_ID <- 'edi.725.6' # may need to change once package is fully published
 eml <- read_metadata(package_ID) ## for packages in production evniornement
 #eml <- read_metadata(package_ID, env = 'staging') ## for packages in staging
 date_attribute <- xml_find_all(eml, xpath = ".//temporalCoverage/rangeOfDates/endDate/calendarDate")

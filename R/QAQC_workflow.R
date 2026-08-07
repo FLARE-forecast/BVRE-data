@@ -1,15 +1,20 @@
 #install.packages("EDIutils")
 #install.packages("xml2")
 #install.packages("here")
-install.packages("devtools")
-library(tidyverse)
-library(EDIutils)
-library(xml2)
-library(lubridate)
-library(devtools)
+#install.packages("devtools")
+#library(tidyverse)
+#library(EDIutils)
+#library(xml2)
+#library(lubridate)
+#library(devtools)
+
+pacman::p_load(tidyverse, devtools, EDIutils, xml2, lubridate, here)
 
 home_directory <- here::here()
 setwd(home_directory)
+
+edi_access_key = Sys.getenv("EDI_ACCESS_KEY")
+login(key = edi_access_key)
 
 ### pull in QAQC function directly from EDI -- keep for now, but will need to update the function
 #source('https://portal-s.edirepository.org/nis/dataviewer?packageid=edi.157.25&entityid=0531eb02833855f84d0b3b54c41ec61e')

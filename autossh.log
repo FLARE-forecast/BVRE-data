@@ -3006,3 +3006,36 @@
 2026/09/02 17:26:36 autossh[4697]: clear alarm timer (0 secs left)
 2026/09/02 17:26:36 autossh[4697]: set alarm for 600 secs
 2026/09/02 17:26:36 autossh[4700]: child of 4697 execing /usr/bin/ssh
+2026/09/02 17:28:46 autossh[4697]: check on child 4700
+2026/09/02 17:28:46 autossh[4697]: ssh exited with error status 255; restarting ssh
+2026/09/02 17:28:46 autossh[4697]: expired child, returning 1
+2026/09/02 17:28:46 autossh[4697]: clear alarm timer (469 secs left)
+2026/09/02 17:28:46 autossh[4697]: checking for grace period, tries = 0
+2026/09/02 17:28:46 autossh[4697]: starting ssh (count 2)
+2026/09/02 17:28:46 autossh[4697]: ssh child pid is 5969
+2026/09/02 17:28:46 autossh[4697]: check on child 5969
+2026/09/02 17:28:46 autossh[4697]: clear alarm timer (0 secs left)
+2026/09/02 17:28:46 autossh[4697]: set alarm for 600 secs
+2026/09/02 17:28:46 autossh[5969]: child of 4697 execing /usr/bin/ssh
+2026/09/02 17:38:46 autossh[4697]: received SIGALRM (end-of-life 0)
+2026/09/02 17:39:01 autossh[4697]: timeout polling to accept read connection
+2026/09/02 17:39:01 autossh[4697]: port down, restarting ssh
+2026/09/02 17:39:01 autossh[4697]: clear alarm timer (0 secs left)
+2026/09/02 17:39:01 autossh[4697]: checking for grace period, tries = 0
+2026/09/02 17:39:01 autossh[4697]: starting ssh (count 3)
+2026/09/02 17:39:01 autossh[4697]: ssh child pid is 10161
+2026/09/02 17:39:01 autossh[4697]: check on child 10161
+2026/09/02 17:39:01 autossh[4697]: clear alarm timer (0 secs left)
+2026/09/02 17:39:01 autossh[4697]: set alarm for 600 secs
+2026/09/02 17:39:01 autossh[10161]: child of 4697 execing /usr/bin/ssh
+2026/09/02 17:45:38 autossh[4697]: check on child 10161
+2026/09/02 17:45:38 autossh[4697]: ssh exited with error status 255; restarting ssh
+2026/09/02 17:45:38 autossh[4697]: expired child, returning 1
+2026/09/02 17:45:38 autossh[4697]: clear alarm timer (204 secs left)
+2026/09/02 17:45:38 autossh[4697]: checking for grace period, tries = 0
+2026/09/02 17:45:38 autossh[4697]: starting ssh (count 4)
+2026/09/02 17:45:38 autossh[4697]: ssh child pid is 14070
+2026/09/02 17:45:38 autossh[4697]: check on child 14070
+2026/09/02 17:45:38 autossh[4697]: clear alarm timer (0 secs left)
+2026/09/02 17:45:38 autossh[4697]: set alarm for 600 secs
+2026/09/02 17:45:38 autossh[14070]: child of 4697 execing /usr/bin/ssh

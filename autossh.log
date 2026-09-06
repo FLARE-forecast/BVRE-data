@@ -3813,3 +3813,22 @@
 2026/09/06 01:26:36 autossh[4689]: clear alarm timer (0 secs left)
 2026/09/06 01:26:36 autossh[4689]: set alarm for 600 secs
 2026/09/06 01:26:36 autossh[4692]: child of 4689 execing /usr/bin/ssh
+2026/09/06 01:36:36 autossh[4689]: received SIGALRM (end-of-life 0)
+2026/09/06 01:36:36 autossh[4689]: connection ok
+2026/09/06 01:36:36 autossh[4689]: check on child 4692
+2026/09/06 01:36:36 autossh[4689]: clear alarm timer (0 secs left)
+2026/09/06 01:36:36 autossh[4689]: set alarm for 600 secs
+2026/09/06 01:46:36 autossh[4689]: received SIGALRM (end-of-life 0)
+2026/09/06 01:46:37 autossh[4689]: connection ok
+2026/09/06 01:46:37 autossh[4689]: check on child 4692
+2026/09/06 01:46:37 autossh[4689]: clear alarm timer (0 secs left)
+2026/09/06 01:46:37 autossh[4689]: set alarm for 600 secs
+2026/09/06 01:55:18 autossh[4689]: received signal to exit (15)
+2026/09/06 01:55:18 autossh[4689]: clear alarm timer (78 secs left)
+2026/09/06 05:26:36 autossh[4731]: checking for grace period, tries = 0
+2026/09/06 05:26:36 autossh[4731]: starting ssh (count 1)
+2026/09/06 05:26:36 autossh[4731]: ssh child pid is 4735
+2026/09/06 05:26:36 autossh[4731]: check on child 4735
+2026/09/06 05:26:36 autossh[4731]: clear alarm timer (0 secs left)
+2026/09/06 05:26:36 autossh[4731]: set alarm for 600 secs
+2026/09/06 05:26:36 autossh[4735]: child of 4731 execing /usr/bin/ssh

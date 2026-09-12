@@ -4934,3 +4934,42 @@
 2026/09/11 17:26:37 autossh[4668]: clear alarm timer (0 secs left)
 2026/09/11 17:26:37 autossh[4668]: set alarm for 600 secs
 2026/09/11 17:26:37 autossh[4671]: child of 4668 execing /usr/bin/ssh
+2026/09/11 17:36:37 autossh[4668]: received SIGALRM (end-of-life 0)
+2026/09/11 17:36:37 autossh[4668]: not what I sent: "bjorn autossh 4668 223131063 
+" : ""
+2026/09/11 17:36:37 autossh[4668]: not what I sent: "bjorn autossh 4668 223131063 
+" : ""
+2026/09/11 17:36:37 autossh[4668]: tried connection 3 times and failed
+2026/09/11 17:36:37 autossh[4668]: port down, restarting ssh
+2026/09/11 17:36:37 autossh[4668]: clear alarm timer (0 secs left)
+2026/09/11 17:36:37 autossh[4668]: checking for grace period, tries = 0
+2026/09/11 17:36:37 autossh[4668]: starting ssh (count 2)
+2026/09/11 17:36:37 autossh[4668]: ssh child pid is 10187
+2026/09/11 17:36:37 autossh[4668]: check on child 10187
+2026/09/11 17:36:37 autossh[4668]: clear alarm timer (0 secs left)
+2026/09/11 17:36:37 autossh[4668]: set alarm for 600 secs
+2026/09/11 17:36:37 autossh[10187]: child of 4668 execing /usr/bin/ssh
+2026/09/11 17:46:37 autossh[4668]: received SIGALRM (end-of-life 0)
+2026/09/11 17:46:37 autossh[4668]: not what I sent: "bjorn autossh 4668 93715615 
+" : ""
+2026/09/11 17:46:37 autossh[4668]: not what I sent: "bjorn autossh 4668 93715615 
+" : ""
+2026/09/11 17:46:37 autossh[4668]: tried connection 3 times and failed
+2026/09/11 17:46:37 autossh[4668]: port down, restarting ssh
+2026/09/11 17:46:37 autossh[4668]: clear alarm timer (0 secs left)
+2026/09/11 17:46:37 autossh[4668]: checking for grace period, tries = 0
+2026/09/11 17:46:37 autossh[4668]: starting ssh (count 3)
+2026/09/11 17:46:37 autossh[4668]: ssh child pid is 14311
+2026/09/11 17:46:37 autossh[4668]: check on child 14311
+2026/09/11 17:46:37 autossh[4668]: clear alarm timer (0 secs left)
+2026/09/11 17:46:37 autossh[4668]: set alarm for 600 secs
+2026/09/11 17:46:37 autossh[14311]: child of 4668 execing /usr/bin/ssh
+2026/09/11 17:55:19 autossh[4668]: received signal to exit (15)
+2026/09/11 17:55:19 autossh[4668]: clear alarm timer (78 secs left)
+2026/09/11 21:26:37 autossh[4720]: checking for grace period, tries = 0
+2026/09/11 21:26:37 autossh[4720]: starting ssh (count 1)
+2026/09/11 21:26:37 autossh[4720]: ssh child pid is 4723
+2026/09/11 21:26:37 autossh[4720]: check on child 4723
+2026/09/11 21:26:37 autossh[4720]: clear alarm timer (0 secs left)
+2026/09/11 21:26:37 autossh[4720]: set alarm for 600 secs
+2026/09/11 21:26:37 autossh[4723]: child of 4720 execing /usr/bin/ssh

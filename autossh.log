@@ -6850,3 +6850,22 @@
 2026/09/21 01:26:39 autossh[4664]: clear alarm timer (0 secs left)
 2026/09/21 01:26:39 autossh[4664]: set alarm for 600 secs
 2026/09/21 01:26:39 autossh[4666]: child of 4664 execing /usr/bin/ssh
+2026/09/21 01:36:39 autossh[4664]: received SIGALRM (end-of-life 0)
+2026/09/21 01:36:39 autossh[4664]: connection ok
+2026/09/21 01:36:39 autossh[4664]: check on child 4666
+2026/09/21 01:36:39 autossh[4664]: clear alarm timer (0 secs left)
+2026/09/21 01:36:39 autossh[4664]: set alarm for 600 secs
+2026/09/21 01:46:39 autossh[4664]: received SIGALRM (end-of-life 0)
+2026/09/21 01:46:39 autossh[4664]: connection ok
+2026/09/21 01:46:39 autossh[4664]: check on child 4666
+2026/09/21 01:46:39 autossh[4664]: clear alarm timer (0 secs left)
+2026/09/21 01:46:39 autossh[4664]: set alarm for 600 secs
+2026/09/21 01:55:21 autossh[4664]: received signal to exit (15)
+2026/09/21 01:55:21 autossh[4664]: clear alarm timer (78 secs left)
+2026/09/21 05:26:39 autossh[4799]: checking for grace period, tries = 0
+2026/09/21 05:26:39 autossh[4799]: starting ssh (count 1)
+2026/09/21 05:26:39 autossh[4799]: ssh child pid is 4801
+2026/09/21 05:26:39 autossh[4799]: check on child 4801
+2026/09/21 05:26:39 autossh[4799]: clear alarm timer (0 secs left)
+2026/09/21 05:26:39 autossh[4799]: set alarm for 600 secs
+2026/09/21 05:26:39 autossh[4801]: child of 4799 execing /usr/bin/ssh

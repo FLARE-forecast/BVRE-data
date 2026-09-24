@@ -7510,3 +7510,30 @@
 2026/09/24 09:26:40 autossh[4775]: clear alarm timer (0 secs left)
 2026/09/24 09:26:40 autossh[4775]: set alarm for 600 secs
 2026/09/24 09:26:40 autossh[4777]: child of 4775 execing /usr/bin/ssh
+2026/09/24 09:36:40 autossh[4775]: received SIGALRM (end-of-life 0)
+2026/09/24 09:36:55 autossh[4775]: timeout polling to accept read connection
+2026/09/24 09:36:55 autossh[4775]: port down, restarting ssh
+2026/09/24 09:36:55 autossh[4775]: clear alarm timer (0 secs left)
+2026/09/24 09:36:55 autossh[4775]: checking for grace period, tries = 0
+2026/09/24 09:36:55 autossh[4775]: starting ssh (count 2)
+2026/09/24 09:36:55 autossh[4775]: ssh child pid is 10236
+2026/09/24 09:36:55 autossh[4775]: check on child 10236
+2026/09/24 09:36:55 autossh[4775]: clear alarm timer (0 secs left)
+2026/09/24 09:36:55 autossh[4775]: set alarm for 600 secs
+2026/09/24 09:36:55 autossh[10236]: child of 4775 execing /usr/bin/ssh
+2026/09/24 09:46:55 autossh[4775]: received SIGALRM (end-of-life 0)
+2026/09/24 09:46:55 autossh[4775]: not what I sent: "bjorn autossh 4775 1783617928 
+" : ""
+2026/09/24 09:46:56 autossh[4775]: connection ok
+2026/09/24 09:46:56 autossh[4775]: check on child 10236
+2026/09/24 09:46:56 autossh[4775]: clear alarm timer (0 secs left)
+2026/09/24 09:46:56 autossh[4775]: set alarm for 600 secs
+2026/09/24 09:55:22 autossh[4775]: received signal to exit (15)
+2026/09/24 09:55:22 autossh[4775]: clear alarm timer (93 secs left)
+2026/09/24 13:26:41 autossh[4737]: checking for grace period, tries = 0
+2026/09/24 13:26:41 autossh[4737]: starting ssh (count 1)
+2026/09/24 13:26:41 autossh[4737]: ssh child pid is 4739
+2026/09/24 13:26:41 autossh[4737]: check on child 4739
+2026/09/24 13:26:41 autossh[4737]: clear alarm timer (0 secs left)
+2026/09/24 13:26:41 autossh[4737]: set alarm for 600 secs
+2026/09/24 13:26:41 autossh[4739]: child of 4737 execing /usr/bin/ssh

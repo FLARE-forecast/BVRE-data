@@ -9597,3 +9597,32 @@
 2026/10/04 17:26:44 autossh[4731]: clear alarm timer (0 secs left)
 2026/10/04 17:26:44 autossh[4731]: set alarm for 600 secs
 2026/10/04 17:26:44 autossh[4733]: child of 4731 execing /usr/bin/ssh
+2026/10/04 17:36:44 autossh[4731]: received SIGALRM (end-of-life 0)
+2026/10/04 17:36:45 autossh[4731]: connection ok
+2026/10/04 17:36:45 autossh[4731]: check on child 4733
+2026/10/04 17:36:45 autossh[4731]: clear alarm timer (0 secs left)
+2026/10/04 17:36:45 autossh[4731]: set alarm for 600 secs
+2026/10/04 17:46:45 autossh[4731]: received SIGALRM (end-of-life 0)
+2026/10/04 17:46:45 autossh[4731]: not what I sent: "bjorn autossh 4731 1117334770 
+" : ""
+2026/10/04 17:46:45 autossh[4731]: not what I sent: "bjorn autossh 4731 1117334770 
+" : ""
+2026/10/04 17:46:45 autossh[4731]: tried connection 3 times and failed
+2026/10/04 17:46:45 autossh[4731]: port down, restarting ssh
+2026/10/04 17:46:45 autossh[4731]: clear alarm timer (0 secs left)
+2026/10/04 17:46:45 autossh[4731]: checking for grace period, tries = 0
+2026/10/04 17:46:45 autossh[4731]: starting ssh (count 2)
+2026/10/04 17:46:45 autossh[4731]: ssh child pid is 21558
+2026/10/04 17:46:45 autossh[4731]: check on child 21558
+2026/10/04 17:46:45 autossh[4731]: clear alarm timer (0 secs left)
+2026/10/04 17:46:45 autossh[4731]: set alarm for 600 secs
+2026/10/04 17:46:45 autossh[21558]: child of 4731 execing /usr/bin/ssh
+2026/10/04 17:55:26 autossh[4731]: received signal to exit (15)
+2026/10/04 17:55:26 autossh[4731]: clear alarm timer (78 secs left)
+2026/10/04 21:26:44 autossh[4744]: checking for grace period, tries = 0
+2026/10/04 21:26:44 autossh[4744]: starting ssh (count 1)
+2026/10/04 21:26:44 autossh[4744]: ssh child pid is 4746
+2026/10/04 21:26:44 autossh[4744]: check on child 4746
+2026/10/04 21:26:44 autossh[4744]: clear alarm timer (0 secs left)
+2026/10/04 21:26:44 autossh[4744]: set alarm for 600 secs
+2026/10/04 21:26:44 autossh[4746]: child of 4744 execing /usr/bin/ssh

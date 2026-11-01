@@ -44034,3 +44034,98 @@
 11/01/26 12:26:35 EST -0500 | 3 packets transmitted, 3 received, 0% packet loss, time 2005ms
 11/01/26 12:26:35 EST -0500 | rtt min/avg/max/mdev = 40.828/46.654/51.070/4.298 ms
 11/01/26 12:26:35 EST -0500 | ##########  END  ##########
+11/01/26 16:26:30 EST -0500 | ########## START ##########
+11/01/26 16:26:30 EST -0500 |  16:26:30 up 3 min,  0 users,  load average: 0.18, 0.09, 0.03
+11/01/26 16:26:30 EST -0500 | reboot   system boot  5.15.0-88-generi Tue Sep 19 12:56   still running
+11/01/26 16:26:30 EST -0500 | reboot   system boot  5.15.0-88-generi Tue Sep 19 12:56 - 12:55 (1139+00:58)
+11/01/26 16:26:30 EST -0500 | reboot   system boot  5.15.0-88-generi Tue Sep 19 12:56 - 08:55 (1138+20:58)
+11/01/26 16:26:30 EST -0500 | reboot   system boot  5.15.0-88-generi Tue Sep 19 12:56 - 04:55 (1138+16:58)
+11/01/26 16:26:30 EST -0500 | reboot   system boot  5.15.0-88-generi Tue Sep 19 12:56 - 01:55 (1138+12:58)
+11/01/26 16:26:30 EST -0500 | Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+11/01/26 16:26:30 EST -0500 | Bus 001 Device 004: ID 8087:0a2b Intel Corp. Bluetooth wireless interface
+11/01/26 16:26:30 EST -0500 | Bus 001 Device 003: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+11/01/26 16:26:30 EST -0500 | Bus 001 Device 002: ID 1410:9031 Novatel Wireless MiFi USB730L
+11/01/26 16:26:30 EST -0500 | Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+11/01/26 16:26:30 EST -0500 | [    2.952986] rndis_host 1-5:1.0 enx0015ff170646: renamed from eth0
+11/01/26 16:26:30 EST -0500 | [  134.727888] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+11/01/26 16:26:30 EST -0500 | [  134.732223] Bridge firewalling registered
+11/01/26 16:26:30 EST -0500 | [  134.934137] Initializing XFRM netlink socket
+11/01/26 16:26:30 EST -0500 | [  136.762338] systemd-journald[24]: Received client request to flush runtime journal.
+11/01/26 16:26:30 EST -0500 | [  136.780420] systemd-journald[24]: File /var/log/journal/a390ab7b5da041789c7c8333c3ddc3b9/system.journal corrupted or uncleanly shut down, renaming and replacing.
+11/01/26 16:26:30 EST -0500 | [  137.839770] device ovs-system entered promiscuous mode
+11/01/26 16:26:30 EST -0500 | [  137.843772] Timeout policy base is empty
+11/01/26 16:26:30 EST -0500 | [  137.843784] Failed to associated timeout policy `ovs_test_tp'
+11/01/26 16:26:30 EST -0500 | [  137.910555] device eviCIBR6 entered promiscuous mode
+11/01/26 16:26:30 EST -0500 | [  137.943250] device appCIBR6 entered promiscuous mode
+11/01/26 16:26:30 EST -0500 | Filesystem                         Size  Used Avail Use% Mounted on
+11/01/26 16:26:30 EST -0500 | tmpfs                              374M  1.3M  373M   1% /run
+11/01/26 16:26:30 EST -0500 | /dev/mapper/ubuntu--vg-ubuntu--lv   57G   11G   44G  20% /
+11/01/26 16:26:30 EST -0500 | tmpfs                              1.9G     0  1.9G   0% /dev/shm
+11/01/26 16:26:30 EST -0500 | tmpfs                              5.0M     0  5.0M   0% /run/lock
+11/01/26 16:26:30 EST -0500 | /dev/sda1                           59G   11G   45G  20% /data
+11/01/26 16:26:30 EST -0500 | /dev/mmcblk0p2                     2.0G  252M  1.6G  14% /boot
+11/01/26 16:26:30 EST -0500 | /dev/mmcblk0p1                     1.1G  6.1M  1.1G   1% /boot/efi
+11/01/26 16:26:30 EST -0500 | 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+11/01/26 16:26:30 EST -0500 |     inet 127.0.0.1/8 scope host lo
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 |     inet6 ::1/128 scope host 
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 | 2: enp2s0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether 00:01:c0:28:30:ab brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 | 3: eno1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether 00:01:c0:28:30:ac brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 |     altname enp3s0
+11/01/26 16:26:30 EST -0500 |     inet 10.10.1.2/24 brd 10.10.1.255 scope global eno1
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 |     inet6 fe80::201:c0ff:fe28:30ac/64 scope link 
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 | 4: enx0015ff170646: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether 00:15:ff:17:06:46 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 |     inet 100.108.2.48/27 metric 100 brd 100.108.2.63 scope global dynamic enx0015ff170646
+11/01/26 16:26:30 EST -0500 |        valid_lft 7034sec preferred_lft 7034sec
+11/01/26 16:26:30 EST -0500 |     inet6 2600:1003:b865:a83e:215:ffff:fe17:646/64 scope global dynamic mngtmpaddr noprefixroute 
+11/01/26 16:26:30 EST -0500 |        valid_lft 86351sec preferred_lft 14351sec
+11/01/26 16:26:30 EST -0500 |     inet6 fe80::215:ffff:fe17:646/64 scope link 
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 | 5: wlp1s0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether ac:67:5d:d0:2c:d0 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 | 6: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+11/01/26 16:26:30 EST -0500 |     link/ether 02:42:e3:48:05:c6 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 |     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 | 7: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether c2:4e:ee:a1:c6:92 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 | 8: eviCIBR6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1410 qdisc noqueue state UNKNOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether 62:15:55:bc:b8:42 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 | 9: appCIBR6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1350 qdisc noqueue state UNKNOWN group default qlen 1000
+11/01/26 16:26:30 EST -0500 |     link/ether de:f3:25:29:a3:49 brd ff:ff:ff:ff:ff:ff
+11/01/26 16:26:30 EST -0500 |     inet 10.10.100.5/24 scope global appCIBR6
+11/01/26 16:26:30 EST -0500 |        valid_lft forever preferred_lft forever
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:20 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 572 bytes, 108.63Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:21 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 576 bytes, 106.68Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:22 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 582 bytes, 110.17Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:23 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 569 bytes, 107.42Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:24 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 578 bytes, 108.26Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:25 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 589 bytes, 112.36Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:26 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 580 bytes, 111.28Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:27 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 573 bytes, 112.59Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:28 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 579 bytes, 116.15Kbyte/sec
+11/01/26 16:26:30 EST -0500 | Sun Nov  1 16:26:29 2026 [pid 2398] [ftpuser] OK UPLOAD: Client "::ffff:10.10.1.1", "/data/datalogger-raw-data/bvre-wind.csv", 579 bytes, 112.01Kbyte/sec
+11/01/26 16:26:30 EST -0500 | PING github.com (140.82.114.4) 56(84) bytes of data.
+11/01/26 16:26:30 EST -0500 | 64 bytes from lb-140-82-114-4-iad.github.com (140.82.114.4): icmp_seq=1 ttl=50 time=62.6 ms
+11/01/26 16:26:31 EST -0500 | 64 bytes from lb-140-82-114-4-iad.github.com (140.82.114.4): icmp_seq=2 ttl=50 time=64.6 ms
+11/01/26 16:26:32 EST -0500 | 64 bytes from lb-140-82-114-4-iad.github.com (140.82.114.4): icmp_seq=3 ttl=50 time=59.9 ms
+11/01/26 16:26:32 EST -0500 | 
+11/01/26 16:26:32 EST -0500 | --- github.com ping statistics ---
+11/01/26 16:26:32 EST -0500 | 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+11/01/26 16:26:32 EST -0500 | rtt min/avg/max/mdev = 59.879/62.339/64.580/1.925 ms
+11/01/26 16:26:32 EST -0500 | PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+11/01/26 16:26:32 EST -0500 | 64 bytes from 8.8.8.8: icmp_seq=1 ttl=113 time=53.2 ms
+11/01/26 16:26:33 EST -0500 | 64 bytes from 8.8.8.8: icmp_seq=2 ttl=113 time=107 ms
+11/01/26 16:26:34 EST -0500 | 64 bytes from 8.8.8.8: icmp_seq=3 ttl=113 time=51.6 ms
+11/01/26 16:26:34 EST -0500 | 
+11/01/26 16:26:34 EST -0500 | --- 8.8.8.8 ping statistics ---
+11/01/26 16:26:34 EST -0500 | 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+11/01/26 16:26:34 EST -0500 | rtt min/avg/max/mdev = 51.629/70.472/106.588/25.545 ms
+11/01/26 16:26:34 EST -0500 | ##########  END  ##########

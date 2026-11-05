@@ -133,7 +133,6 @@ BVR;50;BVRplatform; 2024-12-03 12:45:00 EST; 2026-03-02 10:20:00 EST; EXOBGAPC_R
 BVR;50;BVRplatform; 2024-12-03 12:45:00 EST; 2026-03-02 10:20:00 EST; EXOTurbidity_FNU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]-0.57"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading higher so observations over this time were scaled down 
 BVR;50;BVRplatform; 2024-12-03 12:45:00 EST; 2026-03-02 10:20:00 EST; EXOfDOM_RFU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]-0.5"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading higher so observations over this time were scaled down 
 BVR;50;BVRplatform; 2024-12-03 12:45:00 EST; 2026-03-02 10:20:00 EST; EXOfDOM_QSU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]-1.1"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading higher so observations over this time were scaled down 
-
 BVR;50;BVRplatform; 2025-02-03 11:35:00 EST; 2025-02-03 11:45:00 EST; EXOfDOM_RFU_1.5; EXOfDOM_QSU_1.5;2; NA; NA; very low fdom values
 BVR;50;BVRplatform; 2025-02-04 10:15:00 EST; 2025-02-04 11:35:00 EST; ThermistorTemp_C_1; RDOTemp_C_13;1;NA; NA; temp string up for cleaning and checking
 BVR;50;BVRplatform; 2025-02-04 10:15:00 EST; 2025-02-04 11:35:00 EST; LvlPressure_psi_13; LvlTemp_C_13;1;NA; NA; temp string up for cleaning and checking
@@ -161,13 +160,13 @@ BVR;50;BVRplatform; 2025-04-07 11:50:00 EST; 2027-12-31 00:00:00 EST; RDOTemp_C_
 BVR;50;BVRplatform;2026-01-09 11:10:00 EST;2026-01-09 11:40:00 EST;ThermistorTemp_C_1;LvlTemp_C_13;1;NA;NA;sensor string out of the water (pressure < 5 psi)
 BVR;50;BVRplatform;2026-03-02 10:20:00 EST; 2026-03-02 10:30:00 EST; EXOTemp_C_1.5; EXOWiper_V; 1; NA; NA; EXO replaced with original SN19H103086 after calibration
 BVR;50;BVRplatform; 2026-03-02 10:30:00 EST; 2027-12-31 00:00:00 EST; EXOfDOM_RFU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]+0.92"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading lower so observations over this time were scaled up 
-BVR;50;BVRplatform; 2024-12-03 12:45:00 EST; 2026-03-02 10:20:00 EST; EXOfDOM_QSU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]+2.76"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading lower so observations over this time were scaled up
-BVR;50;BVRplatform;2026-09-22 10:40:00 EST;2026-09-22 11:00:00 EST;ThermistorTemp_C_1;LvlTemp_C_13;1;NA;NA;sensor string out of the water (pressure < 5 psi)
-BVR;50;BVRplatform;2026-10-29 12:40:00 EST;2026-10-29 13:00:00 EST;ThermistorTemp_C_1;LvlTemp_C_13;1;NA;NA;sensor string out of the water (pressure < 5 psi) to switch the RDO sensors
+BVR;50;BVRplatform; 2026-03-02 10:30:00 EST; 2027-12-31 00:00:00 EST; EXOfDOM_QSU_1.5; NA;6;NA; "bvrdata[Time, maintenance_cols]+2.76"; EXO2 up for cleaning and replaced with EXO2 SN23J102731 and optical sensors reading lower so observations over this time were scaled up
 BVR;50;BVRplatform;2026-07-01 03:30:00 EST;2026-07-01 03:50:00 EST;EXOTurbidity_FNU_1.5;NA;2;NA;NA;extremely high turbidity spike (>100 FNU)
-BVR;50;BVRplatform;2026-10-11 09:20:00 EST;2026-10-11 09:40:00 EST;EXOTurbidity_FNU_1.5;NA;2;NA;NA;extremely high turbidity spike (>100 FNU)
 BVR;50;BVRplatform;2026-06-30 12:40:00 EST;2026-06-30 13:00:00 EST;EXOChla_RFU_1.5;EXOChla_ugL_1.5;2;NA;NA;extremely high chlorophyll-a spike (>80 ug/L)
 BVR;50;BVRplatform;2026-07-03 10:50:00 EST;2026-07-03 11:20:00 EST;EXOChla_RFU_1.5;EXOBGAPC_ugL_1.5;2;NA;NA;extremely high chlorophyll-a and phycocyanin spike
 BVR;50;BVRplatform;2026-07-13 06:00:00 EST;2026-07-13 06:20:00 EST;EXOBGAPC_RFU_1.5;EXOBGAPC_ugL_1.5;2;NA;NA;extremely high phycocyanin spike (>8 ug/L)
 BVR;50;BVRplatform;2026-07-20 14:30:00 EST;2026-07-20 14:50:00 EST;EXOBGAPC_RFU_1.5;EXOBGAPC_ugL_1.5;2;NA;NA;extremely high phycocyanin spike (>8 ug/L)
 BVR;50;BVRplatform;2026-07-23 07:50:00 EST;2026-07-23 08:10:00 EST;EXOBGAPC_RFU_1.5;EXOBGAPC_ugL_1.5;2;NA;NA;extremely high phycocyanin spike (>8 ug/L)
+BVR;50;BVRplatform;2026-09-22 10:40:00 EST;2026-09-22 11:00:00 EST;ThermistorTemp_C_1;LvlTemp_C_13;1;NA;NA;sensor string out of the water (pressure < 5 psi)
+BVR;50;BVRplatform;2026-10-11 09:20:00 EST;2026-10-11 09:40:00 EST;EXOTurbidity_FNU_1.5;NA;2;NA;NA;extremely high turbidity spike (>100 FNU)
+BVR;50;BVRplatform;2026-10-29 12:40:00 EST;2026-10-29 13:00:00 EST;ThermistorTemp_C_1;LvlTemp_C_13;1;NA;NA;sensor string out of the water (pressure < 5 psi) to switch the RDO sensors
